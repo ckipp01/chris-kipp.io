@@ -14,6 +14,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Generate site
-        uses: docker://pandoc/core:2.13
+      - name: Install pandoc
+        run: sudo dpkg -i https://github.com/jgm/pandoc/releases/download/2.13/pandoc-2.13-1-amd64.deb
+
+      - name: Generate Site
         run: ./bin/make-site.sh
