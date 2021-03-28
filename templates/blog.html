@@ -1,0 +1,16 @@
+${ head() }
+  <body>
+    <div class="wrapper">
+      ${ header() }
+      <main>
+        ${if(updated)}
+          <p class="date">Last Updated: ${updated}</span>
+        ${endif}
+        ${if(date)}
+          <p class="date">Published: ${date}</span>
+        ${endif}
+        ${body}
+      </main>
+      ${ footer() }
+    </div>
+  </body>
