@@ -1,0 +1,21 @@
+name: Create chris-kipp.io
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  build:
+    name: Chronica build and deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Download Pandoc
+        run: sudo apt-get -y install pandoc
+
+      - name: Generate site with Ammonite
+        run: ./bin/make-site.sh
