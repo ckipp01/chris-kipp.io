@@ -7,15 +7,13 @@ on:
 
 jobs:
   build:
-    name: Chronica build and deploy
+    name: Build and Deploy
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Download Pandoc
-        run: sudo apt-get -y install pandoc
-
-      - name: Generate site with Ammonite
+      - name: Generate site
+        uses: docker://pandoc/core:2.13
         run: ./bin/make-site.sh
