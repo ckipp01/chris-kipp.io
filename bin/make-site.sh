@@ -6,7 +6,7 @@ DIVIDER="|||"
 for file in `ls blogs/`; do
   DATE=`grep '^date:' blogs/$file | sed 's/date: //'`
   TITLE=`grep '^title:' blogs/$file | sed 's/title: //'`
-  echo "$DATE $DIVIDER $TITLE" >> $TMPFILE
+  echo "$DATE$DIVIDER$TITLE" >> $TMPFILE
 done
 
 sort --reverse $TMPFILE --output $TMPFILE
