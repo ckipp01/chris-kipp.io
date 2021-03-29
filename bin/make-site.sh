@@ -55,8 +55,11 @@ done
 
 mkdir -p site/images
 cp -r images/* site/images
-
 echo "Copied images"
+
+
+cp vercel.json site/vercel.json
+echo "Copied config file"
 
 echo "Site generated."
 
