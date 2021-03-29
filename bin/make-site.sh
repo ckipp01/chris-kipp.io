@@ -41,6 +41,8 @@ pandoc about.md \
 
 echo "Created about page"
 
+mkdir -p site/blog
+
 for file in `ls blogs/`; do
   TITLE=`grep '^title:' blogs/$file | sed 's/title: //' | sed 's/ /-/g'`
   pandoc blogs/$file\
@@ -48,7 +50,7 @@ for file in `ls blogs/`; do
     -t html5 \
     -s --highlight-style kate \
     --template templates/blog.html \
-    -o site/${TITLE,,}.html
+    -o site/blog/${TITLE,,}.html
 
   echo "Created ${TITLE,,}.html"
 done
