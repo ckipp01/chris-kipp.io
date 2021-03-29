@@ -27,11 +27,12 @@ pandoc index.md \
   --template templates/index.html \
   -o site/index.html
 
-cp site/index.html site/blog.html
+echo "Created homepage"
+
+mkdir -p site/blog
+cp site/index.html site/blog/index.html
 
 echo "Created blog.html"
-
-echo "Created homepage"
 
 pandoc about.md \
   -f markdown \
@@ -40,8 +41,6 @@ pandoc about.md \
   -o site/about.html
 
 echo "Created about page"
-
-mkdir -p site/blog
 
 for file in `ls blogs/`; do
   TITLE=`grep '^title:' blogs/$file | sed 's/title: //' | sed 's/ /-/g'`
