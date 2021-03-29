@@ -27,6 +27,10 @@ pandoc index.md \
   --template templates/index.html \
   -o site/index.html
 
+cp site/index.html site/blog.html
+
+echo "Created blog.html"
+
 echo "Created homepage"
 
 pandoc about.md \
@@ -48,6 +52,11 @@ for file in `ls blogs/`; do
 
   echo "Created ${TITLE,,}.html"
 done
+
+mkdir -p site/images
+cp -r images/* site/images
+
+echo "Copied images"
 
 echo "Site generated."
 
