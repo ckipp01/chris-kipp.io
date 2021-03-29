@@ -1,0 +1,6 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/useful-cs-commands", "destination": "/blog/useful-cs-commands" }
+  ]
+}
