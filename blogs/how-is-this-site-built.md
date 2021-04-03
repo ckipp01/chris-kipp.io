@@ -46,44 +46,44 @@ Following this process, all of the markdown files are read again, and processed
 by CommonMark creating html before being written out.
 
 ```scala
-  val logs: List[Log] = getLogs(pwd / "logs.json")
-  val topics: Seq[String] = (ls ! pwd / 'wiki).map(_.baseName)
-  val percentageGenerator = new PercentageGenerator(logs)
-  val tagGenerator = new TagGenerator(logs, topics)
+val logs: List[Log] = getLogs(pwd / "logs.json")
+val topics: Seq[String] = (ls ! pwd / 'wiki).map(_.baseName)
+val percentageGenerator = new PercentageGenerator(logs)
+val tagGenerator = new TagGenerator(logs, topics)
 
-  val mdocSettings = mdoc
-    .MainSettings()
-    .withIn(Paths.get("wiki"))
-    .withStringModifiers(List(percentageGenerator, tagGenerator))
-    .withNoLinkHygiene(true)
+val mdocSettings = mdoc
+  .MainSettings()
+  .withIn(Paths.get("wiki"))
+  .withStringModifiers(List(percentageGenerator, tagGenerator))
+  .withNoLinkHygiene(true)
 
-  mdoc.Main.process(mdocSettings)
+mdoc.Main.process(mdocSettings)
 
-  val wikiMarkdownPaths: Seq[Path] = (ls ! pwd / 'out).filter(_.ext == "md")
-  val wikiPages: Seq[Page] = wikiMarkdownPaths.map(createPage(_, "wiki", logs))
-  val wikiOverviewPage: Page = createOverview(logs, wikiPages, "wiki")
+val wikiMarkdownPaths: Seq[Path] = (ls ! pwd / 'out).filter(_.ext == "md")
+val wikiPages: Seq[Page] = wikiMarkdownPaths.map(createPage(_, "wiki", logs))
+val wikiOverviewPage: Page = createOverview(logs, wikiPages, "wiki")
 
-  for (page <- (wikiPages :+ wikiOverviewPage))
-    writeToOut(page, "wiki")
+for (page <- (wikiPages :+ wikiOverviewPage))
+  writeToOut(page, "wiki")
 
-  val blogMarkdownPaths: Seq[Path] = (ls ! pwd / 'blog).filter(_.ext == "md")
-  val blogPages: Seq[Page] = blogMarkdownPaths.map(createPage(_, "blog", logs))
-  val blogOverviewPage: Page = createOverview(logs, blogPages, "blog")
+val blogMarkdownPaths: Seq[Path] = (ls ! pwd / 'blog).filter(_.ext == "md")
+val blogPages: Seq[Page] = blogMarkdownPaths.map(createPage(_, "blog", logs))
+val blogOverviewPage: Page = createOverview(logs, blogPages, "blog")
 
-  for (page <- (blogPages :+ blogOverviewPage))
-    writeToOut(page, "blog")
+for (page <- (blogPages :+ blogOverviewPage))
+  writeToOut(page, "blog")
 
-  val extraMarkdownPaths: Seq[Path] = (ls ! pwd / 'extras).filter(_.ext == "md")
-  val extraHtml: Seq[Page] = extraMarkdownPaths.map {
-    case about if about.baseName == "about" => createPage(about, "about", logs)
-    case unknown                            => createPage(unknown, "uknown", logs)
-  }
+val extraMarkdownPaths: Seq[Path] = (ls ! pwd / 'extras).filter(_.ext == "md")
+val extraHtml: Seq[Page] = extraMarkdownPaths.map {
+  case about if about.baseName == "about" => createPage(about, "about", logs)
+  case unknown                            => createPage(unknown, "uknown", logs)
+}
 
-  val homepageHtml: Page = createHomepage(pwd / 'homepage / "index.md")
-  writeToOut(homepageHtml)
+val homepageHtml: Page = createHomepage(pwd / 'homepage / "index.md")
+writeToOut(homepageHtml)
 
-  for (page <- extraHtml)
-    writeToOut(page)
+for (page <- extraHtml)
+  writeToOut(page)
 ```
 
 ## [The future](#the-future)

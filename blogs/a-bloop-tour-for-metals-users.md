@@ -52,7 +52,7 @@ If you've seen any of the presentations done about Metals, then you've probably
 seen a graphic similar to what I have below. However, the one below is a bit
 more simplified showing only one language client and one build tool.
 
-![BSP + LSP diagram](/media/diagram.png)
+![BSP + LSP diagram](/images/diagram.png)
 
 This diagram is meant to show Bloop's part in the flow from build definition to
 your editor of choice. If you start on the left, you have your build definition
@@ -112,16 +112,15 @@ all exist. However, there are a few differences and nuances worth pointing out.
     You need to use command substitution like below if you want to compile or
     test all projects. There is no implicit root project.
 
-```sh
+```bash
 ❯ bloop compile $(bloop projects)
-...
 ```
 
 - By default compilation requires compilation of all downstream projects,
     however, to compile upstream projects (transitive projects) that depend on
     your project, use the `--cascade` flag.
 
-```sh
+```bash
 ❯ bloop compile --cascade root
 Compiling root (1 Scala source)
 Compiled root (982ms)
@@ -132,7 +131,7 @@ Compiled root-test (344ms)
 - If you want to clean your cache and ensure that you have all downstream
     projects cleaned as well, use the `--propagate` flag.
 
-```sh
+```bash
 ❯ bloop clean --propagate root
 ```
 
@@ -148,7 +147,7 @@ Compiled root-test (344ms)
 - If you need a repl, `bloop console` will drop you into an [Ammonite
     shell](https://ammonite.io/) in the targeted project.
 
-```sh
+```bash
 ❯ bloop console root
 Loading...
 Welcome to the Ammonite Repl 2.1.4-2-ef9b0a0 (Scala 2.12.11 Java 1.8.0_242)
@@ -158,11 +157,11 @@ Welcome to the Ammonite Repl 2.1.4-2-ef9b0a0 (Scala 2.12.11 Java 1.8.0_242)
 - You can generate [graphviz](https://graphviz.org/) diagrams to view your
     dependencies with a command like the one found below.
 
-```sh
+```bash
 ❯ bloop projects --dot-graph | dot -Tsvg -o metals-diagram.svg && open metals-diagram.svg
 ```
 
-![metals graphviz diagram](/media/metals-diagram.svg)
+![metals graphviz diagram](/images/metals-diagram.svg)
 
 ## [Takeaways and Things to keep in mind](#takeaways-and-things-to-keep-in-mind)
 
@@ -172,7 +171,7 @@ Welcome to the Ammonite Repl 2.1.4-2-ef9b0a0 (Scala 2.12.11 Java 1.8.0_242)
     deduplication_ if you are watching a test with `-w` and also compiling a
     project with Metals. You'll see a message like this in your bloop output:
 
-```sh
+```bash
 Deduplicating compilation of root from bsp client 'Metals 0.9.0+139-c169b4ce-SNAPSHOT' (since 39.439s)
 ```
 
