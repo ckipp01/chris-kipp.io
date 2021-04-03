@@ -35,7 +35,7 @@ my goal for this isn't to do an in-depth dive into all the ways you can use
 be able to start using right away. The following examples are all real scenarios
 that I came across in the last couple weeks.
 
-### [`resolve`](#resolve)
+### [resolve](#resolve)
 
 While at work, I was in a conversation in a pull request about how my team didn't
 love the Java Api of [Caffeine](https://github.com/ben-manes/caffeine), which we
@@ -49,7 +49,7 @@ is a quick way to print out transitive dependencies of one or more other
 dependencies. So, I did the following:
 
 
-```sh
+```bash
 ❯ cs resolve com.github.blemale:scaffeine_2.12:3.1.0
 https://repo1.maven.org/maven2/com/github/blemale/scaffeine_2.12/3.1.0/scaffeine_2.12-3.1.0.pom
   100.0% [##########] 2.6 KiB (7.6 KiB / s)
@@ -78,7 +78,7 @@ to be able to list the transitive dependencies, which can be found at the
 bottom. You can also get a nice tree view of this by passing in the `--tree` or
 `-t` option.
 
-```sh
+```bash
 ❯ cs resolve -t com.github.blemale:scaffeine_2.12:3.1.0
   Result:
 └─ com.github.blemale:scaffeine_2.12:3.1.0
@@ -93,7 +93,7 @@ bottom. You can also get a nice tree view of this by passing in the `--tree` or
 This is such a quick way to be able to see the dependency tree of a dependency
 without adding it into your build or looking through build files.
 
-### [`install`](#install)
+### [install](#install)
 
 Another useful command is the `cs install` command which allows you to install a
 launcher for a JVM-based application. The
@@ -108,7 +108,7 @@ something locally without including it in the project. I was reviewing an
 `.adoc` document and was curious if mdoc supported them the same way it does
 `.md` files. So I simply did the following:
 
-```sh
+```bash
 ❯ cs install mdoc
 ...
 ...
@@ -119,7 +119,7 @@ Wrote mdoc
 This then allowed me full access to the `mdoc` cli commands, which I could use
 locally without having to include it in my project to test something out.
 
-### [`complete`](#complete)
+### [complete](#complete)
 
 Speaking of mdoc, I was using it in another project, and I was curious what the
 latest version was. I was actually using it in an
@@ -130,7 +130,7 @@ lead me to the version. Ironically, I sent in a pr to add in a badge to the
 readme to make the latest version more discoverable when the author of mdoc,
 [Ólafur Páll Geirsson](https://twitter.com/olafurpg), introduced me to this gem:
 
-```sh
+```bash
 ❯ cs complete org.scalameta:mdoc_2.13:
 1.3.2
 1.3.4
