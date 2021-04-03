@@ -42,6 +42,18 @@ pandoc about.md \
 
 echo "Created about page"
 
+pandoc talks.md \
+  -f markdown \
+  -t html5 \
+  --template templates/basic.html \
+  -o site/talks.html
+
+echo "Created talks page"
+
+mkdir -p site/slides
+cp -r slides/* site/slides
+echo "Copied slides"
+
 for file in `ls blogs/`; do
   TITLE=`grep '^title:' blogs/$file | sed 's/title: //' | sed 's/ /-/g'`
   pandoc blogs/$file\
