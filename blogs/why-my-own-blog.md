@@ -37,14 +37,14 @@ more effort. However, in my experience you're left with a richer experience.
 Taking the time to research and to find a place a bit farther off the main
 street is indeed more labor intensive, but rewarding.
 
-My hope is the that my website, [chronica](/wiki/chronica) is just that. A
-central place that I fully own and have control over where my projects,
-thoughts, and works can all be displayed. There is no overly invasive trackers,
-no advertisements, and no abstraction over what you are seeing. Everything is
-open sourced and transparent. This is an alternative to me using platforms like
-Medium which bombard you with advertisements and track as much information about
-you and your readings as possible, or Facebook that caters what you see further
-enforcing filter bubbles and essentially selling *you* as their product.
+My hope is the that my website is just that. A central place that I fully own
+and have control over where my projects, thoughts, and works can all be
+displayed. There is no overly invasive trackers, no advertisements, and no
+abstraction over what you are seeing. Everything is open sourced and
+transparent. This is an alternative to me using platforms like Medium which
+bombard you with advertisements and track as much information about you and your
+readings as possible, or Facebook that caters what you see further enforcing
+filter bubbles and essentially selling *you* as their product.
 
 You can read more about how this site is build and works
 [here](/blog/how-is-this-site-built).
