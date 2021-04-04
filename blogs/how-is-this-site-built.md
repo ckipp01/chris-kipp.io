@@ -61,7 +61,7 @@ The way that the site is currently built is quite simple. It just uses
 into html pages. I have some custom html partials that include the various parts
 of the site and the style. The entire thing is just built with [this
 script](https://github.com/ckipp01/chris-kipp.io/blob/main/bin/make-site.sh) via
-.[GitHub Actions](https://github.com/ckipp01/chris-kipp.io/actions), and then
+[GitHub Actions](https://github.com/ckipp01/chris-kipp.io/actions), and then
 automatically deployed to [Vercel](https://vercel.com). So far I've found that
 this site is incredibly fast and easy to manage. Pandoc is also a joy to work
 with. That's pretty much it, and that's all I really want.
