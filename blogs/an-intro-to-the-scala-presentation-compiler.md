@@ -96,6 +96,7 @@ Ecosystem use or have used the Scala Presentation Compiler.
 - [Metals, the Scala Language Server](https://scalameta.org/metals/)
 - [Ammonite](https://ammonite.io/)
 - [mdoc](https://scalameta.org/mdoc/)
+- [The Scala REPL](https://docs.scala-lang.org/overviews/repl/overview.html)
 
 You may have noticed that [IntelliJ](jetbrains.com/idea/) is missing from that
 list. That's because IntelliJ actually uses its own implementation of the Scala
@@ -419,3 +420,5 @@ stopping by.
     others.
 - [`MarkdownCompiler.scala`](https://github.com/scalameta/mdoc/blob/main/mdoc/src/main/scala-3/mdoc/internal/markdown/MarkdownCompiler.scala)
     Shows how mdoc creates and uses the Scala 3 presentation compiler.
+- [`PresentationCompilation.scala`](https://github.com/scala/scala/blob/2.13.x/src/repl/scala/tools/nsc/interpreter/PresentationCompilation.scala)
+    Showing the usage of the presentation compiler in the Scala 2 REPL.
