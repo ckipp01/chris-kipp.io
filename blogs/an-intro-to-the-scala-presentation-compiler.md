@@ -414,6 +414,8 @@ stopping by.
 - [`DottyLanguageServer.scala`](https://github.com/lampepfl/dotty/blob/master/language-server/src/dotty/tools/languageserver/DottyLanguageServer.scala)
     The built-in LSP server in the Scala 3 codebase.
 - [`Compiler.scala`](https://github.com/com-lihaoyi/Ammonite/blob/master/amm/compiler/src/main/scala-3/ammonite/compiler/Compiler.scala)
-    Shows how Ammonite accesses the Scala 3 presentation compiler.
+    Shows how Ammonite accesses the Scala 3 compiler and uses various parts of
+    the presentation compiler. This example is the most different than they
+    others.
 - [`MarkdownCompiler.scala`](https://github.com/scalameta/mdoc/blob/main/mdoc/src/main/scala-3/mdoc/internal/markdown/MarkdownCompiler.scala)
     Shows how mdoc creates and uses the Scala 3 presentation compiler.
