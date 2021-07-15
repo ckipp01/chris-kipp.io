@@ -291,8 +291,14 @@ object Main:
 
 The offset for this position should be 55. So we'll create this position to use
 in a bit. For some of the future calls we are about to make we'll also need a
-context provided, so you'll also see that given. I'll share this code snippet
-and then we'll dissect exactly what's going on.
+context provided, so you'll also see that given. Often in the examples you'll
+see this done a bit different depending on how the context is created. Lots of
+times you'll start with your own fresh context and build it up to be example
+what you want. This can be doing things like setting the classpath as we did in
+our example, setting the output to `new VirtualDirectory("(memory)")` so any
+generated classfiles don't actually get physically stored anywhere. There are a
+whole bunch of settings, but again, we're keeping it as simple as possible.
+I'll share this code snippet and then we'll dissect exactly what's going on.
 
 ```scala
 val pos: SourcePosition = new SourcePosition(sourceFile, Spans.Span(55))
