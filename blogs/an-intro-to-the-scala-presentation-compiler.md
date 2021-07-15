@@ -95,6 +95,7 @@ Ecosystem use or have used the Scala Presentation Compiler.
 - [The Ensime project](https://ensime.github.io/)
 - [Metals, the Scala Language Server](https://scalameta.org/metals/)
 - [Ammonite](https://ammonite.io/)
+- [mdoc](https://scalameta.org/mdoc/)
 
 You may have noticed that [IntelliJ](jetbrains.com/idea/) is missing from that
 list. That's because IntelliJ actually uses its own implementation of the Scala
@@ -408,3 +409,5 @@ stopping by.
     The built-in LSP server in the Scala 3 codebase.
 - [`Compiler.scala`](https://github.com/com-lihaoyi/Ammonite/blob/master/amm/compiler/src/main/scala-3/ammonite/compiler/Compiler.scala)
     Shows how Ammonite accesses the Scala 3 presentation compiler.
+- [`MarkdownCompiler.scala`](https://github.com/scalameta/mdoc/blob/main/mdoc/src/main/scala-3/mdoc/internal/markdown/MarkdownCompiler.scala)
+    Shows how mdoc creates and uses the Scala 3 presentation compiler.
