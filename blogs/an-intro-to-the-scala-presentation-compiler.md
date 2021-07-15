@@ -334,21 +334,14 @@ for comprehension like this:
  } yield a
 ```
 
-The AST for this would have some nodes that have the same ranges:
+The AST for this would have multiple nodes that have the exact same range. Here
+are two different ones that have the exact same range.
 
 ```scala
-Apply(
-  Select(Apply(Ident(Some), List(Literal(Constant(1)))), flatMap), // <-- This range
-  List(
-    Function(
-      List(ValDef(Modifiers(8192L, , List()), a, <type ?>, <empty>)),
-      Apply(
-        Select(Apply(Ident(Some), List(Literal(Constant(2)))), map), // <-- Same as this range
-        ...
-      )
-    )
-  )
-)
+// The range for this one
+Apply(Ident(Some), List(Literal(Constant(1))))
+// Is the exact same range as this one
+Select(Apply(Ident(Some), List(Literal(Constant(1)))), map)
 ```
 
 If the above looks foreign to you, the [Reflection Overview
