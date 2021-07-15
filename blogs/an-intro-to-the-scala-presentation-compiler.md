@@ -243,9 +243,11 @@ val driver = new InteractiveDriver(
 ```
 
 Keep in mind that this is meant to be a very minimal example with everything in
-one place. Everything that we're doing is living in the same file. So if this
-was a real world project we'd care a little more about where and how we are
-managing this driver. For now, we're just creating it for a single run.
+one place. Everything that we're doing is living in the same file is around 80
+lines of code. So if this was a real world project we'd care a little more about
+where and how we are managing this driver, how we are setting up the context
+etc. For now, we're just creating it for a single run, so we'll literally keep
+it as simple as possible.
 
 Next we'll take `ourScalaCode` from up above and create a virtual source file
 out of it. We'll then take it and then run it. We can also verify here that
