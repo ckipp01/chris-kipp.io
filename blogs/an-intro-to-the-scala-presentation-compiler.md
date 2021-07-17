@@ -2,6 +2,7 @@
 title: An intro to the Scala presentation compiler
 date: 2021-07-15
 description: An introduction to what the Scala presentation compiler is and an example of how to use it.
+updated: 2021-07-17
 ---
 
 # An intro to the Scala Presentation Compiler
@@ -28,9 +29,9 @@ which will be relevant for what I show down below.
 
 The goal for this post is so that hopefully when someone in the future hears a
 phrase about the presentation compiler and has no idea what it is, this can
-serve as introduction to what it is, where to find it, and as an example of how
-to use it. When I first started searching around for these answers I came across
-a few useful sources that I'll reference since they helped me:
+serve as an introduction to what it is, where to find it, and as an example of
+how to use it. When I first started searching around for these answers I came
+across a few useful sources that I'll reference since they helped me:
 
 - [The Scala Presentation
     Compiler](http://scala-ide.org/docs/dev/architecture/presentation-compiler.html),
@@ -50,7 +51,7 @@ a few useful sources that I'll reference since they helped me:
 
 ## [What is the presentation compiler](#what-is-the-presentation-compiler)
 
-The above mentioned post by the Scala IDE teams defines the Presentation
+The above mentioned post by the Scala IDE teams defines the presentation
 compiler as follows:
 
 > The Scala IDE for Eclipse uses the Scala Presentation Compiler, a faster
@@ -65,12 +66,12 @@ compiler that is:
 - Asynchronous
 - Interruptible at every point
 - Can do targeted typechecking
-- Stops after a specific point (type-checking) and provide a partial result
+- Stops after a specific point (type-checking) and provides a partial result
 
 Martin Odersky actually explains this a bit _way back in 2011_ when giving a
 [talk](https://www.youtube.com/watch?v=qqQNqIy5LdM&t=1320s) about what's coming
 in Scala 2.10. You may also be wondering where this thing is in the Scala code
-base?
+base.
 
 - For Scala 3 you can find it located [here in the interactive
     package](https://github.com/lampepfl/dotty/tree/master/compiler/src/dotty/tools/dotc/interactive)
@@ -88,8 +89,9 @@ Scala 3 has a completely different implementation.
 ## [What uses the presentation compiler](#what-uses-the-presentation-compiler)
 
 If you haven't already gotten this from looking at where these articles are
-coming from, you'll notice that _many_ of the IDE-like tools in the Scala
-Ecosystem use or have used the Scala Presentation Compiler.
+coming from, you'll notice that _many_ of the IDE-like tools or tools that
+provide IDE-like features in the Scala Ecosystem use or have used the Scala
+Presentation Compiler.
 
 - [Scala IDE for Eclipse](http://scala-ide.org/)
 - [The Ensime project](https://ensime.github.io/)
@@ -101,8 +103,8 @@ Ecosystem use or have used the Scala Presentation Compiler.
 You may have noticed that [IntelliJ](jetbrains.com/idea/) is missing from that
 list. That's because IntelliJ actually uses its own implementation of the Scala
 Presentation Compiler. That's why it's possible to see subtle differences with
-diagnostics showing in IntelliJ when they don't show when compiling with the
-actual Scala compiler.
+diagnostics showing in IntelliJ that don't show when compiling with the actual
+Scala compiler.
 
 Many of these projects use the presentation compiler to accomplish very similar
 goals, and that is to provide the common features that you'd expect from an
@@ -245,11 +247,11 @@ val driver = new InteractiveDriver(
 ```
 
 Keep in mind that this is meant to be a very minimal example with everything in
-one place. Everything that we're doing is living in the same file is around 80
-lines of code. So if this was a real world project we'd care a little more about
-where and how we are managing this driver, how we are setting up the context
-etc. For now, we're just creating it for a single run, so we'll literally keep
-it as simple as possible.
+one place. Everything that we're doing is living in the same file and is only
+around 80 lines of code. So if this was a real world project we'd care a little
+more about where and how we are managing this driver, how we are setting up the
+context etc. For now, we're just creating it for a single run, so we'll
+literally keep it as simple as possible.
 
 Next we'll take `ourScalaCode` from up above and create a virtual source file
 out of it. We'll then take it and then run it. We can also verify here that
