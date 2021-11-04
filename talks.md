@@ -30,5 +30,6 @@ description: "
 </div>
 
 ## Other talks
+  - [Code Coverage in Scala 3](/slides/slides-code-coverage-in-scala3)
   - [How Metals and LSP allow you to use your favorite editor for Scala](/slides/slides-lsp-metals)
   - [Demystifying serverless functions with Zeit Now](/slides/slides-faas-zeit-now)
