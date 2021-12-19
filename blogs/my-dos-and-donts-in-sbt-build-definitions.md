@@ -49,7 +49,7 @@ Like everything, there seems to be trends in build definitions. One trend I saw
 for a while (and you may still use it) is to keep a separate build file for
 every project in your build. Meaning you'll likely have a structure like this:
 
-```
+```bash
 .
 ├── a
 │  ├── build.sbt
@@ -122,7 +122,7 @@ and how it's various scopes work, but keep in mind that most newcomers to Scala
 won't, and they will immediately be met with confusion when they discover the
 following:
 
-```
+```bash
 sbt:bare-settings> projects
 [info] In file:/Users/ckipp/Documents/scala-workspace/bare-settings/
 [info]     domain
