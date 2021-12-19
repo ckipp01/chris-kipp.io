@@ -7,15 +7,16 @@ description: These are rules I like to follow when writing my build definitions 
 # My Dos and Don'ts in sbt Build Definitions
 
 Over the past couple of years I've been able to dig around a lot of sbt build
-files. Whether sbt is your Scala build tool of choice or not, you'll likely need
-to deal with it at some time or another. sbt baffled me when I first got
-started. The simple things were actually pretty simple, but anything else sort
-of forces you to get a better-than-surface-level understanding of sbt. Depending
-on that level of understanding, the team writing that build definition, or even
-the type of project your writing it for provides for a nice smörgåsbord of
-examples out there. All sorts of fun and crazy stuff. Because of this, I thought
-I'd make a list of Dos and Don'ts I typically try to follow when writing build
-definitions in sbt. These opinions were formed with a mixture of open-source and
+files. Whether [sbt](https://www.scala-sbt.org/index.html) is your Scala build
+tool of choice or not, you'll likely need to deal with it at some time or
+another. sbt baffled me when I first got started. The simple things were
+actually pretty simple, but anything else sort of forces you to get a
+better-than-surface-level understanding of sbt. Depending on that level of
+understanding, the team writing that build definition, or even the type of
+project your writing it for provides for a nice smörgåsbord of examples out
+there. All sorts of fun and crazy stuff. Because of this, I thought I'd make a
+list of Dos and Don'ts I typically try to follow when writing build definitions
+in sbt. These opinions were formed with a mixture of open-source and
 professional work, annoyances with incredibly complex builds, and probably some
 straight-up misunderstandings on my part since sbt still baffles me at times.
 
