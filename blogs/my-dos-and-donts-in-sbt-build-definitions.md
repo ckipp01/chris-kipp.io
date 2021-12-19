@@ -1,5 +1,5 @@
 ---
-title: My Dos and Don'ts in sbt Build Definitions
+title: My Dos and Donts in sbt Build Definitions
 date: 2021-12-19
 description: These are rules I like to follow when writing my build definitions using sbt.
 ---

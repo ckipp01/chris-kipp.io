@@ -1,6 +1,7 @@
 {
   "cleanUrls": true,
   "redirects": [
-    { "source": "/useful-cs-commands", "destination": "/blog/useful-cs-commands" }
+    { "source": "/useful-cs-commands", "destination": "/blog/useful-cs-commands" },
+    { "source": "/blog/my-dos-and-don'ts-in-sbt-build-definitions", "destination": "/blog/my-dos-and-donts-in-sbt-build-definitions" }
   ]
 }
