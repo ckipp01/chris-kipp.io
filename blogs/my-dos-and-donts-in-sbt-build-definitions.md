@@ -400,7 +400,7 @@ if you need to change it but don't understand what you're changing. I've
 personally found the Scala tooling community incredibly helpful and open to
 questions of all levels. I've asked a lot of sbt questions in the
 [sbt/sbt](https://gitter.im/sbt/sbt) gitter chat, and they almost always got
-answers.
+answered.
 
 ## [Conclusion](#conclusion)
 
