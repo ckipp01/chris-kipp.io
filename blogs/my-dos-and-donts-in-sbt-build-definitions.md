@@ -28,12 +28,12 @@ simply having your team all on the same page and doing things the same way.
 
 So without further ado, here are my personal Dos and Don'ts
 
-- [Don't make separate `build.sbt` files for your different modules](#dont-make-seperate-build-files-for-your-different-modules)
+- [Don't make separate `build.sbt` files for your different modules](#dont-make-separate-build.sbt-files-for-your-different-modules)
 - [Do stay away from bare settings](#do-stay-away-from-bare-settings)
-- [Don't let your settings leak into modules they don't need to be in](#dont-let-your-settings-leak)
+- [Don't let your settings leak into modules they don't need to be in](#dont-let-your-settings-leak-into-modules-they-dont-need-to-be-in)
 - [Do regularly go over your entire build definition](#do-regularly-go-over-your-entire-build-definition)
-- [Don't shade things unless you absolutely have to](#dont-sahde-things-unless-you-absolutely-have-to)
-- [Do stick to `lazy val`s everywhere](#do-stick-to-lazy-vals-everwhere)
+- [Don't shade things unless you absolutely have to](#dont-shade-things-unless-you-absolutely-have-to)
+- [Do stick to `lazy val`s everywhere](#do-stick-to-lazy-vals-everywhere)
 - [Don't ever hardcode constants](#dont-ever-hardcode-constants)
 - [Do stay away from crazy meta meta build stuff](#do-stay-away-from-crazy-meta-meta-build-stuff)
 - [Don't put stuff in `project/` unless it is a collection of something or is "standalone"](#dont-put-stuff-in-project-unless-its-standalont-or-a-collection)
@@ -43,7 +43,7 @@ So without further ado, here are my personal Dos and Don'ts
 - [Don't add stuff to your build definition you don't understand](#dont-add-stuff-to-your-build-definition-you-dont-understand)
 
 
-## [Don't make separate `build.sbt` files for your different modules](#dont-make-seperate-build-files-for-your-different-modules)
+## [Don't make separate `build.sbt` files for your different modules](#dont-make-separate-build.sbt-files-for-your-different-modules)
 
 Like everything, there seems to be trends in build definitions. One trend I saw
 for a while (and you may still use it) is to keep a separate build file for
@@ -155,7 +155,7 @@ time spent explaining to your team why will be time better spent than a new
 teammate banging their head against the wall when they are bit by it later on if
 you don't and you use bare settings.
 
-## [Don't let your settings leak into modules they don't need to be in](#dont-let-your-settings-leak)
+## [Don't let your settings leak into modules they don't need to be in](#dont-let-your-settings-leak-into-modules-they-dont-need-to-be-in)
 
 A common approach you'll see in a lot of builds is making use of common
 settings. You'll often see something like the following:
@@ -211,7 +211,7 @@ settings you copied off Stack Overflow to overcome some issue still need to be
 there. This helps keep those build definitions nice and tidy and avoids the "Is
 this still relevant" question I so often ask when looking at build files.
 
-## [Don't shade things unless you absolutely have to](#dont-sahde-things-unless-you-absolutely-have-to)
+## [Don't shade things unless you absolutely have to](#dont-shade-things-unless-you-absolutely-have-to)
 
 I hesitated to put this in here since it's maybe more specific to just
 dependency management, but I thought it helped reinforce the idea of keeping
@@ -229,7 +229,7 @@ My default rule is to avoid shading unless you absolutely have to do it and the
 benefit outweighs any complexity and confusion you may be adding to your build
 definition.
 
-## [Do stick to `lazy val`s everywhere](#do-stick-to-lazy-vals-everwhere)
+## [Do stick to `lazy val`s everywhere](#do-stick-to-lazy-vals-everywhere)
 
 This one may seem obvious to some, but it's also a commonly asked question. The
 most simple answer is that to avoid having to define everything before you use
