@@ -5,6 +5,9 @@ description: "
   This is the website and blog of Chris Kipp.
   "
 ...
+
+![An avatar of me](images/me.png)
+
 Hi, I'm Chris. You've stumbled upon my blog and website. It's a simple place
 where I write some things and hold links to other places that I'd like to
 remember. You'll find me writing or working on things related to developer
