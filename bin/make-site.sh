@@ -74,5 +74,8 @@ echo "Copied images"
 cp vercel.json site/vercel.json
 echo "Copied config file"
 
+cp chris-kipp-resume.pdf site/chris-kipp-resume.pdf
+echo "Copied resume"
+
 echo "Site generated."
 
