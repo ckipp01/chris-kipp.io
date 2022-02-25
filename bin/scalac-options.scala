@@ -11,7 +11,7 @@ import dotty.tools.dotc.config.ScalaSettings
   pw.write("scala 3 scalac options for 3.1.1\n")
   pw.write("--------------------------------\n")
   val allSettings = new ScalaSettings().allSettings
-  allSettings.map { setting =>
+  allSettings.foreach { setting =>
     pw.write(s"${setting.name}\n")
     pw.write(s"\t${setting.description}\n")
   }
