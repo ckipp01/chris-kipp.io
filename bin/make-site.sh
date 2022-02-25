@@ -70,12 +70,15 @@ mkdir -p site/images
 cp -r images/* site/images
 echo "Copied images"
 
-
 cp vercel.json site/vercel.json
 echo "Copied config file"
 
 cp chris-kipp-resume.pdf site/chris-kipp-resume.pdf
 echo "Copied resume"
+
+scala-cli run bin/scalac-options.scala
+cp scala3-scalac-options.txt site/scala3-scalac-options.txt
+echo "Copied scalacOptions"
 
 echo "Site generated."
 
