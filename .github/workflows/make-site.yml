@@ -19,10 +19,12 @@ jobs:
           sudo wget https://github.com/jgm/pandoc/releases/download/2.13/pandoc-2.13-1-amd64.deb
           sudo dpkg -i pandoc-2.13-1-amd64.deb
 
-      - name: Generate Site
+      - name: setup scala-cli
       - uses: coursier/setup-action@v1.2.0-M1
         with:
           apps: scala-cli
+
+      - name: Generate Site
         run: ./bin/make-site.sh
 
       - name: Deploy Site
