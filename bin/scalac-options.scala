@@ -8,7 +8,7 @@ import dotty.tools.dotc.config.ScalaSettings
 
 @main def showSettings() =
   val pw = new PrintWriter(new File("scala3-scalac-options.txt"))
-  pw.write("scala 3 scalac options for 3.1.1\n")
+  pw.write("scalac options for 3.1.1\n")
   pw.write("--------------------------------\n")
   val allSettings = new ScalaSettings().allSettings
   allSettings.foreach { setting =>
