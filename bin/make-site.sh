@@ -77,7 +77,7 @@ cp chris-kipp-resume.pdf site/chris-kipp-resume.pdf
 echo "Copied resume"
 
 scala-cli run bin/scalac-options.scala
-cp scala3-scalac-options.txt site/scala3-scalac-options.txt
+mv scala3-scalac-options.txt site/scala3-scalac-options.txt
 echo "Copied scalacOptions"
 
 echo "Site generated."

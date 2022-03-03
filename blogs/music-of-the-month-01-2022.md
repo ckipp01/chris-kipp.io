@@ -24,7 +24,7 @@ through making it through tough times and coming out of the other side. The
 lyrics are raw, but balanced with Anti-Lilly's positive outlook. This is such a
 fantastic album.
 
-<iframe style="border: 0; max-width: 350px; height: 786px;" src="https://bandcamp.com/EmbeddedPlayer/album=1321219507/size=large/bgcol=ffffff/linkcol=333333/transparent=true/" seamless><a href="https://antilillyandphoniks.bandcamp.com/album/its-nice-outside">It&#39;s Nice Outside by Anti-Lilly &amp; Phoniks</a></iframe>
+<iframe style="border: 0; max-width: 350px; height: 786px;" src="https://bandcamp.com/EmbeddedPlayer/album=1321219507/size=large/bgcol=333333/linkcol=ffffff/transparent=true/" seamless><a href="https://antilillyandphoniks.bandcamp.com/album/its-nice-outside">It&#39;s Nice Outside by Anti-Lilly &amp; Phoniks</a></iframe>
 
 ## Song of the Month
 
@@ -33,6 +33,6 @@ _A-001_ by Corntuth off their album _Music to Work To_. January is also a pretty
 reflective month for me as I look back at the previous year and plan for the
 current. This song definitely facilitated some of that for me this month.
 
-<iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2879227229/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/track=1942059846/transparent=true/" seamless><a href="https://corntuth.bandcamp.com/album/music-to-work-to">Music To Work To by Corntuth</a></iframe>
+<iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2879227229/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/track=1942059846/transparent=true/" seamless><a href="https://corntuth.bandcamp.com/album/music-to-work-to">Music To Work To by Corntuth</a></iframe>
 
 _See you next month_
