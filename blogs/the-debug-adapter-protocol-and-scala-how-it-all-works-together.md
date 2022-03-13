@@ -127,7 +127,7 @@ If you have `nvim-dap` installed and you open a Scala project with a main method
 you should see code lenses appear on your main method. In `nvim-metals` it will
 look like this:
 
-![some scala code with code lens](images/code-lens.png)
+![some scala code with code lens](/images/code-lens.png)
 
 The first question we need to answer is "how did these get here?" and then "how
 does this actually trigger a run or debug of my code?". Behind the scenes what
@@ -392,7 +392,7 @@ fair amount of stuff that has already happened. To recap all of this, here is a
 diagram showing what we've all covered.
 
 ![all communication between nvim-metals, nvim-dap, and
-metals](images/dap-setup.svg)
+metals](/images/dap-setup.svg)
 
 ## The actual DAP communication
 
@@ -405,7 +405,7 @@ breakpoints set, we aren't doing expression evaluation, conditionals etc. To
 outline what the communication looks like between DAP client and DAP server,
 here is another diagram.
 
-![dap communication](images/dap-communication.svg)
+![dap communication](/images/dap-communication.svg)
 
 While the diagram above isn't actually exhaustive it contains the main events
 that get the point across of how the DAP server and client are communicating.
@@ -511,7 +511,7 @@ env file`. If you have 3 different ones defined, maybe one with args, one
 without, and one specifically for tests, you'd see those three to choose from.
 Here is an example of what mine looks like locally when I trigger it:
 
-![example of my run configurations](images/run-configurations.png)
+![example of my run configurations](/images/run-configurations.png)
 
 The communication here is slightly different than when using the code lens since
 at this point we're triggering the process to start, but we don't _actually_
@@ -524,7 +524,7 @@ select which you'd like if there are multiple mains or test suites to choose
 from. Here is a diagram showing the changed order of things when you trigger a
 `run` this way.
 
-![debug discover communication](images/debug-discovery.svg)
+![debug discover communication](/images/debug-discovery.svg)
 
 ## I'm amazed this all works
 
