@@ -395,8 +395,8 @@ At this point is when DAP communication actually starts. However, there is a
 fair amount of stuff that has already happened. To recap all of this, here is a
 diagram showing what we've all covered.
 
-![all communication between nvim-metals, nvim-dap, and
-metals](/images/dap-setup.svg)
+[![all communication between nvim-metals, nvim-dap, and
+metals](/images/dap-setup.svg)](/images/dap-setup.svg){target="_blank"}
 
 ## [The actual DAP communication](#the-actual-dap-communication)
 
