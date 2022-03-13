@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="423px" preserveAspectRatio="none" style="width:1178px;height:423px;background:#FCF3D9;" version="1.1" viewBox="0 0 1178 423" width="1178px" zoomAndPan="magnify"><defs/><g><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="57" x2="57" y1="36.2969" y2="387.7578"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="518" x2="518" y1="36.2969" y2="387.7578"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="709.5" x2="709.5" y1="36.2969" y2="387.7578"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1038" x2="1038" y1="36.2969" y2="387.7578"/><rect fill="#FCF3D9" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="104" x="5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90" x="12" y="24.9951">nvim-metals</text><rect fill="#FCF3D9" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="104" x="5" y="386.7578"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90" x="12" y="406.7529">nvim-metals</text><rect fill="#FCF3D9" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="82" x="477" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="484" y="24.9951">nvim-dap</text><rect fill="#FCF3D9" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="82" x="477" y="386.7578"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="484" y="406.7529">nvim-dap</text><rect fill="#FCF3D9" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="63" x="678.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49" x="685.5" y="24.9951">metals</text><rect fill="#FCF3D9" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="63" x="678.5" y="386.7578"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49" x="685.5" y="406.7529">metals</text><rect fill="#FCF3D9" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="98" x="989" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="996" y="24.9951">build server</text><rect fill="#FCF3D9" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="98" x="989" y="386.7578"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="996" y="406.7529">build server</text><polygon fill="#181818" points="506,63.4297,516,67.4297,506,71.4297,510,67.4297" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="57" x2="512" y1="67.4297" y2="67.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="437" x="64" y="62.3638">integration set up when the user includes setup_dap() in their config</text><line style="stroke:#181818;stroke-width:1.0;" x1="518" x2="560" y1="96.5625" y2="96.5625"/><line style="stroke:#181818;stroke-width:1.0;" x1="560" x2="560" y1="96.5625" y2="109.5625"/><line style="stroke:#181818;stroke-width:1.0;" x1="519" x2="560" y1="109.5625" y2="109.5625"/><polygon fill="#181818" points="529,105.5625,519,109.5625,529,113.5625,525,109.5625" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="178" x="525" y="91.4966">user triggers dap.continue()</text><polygon fill="#181818" points="698,164.9609,708,168.9609,698,172.9609,702,168.9609" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="57" x2="704" y1="168.9609" y2="168.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="192" x="64" y="133.6294">workspace/executeCommand</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="261" x="64" y="148.7622">command is metals.debug-adapter-start</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="205" x="64" y="163.895">args contain runOrTestFile (LSP)</text><line style="stroke:#181818;stroke-width:1.0;" x1="710" x2="752" y1="198.0938" y2="198.0938"/><line style="stroke:#181818;stroke-width:1.0;" x1="752" x2="752" y1="198.0938" y2="211.0938"/><line style="stroke:#181818;stroke-width:1.0;" x1="711" x2="752" y1="211.0938" y2="211.0938"/><polygon fill="#181818" points="721,207.0938,711,211.0938,721,215.0938,717,211.0938" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="314" x="717" y="193.0278">checks the current file for main methods or tests</text><polygon fill="#181818" points="1026,236.2266,1036,240.2266,1026,244.2266,1030,240.2266" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="710" x2="1032" y1="240.2266" y2="240.2266"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="282" x="717" y="235.1606">debugSession/start sent if main found (BSP)</text><line style="stroke:#181818;stroke-width:1.0;" x1="1038" x2="1080" y1="269.3594" y2="269.3594"/><line style="stroke:#181818;stroke-width:1.0;" x1="1080" x2="1080" y1="269.3594" y2="282.3594"/><line style="stroke:#181818;stroke-width:1.0;" x1="1039" x2="1080" y1="282.3594" y2="282.3594"/><polygon fill="#181818" points="1049,278.3594,1039,282.3594,1049,286.3594,1045,282.3594" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="126" x="1045" y="264.2935">starts debug server</text><polygon fill="#181818" points="721,307.4922,711,311.4922,721,315.4922,717,311.4922" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="715" x2="1037" y1="311.4922" y2="311.4922"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="240" x="727" y="306.4263">debugSession/start uri returned (BSP)</text><polygon fill="#181818" points="68,336.625,58,340.625,68,344.625,64,340.625" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="62" x2="709" y1="340.625" y2="340.625"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="308" x="74" y="335.5591">workspace/executeCommand uri returned (LSP)</text><polygon fill="#181818" points="506,365.7578,516,369.7578,506,373.7578,510,369.7578" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="57" x2="512" y1="369.7578" y2="369.7578"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="232" x="64" y="364.6919">handoff to start BSP communication</text><!--MD5=[366850873aa25dbd6ae40a4243834bd4]
+@startuml
+!$LIGHT = "#fcf3d9"
+
+<style>
+root {
+  backgroundColor $LIGHT
+}
+
+</style>
+"nvim-metals" -> "nvim-dap" : integration set up when the user includes setup_dap() in their config
+"nvim-dap" -> "nvim-dap" : user triggers dap.continue()
+"nvim-metals" -> metals : workspace/executeCommand\ncommand is metals.debug-adapter-start\nargs contain runOrTestFile (LSP)
+"metals" -> "metals" : checks the current file for main methods or tests
+"metals" -> "build server" : debugSession/start sent if main found (BSP)
+"build server" -> "build server" : starts debug server
+"build server" -> metals : debugSession/start uri returned (BSP)
+"metals" -> "nvim-metals" : workspace/executeCommand uri returned (LSP)
+"nvim-metals" -> "nvim-dap" : handoff to start BSP communication
+@enduml
+
+@startuml
+
+<style>
+root {
+  backgroundColor #fcf3d9
+}
+
+</style>
+"nvim-metals" -> "nvim-dap" : integration set up when the user includes setup_dap() in their config
+"nvim-dap" -> "nvim-dap" : user triggers dap.continue()
+"nvim-metals" -> metals : workspace/executeCommand\ncommand is metals.debug-adapter-start\nargs contain runOrTestFile (LSP)
+"metals" -> "metals" : checks the current file for main methods or tests
+"metals" -> "build server" : debugSession/start sent if main found (BSP)
+"build server" -> "build server" : starts debug server
+"build server" -> metals : debugSession/start uri returned (BSP)
+"metals" -> "nvim-metals" : workspace/executeCommand uri returned (LSP)
+"nvim-metals" -> "nvim-dap" : handoff to start BSP communication
+@enduml
+
+PlantUML version 1.2022.3beta2(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

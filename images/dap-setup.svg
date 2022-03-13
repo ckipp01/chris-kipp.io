@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="556px" preserveAspectRatio="none" style="width:910px;height:556px;background:#FCF3D9;" version="1.1" viewBox="0 0 910 556" width="910px" zoomAndPan="magnify"><defs/><g><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="36" x2="36" y1="36.2969" y2="521.6875"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="402.5" x2="402.5" y1="36.2969" y2="521.6875"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="675.5" x2="675.5" y1="36.2969" y2="521.6875"/><rect fill="#FCF3D9" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="63" x="5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49" x="12" y="24.9951">metals</text><rect fill="#FCF3D9" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="63" x="5" y="520.6875"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49" x="12" y="540.6826">metals</text><rect fill="#FCF3D9" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="98" x="353.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="360.5" y="24.9951">build server</text><rect fill="#FCF3D9" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="98" x="353.5" y="520.6875"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="360.5" y="540.6826">build server</text><rect fill="#FCF3D9" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="104" x="623.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90" x="630.5" y="24.9951">nvim-metals</text><rect fill="#FCF3D9" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="104" x="623.5" y="520.6875"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90" x="630.5" y="540.6826">nvim-metals</text><polygon fill="#181818" points="390.5,63.4297,400.5,67.4297,390.5,71.4297,394.5,67.4297" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="36.5" x2="396.5" y1="67.4297" y2="67.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="225" x="43.5" y="62.3638">buildTarget/scalaMainClasses (BSP)</text><polygon fill="#181818" points="47.5,92.5625,37.5,96.5625,47.5,100.5625,43.5,96.5625" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="41.5" x2="401.5" y1="96.5625" y2="96.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="217" x="53.5" y="91.4966">builTarget/scalaMainClasses (BSP)</text><polygon fill="#181818" points="47.5,121.6953,37.5,125.6953,47.5,129.6953,43.5,125.6953" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="41.5" x2="674.5" y1="125.6953" y2="125.6953"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="195" x="53.5" y="120.6294">textDocument/codeLens (LSP)</text><line style="stroke:#181818;stroke-width:1.0;" x1="36.5" x2="78.5" y1="169.9609" y2="169.9609"/><line style="stroke:#181818;stroke-width:1.0;" x1="78.5" x2="78.5" y1="169.9609" y2="182.9609"/><line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="78.5" y1="182.9609" y2="182.9609"/><polygon fill="#181818" points="47.5,178.9609,37.5,182.9609,47.5,186.9609,43.5,182.9609" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="190" x="43.5" y="149.7622">checks semanticDB for mains</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="352" x="43.5" y="164.895">compares them against the scalaMainClasses returned</text><polygon fill="#181818" points="663.5,208.0938,673.5,212.0938,663.5,216.0938,667.5,212.0938" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="36.5" x2="669.5" y1="212.0938" y2="212.0938"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="195" x="43.5" y="207.0278">textDocument/codeLens (LSP)</text><line style="stroke:#181818;stroke-width:1.0;" x1="675.5" x2="717.5" y1="271.4922" y2="271.4922"/><line style="stroke:#181818;stroke-width:1.0;" x1="717.5" x2="717.5" y1="271.4922" y2="284.4922"/><line style="stroke:#181818;stroke-width:1.0;" x1="676.5" x2="717.5" y1="284.4922" y2="284.4922"/><polygon fill="#181818" points="686.5,280.4922,676.5,284.4922,686.5,288.4922,682.5,284.4922" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="146" x="682.5" y="236.1606">user triggers code lens</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="221" x="682.5" y="251.2935">creates the debugee configuration</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="128" x="682.5" y="266.4263">creates the callback</text><polygon fill="#181818" points="47.5,324.7578,37.5,328.7578,47.5,332.7578,43.5,328.7578" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="41.5" x2="674.5" y1="328.7578" y2="328.7578"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="192" x="53.5" y="308.5591">workspace/executeCommand</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="225" x="53.5" y="323.6919">(metals.debug-adapter-start) (LSP)</text><polygon fill="#181818" points="390.5,353.8906,400.5,357.8906,390.5,361.8906,394.5,357.8906" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="36.5" x2="396.5" y1="357.8906" y2="357.8906"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="161" x="43.5" y="352.8247">debugSession/start (BSP)</text><line style="stroke:#181818;stroke-width:1.0;" x1="402.5" x2="444.5" y1="402.1563" y2="402.1563"/><line style="stroke:#181818;stroke-width:1.0;" x1="444.5" x2="444.5" y1="402.1563" y2="415.1563"/><line style="stroke:#181818;stroke-width:1.0;" x1="403.5" x2="444.5" y1="415.1563" y2="415.1563"/><polygon fill="#181818" points="413.5,411.1563,403.5,415.1563,413.5,419.1563,409.5,415.1563" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="158" x="409.5" y="381.9575">launches a debug server</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="259" x="409.5" y="397.0903">utilizes scalacenter/scala-debug-adapter</text><polygon fill="#181818" points="47.5,455.4219,37.5,459.4219,47.5,463.4219,43.5,459.4219" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="41.5" x2="401.5" y1="459.4219" y2="459.4219"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="123" x="53.5" y="439.2231">debugSession/start</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="169" x="57.5" y="454.356">returns debugger uri (BSP)</text><polygon fill="#181818" points="663.5,499.6875,673.5,503.6875,663.5,507.6875,667.5,503.6875" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="36.5" x2="669.5" y1="503.6875" y2="503.6875"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="192" x="43.5" y="483.4888">workspace/executeCommand</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="189" x="43.5" y="498.6216">(forwards debugger uri) (LSP)</text><!--MD5=[e9f8a36508cee7553fd1bf78368f5407]
+@startuml
+!$LIGHT = "#fcf3d9"
+
+<style>
+root {
+  backgroundColor $LIGHT
+}
+</style>
+
+metals -> "build server" : buildTarget/scalaMainClasses (BSP)
+"build server" -> metals : builTarget/scalaMainClasses (BSP)
+
+"nvim-metals" -> metals : textDocument/codeLens (LSP)
+metals -> metals : checks semanticDB for mains \ncompares them against the scalaMainClasses returned
+metals -> "nvim-metals" : textDocument/codeLens (LSP)
+
+"nvim-metals" -> "nvim-metals" : user triggers code lens\ncreates the debugee configuration\ncreates the callback
+"nvim-metals" -> metals : workspace/executeCommand\n(metals.debug-adapter-start) (LSP)
+metals -> "build server" : debugSession/start (BSP)
+"build server" -> "build server" : launches a debug server\nutilizes scalacenter/scala-debug-adapter
+"build server" -> metals : debugSession/start\n returns debugger uri (BSP)
+metals -> "nvim-metals" : workspace/executeCommand\n(forwards debugger uri) (LSP)
+@enduml
+
+@startuml
+
+<style>
+root {
+  backgroundColor #fcf3d9
+}
+</style>
+
+metals -> "build server" : buildTarget/scalaMainClasses (BSP)
+"build server" -> metals : builTarget/scalaMainClasses (BSP)
+
+"nvim-metals" -> metals : textDocument/codeLens (LSP)
+metals -> metals : checks semanticDB for mains \ncompares them against the scalaMainClasses returned
+metals -> "nvim-metals" : textDocument/codeLens (LSP)
+
+"nvim-metals" -> "nvim-metals" : user triggers code lens\ncreates the debugee configuration\ncreates the callback
+"nvim-metals" -> metals : workspace/executeCommand\n(metals.debug-adapter-start) (LSP)
+metals -> "build server" : debugSession/start (BSP)
+"build server" -> "build server" : launches a debug server\nutilizes scalacenter/scala-debug-adapter
+"build server" -> metals : debugSession/start\n returns debugger uri (BSP)
+metals -> "nvim-metals" : workspace/executeCommand\n(forwards debugger uri) (LSP)
+@enduml
+
+PlantUML version 1.2022.3beta2(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
