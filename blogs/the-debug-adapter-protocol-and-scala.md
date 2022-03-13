@@ -11,7 +11,7 @@ tooling protocols. A growing number of developers are at least familiar with the
 Language Server Protocol (LSP), especially if you're a
 [Metals](https://scalameta.org/metals/) user or were an early user of Dotty when
 it had a built-in LSP server. You've also more than likely been exposed to the
-Build Server Protocol (BSP) even if was just in passing by seeing
+Build Server Protocol (BSP) even if it was just in passing by seeing
 [sbt](https://www.scala-sbt.org/) create a `.bsp/` directory in your Scala
 workspace. Another popular protocol is the Debug Adapter Protocol, which again
 you may have rubbed up against if you're using Metals. I've seen a lot of
@@ -19,7 +19,7 @@ questions about the how DAP works with Metals and this one actually has a few
 more moving parts than the others to make it all work together. So, I wanted to
 jot down some notes both to ensure I understand all the moving parts, to serve
 as a detailed explanation of sorts of how it all works together, and to
-hopefully help you to as well.
+hopefully help you to get the full picture as well.
 
 Keep in mind that this will differ a bit per client. Client here may also be a
 bit ambiguous since we'll be talking about Metals client extensions and DAP
@@ -62,19 +62,21 @@ into the language or platform, like the [Java Debug
 Interface](https://docs.oracle.com/en/java/javase/17/docs/api/jdk.jdi/module-summary.html),
 which is what [java-debug](https://github.com/microsoft/java-debug) uses, which
 is what
-[scala-debug-adapter](https://github.com/scalacenter/scala-debug-adapter) uses.
-However, we'll get further into that down below. All that to say, the goal is
-that in a situation where a VS Code user wants to transition to another editor,
-_like Neovim_, they can still have the same basic debugging experience as long
-as that new client has a DAP client implementation either built in or available
-as a plugin. The same can be said for the server side if a Metals users decides
-to use Bloop as their build server or sbt as their build server, they can share
-a common implementation of the server side of the protocol and not have to fully
-re-implement it twice. The server side example is exactly what the
+[scala-debug-adapter](https://github.com/scalacenter/scala-debug-adapter) uses,
+which is what most build servers will be using, which is what Metals connects
+to... you get the idea. However, we'll get further into that down below. All
+that to say, the goal is that in a situation where a X editor user wants to
+transition to another editor, _like Neovim_, they can still have the same basic
+debugging experience as long as that new client has a DAP client implementation
+either built in or available as a plugin. The same can be said for the server
+side if a Metals users decides to use Bloop as their build server or sbt as
+their build server, they can share a common implementation of the server side of
+the protocol and not have to fully re-implement it twice. The server side
+example is exactly what the
 [scala-debug-adapter](https://github.com/scalacenter/scala-debug-adapter) is
 for.
 
-## [Two different types of clients](#the-two-different-types-of-clients)
+## [Two different types of clients](#two-different-types-of-clients)
 
 I mentioned it up above, but also want to reiterate it here. Different language
 server clients may handle the DAP client part differently. Like in the case of
@@ -98,9 +100,10 @@ The other way this can look in a client is when your language server client
 doesn't natively implement a DAP client, but has you use an extension to
 implement this. You can see an example of this in
 [scalameta/nvim-metals](https://github.com/scalameta/nvim-metals/blob/32a37ce2f2cdafd0f1c5a44bcf748dae6867c982/lua/metals/setup.lua#L109-L168).
-Notice that in `setup_dap` function the first thing we actually do is require
-[mfussenegger/nvim-dap](https://github.com/mfussenegger/nvim-dap) which is a
-fantastic plugin that implements the client portion of the protocol for Neovim.
+Notice that in the `setup_dap` function the first thing we actually do is
+require [mfussenegger/nvim-dap](https://github.com/mfussenegger/nvim-dap) which
+is a fantastic plugin that implements the client portion of the protocol for
+Neovim.
 
 So, whether you're using VS Code with a built-in DAP client integration or using
 Neovim and a plugin like `nvim-dap`, the core client functionality should be
@@ -109,8 +112,8 @@ using `nvim-dap`, since that's what I'm most familiar with.
 
 ## [How does everything get set up](#how-does-everything-get-set-up)
 
-I don't want this to necessarily be a "getting started with nvim-dap" guide, as
-there are already guides out there, plus the
+I don't want this to necessarily be a "getting started with `nvim-dap`" guide,
+as there are already guides out there, plus the
 [docs](https://github.com/mfussenegger/nvim-dap/blob/master/doc/dap.txt) for
 `nvim-dap` are pretty detailed. Instead, I want to focus on _how_ this all works
 together specifically when using `nvim-metals`. Most of this will be
@@ -134,16 +137,16 @@ does this actually trigger a run or debug of my code?". Behind the scenes what
 actually happens is that Metals will have communicated with your build server
 and gotten any main methods in your build target via a
 [`buildTarget/scalaMainClasses`](https://build-server-protocol.github.io/docs/extensions/scala.html#scala-main-classes-request)
-request and cached those results. Then when the LSP request comes to metals for
+request and cached those results. Then when the LSP request comes to Metals for
 the `textDocument/codeLens` Metals looks through the
 [SemanticDB](https://scalameta.org/docs/semanticdb/guide.html) for the current
 document and looks for any main methods. If it finds them, it compares them to
-the cached that were retrieved earlier, and then creates code lenses for them
-with special commands attached to them. 
+the cached ones that were retrieved earlier, and then creates code lenses for
+them with special commands attached to them. 
 
-Here are some illustrations of the above.
+Here are some illustrations of the above:
 
-_Example of the `buildTarget/scalaMainClasses` request and response to the build server_
+_Example of the `buildTarget/scalaMainClasses` request and response with the build server_
 
 ```json
 [Trace - 10:50:29 AM] Sending request 'buildTarget/scalaMainClasses - (7)'
@@ -184,7 +187,7 @@ Result: {
 }
 ```
 
-_Example of what the SemanticDB for our coded snippet looks like. Notice the
+_Example of what the SemanticDB for our code snippet looks like. Notice the
 first occurrence which is `scala/main#`. Once found we'd get the symbol for that
 occurrence and then check it against what was returned above._
 
@@ -277,7 +280,7 @@ differs a bit by client. Since we're focusing on `nvim-metals` and `nvim-dap`
 I'll outline a bit of what is happening behind the scenes to tie everything
 together.
 
-Either of the commands will end up calling this function:
+Both of the commands will end up calling this function:
 
 ```lua
 local function debug_start_command(no_debug)
@@ -301,21 +304,22 @@ debug adapter and if so how, or if it should connect to a running debugger and
 if so where. This configuration can be a table with these details or a function
 that takes a callback and a configuration. In the case of `nvim-metals` we use
 the latter with the callback, which will be explained further below. The second
-configuration that is relevant here is the debugee configuration which is the
+configuration that is relevant here is the debuggee configuration which is the
 configuration for your application you'll be debugging. So if you're familiar
 with VS Code think of this as your `launch.json`. `nvim-dap` can actually work
 using a `launch.json`, but we won't focus on that here.
 
 So in the above `debug_start_command` function the table being passed into
-`dap.run()` is your debugee configuration. The `type` is a reference to the
-adapter entry that matches this key, the `request` is either `attach` or
-`launch` indicating whether the debug-adapter should launch or attach to a
-debuggee, the `name` is a human readable name for the configuration (which we'll
-revisit), and the `noDebug` is whether or not debug mode should be enabled. If
-this is `true` breakpoints will be ignored. Finally, the `metals` key isn't part
-of the spec here and will actually be removed before being passed to `nvim-dap`.
-However we use it to be able to forward the arguments from the code lens to the
-adapter configuration.
+`dap.run()` is your partially your debuggee configuration. The `type` is a
+reference to the adapter entry that matches this key, the `request` is either
+`attach` or `launch` indicating whether the debug-adapter should launch or
+attach to a debuggee, the `name` is a human readable name for the configuration
+(which we'll revisit), and the `noDebug` is whether or not debug mode should be
+enabled. If this is `true` breakpoints will be ignored. Finally, the `metals`
+key isn't part of the spec here and will actually be removed before being passed
+to `nvim-dap` when it fully becomes the debuggee configuration. However we use
+it to be able to forward the arguments from the code lens to the adapter
+configuration.
 
 So where is the adapter configuration? `nvim-metals` fully handles the adapter
 configuration for you. The main reason for this is that before we can actually
@@ -371,21 +375,21 @@ end
 
 Let's walk through this. We first check the `config.name` and if it's
 `from_lens` we know that this whole process was started from triggering a code
-lens, so we grab everything in the metals key and set that to `arguments` that
-will actually be sent to metals along with the `metals.debug-adapter-start`
-command. Let's ignore the `else` branch if the name isn't `from_lens` since
-we're focusing on the code lens example here. The `execute_command` function
-will send the LSP command to Metals which will then over BSP tell the build
-server to start the debug server. Your debug server is (or if it's not it should
-be) using
+lens, so we grab everything in the `metals` key and set that to `arguments`
+which will actually be sent to metals along with the
+`metals.debug-adapter-start` command. Let's ignore the `else` branch if the name
+isn't `from_lens` since we're focusing on the code lens example here. The
+`execute_command` function will send the LSP command to Metals which will then
+over BSP tell the build server to start the debug server. Your debug server is
+(or if it's not it should be) using
 [scalacenter/scala-debug-adapter](https://github.com/scalacenter/scala-debug-adapter)
 to start and manage the debug server. Then the `res` that is returned via BSP
 will have the information we need, mainly the `host` and `port` of the server
 that has already been started. This is then forwarded over LSP back to
 `nvim-metals`. The `type` here is now set to `server` since there is already a
 debugger running that we just want to connect to. The `enrich_config` takes in
-the debugee configuration that we created before and strips the `metals` key out
-since it's no longer relevant for the actual run, and not part of DAP.
+the debuggee configuration that we created before and strips the `metals` key
+out since it's no longer relevant for the actual run, and not part of DAP.
 
 At this point is when DAP communication actually starts. However, there is a
 fair amount of stuff that has already happened. To recap all of this, here is a
@@ -476,7 +480,7 @@ before. One thing you may have noticed with the code lens is that it's
 fully handled by `nvim-metals` without really a great way to maybe set some
 arguments that you'd like to pass into your `run` or maybe some specific
 jvmOptions. The recommended way to do this with `nvim-metals` is to pre-define
-your debugee configuration. Let's say you wanted to trigger a run with a
+your debuggee configuration. Let's say you wanted to trigger a run with a
 specific argument and also a specific env file. You could defined a
 configuration like this:
 
@@ -526,7 +530,7 @@ from. Here is a diagram showing the changed order of things when you trigger a
 
 [![debug discover communication](/images/debug-discovery.svg)](/images/debug-discovery.svg){target="_blank"}
 
-## [I'm amazed this all works](#i'm-amazed-this-all-works)
+## [I'm amazed this all works](#im-amazed-this-all-works)
 
 Even without going into the technical details of how each part of this works,
 it's incredible that it even does with the amount of moving parts, different
