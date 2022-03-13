@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="308px" preserveAspectRatio="none" style="width:267px;height:308px;background:#FCF3D9;" version="1.1" viewBox="0 0 267 308" width="267px" zoomAndPan="magnify"><defs/><g><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="46" x2="46" y1="36.2969" y2="273.2266"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="207" x2="207" y1="36.2969" y2="273.2266"/><rect fill="#FCF3D9" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="82" x="5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="12" y="24.9951">nvim-dap</text><rect fill="#FCF3D9" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="82" x="5" y="272.2266"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="12" y="292.2217">nvim-dap</text><rect fill="#FCF3D9" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="108" x="153" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="94" x="160" y="24.9951">debug server</text><rect fill="#FCF3D9" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="108" x="153" y="272.2266"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="94" x="160" y="292.2217">debug server</text><polygon fill="#181818" points="195,63.4297,205,67.4297,195,71.4297,199,67.4297" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="46" x2="201" y1="67.4297" y2="67.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="51" x="53" y="62.3638">initialize</text><polygon fill="#181818" points="57,92.5625,47,96.5625,57,100.5625,53,96.5625" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="51" x2="206" y1="96.5625" y2="96.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="51" x="63" y="91.4966">initialize</text><polygon fill="#181818" points="195,121.6953,205,125.6953,195,129.6953,199,125.6953" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="46" x2="201" y1="125.6953" y2="125.6953"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="42" x="53" y="120.6294">launch</text><polygon fill="#181818" points="57,150.8281,47,154.8281,57,158.8281,53,154.8281" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="51" x2="206" y1="154.8281" y2="154.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="42" x="63" y="149.7622">launch</text><polygon fill="#181818" points="57,179.9609,47,183.9609,57,187.9609,53,183.9609" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="51" x2="206" y1="183.9609" y2="183.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="83" x="63" y="178.895">output event</text><line style="stroke:#181818;stroke-width:1.0;" x1="46" x2="88" y1="213.0938" y2="213.0938"/><line style="stroke:#181818;stroke-width:1.0;" x1="88" x2="88" y1="213.0938" y2="226.0938"/><line style="stroke:#181818;stroke-width:1.0;" x1="47" x2="88" y1="226.0938" y2="226.0938"/><polygon fill="#181818" points="57,222.0938,47,226.0938,57,230.0938,53,226.0938" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="147" x="53" y="208.0278">displays output to user</text><polygon fill="#181818" points="57,251.2266,47,255.2266,57,259.2266,53,255.2266" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="51" x2="206" y1="255.2266" y2="255.2266"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="63" y="250.1606">exit</text><!--MD5=[bbd9cd7ac37a3471fb3527f9dd515d3b]
+@startuml
+!$LIGHT = "#fcf3d9"
+
+<style>
+root {
+  backgroundColor $LIGHT
+}
+</style>
+
+"nvim-dap" -> "debug server" : initialize
+"debug server" -> "nvim-dap" : initialize
+"nvim-dap" -> "debug server" : launch
+"debug server" -> "nvim-dap" : launch
+"debug server" -> "nvim-dap" : output event
+"nvim-dap" -> "nvim-dap" : displays output to user
+"debug server" -> "nvim-dap" : exit
+@enduml
+
+@startuml
+
+<style>
+root {
+  backgroundColor #fcf3d9
+}
+</style>
+
+"nvim-dap" -> "debug server" : initialize
+"debug server" -> "nvim-dap" : initialize
+"nvim-dap" -> "debug server" : launch
+"debug server" -> "nvim-dap" : launch
+"debug server" -> "nvim-dap" : output event
+"nvim-dap" -> "nvim-dap" : displays output to user
+"debug server" -> "nvim-dap" : exit
+@enduml
+
+PlantUML version 1.2022.3beta2(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
