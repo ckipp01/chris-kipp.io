@@ -1,5 +1,5 @@
 ---
-title: The Debug Adapter Protocol and Scala How it all works together
+title: The Debug Adapter Protocol and Scala.
 date: 2022-03-13
 description: A description of how the Debug Adapter Protocol works with Metals and Scala.
 ---
