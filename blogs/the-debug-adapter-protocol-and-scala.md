@@ -6,8 +6,8 @@ description: A description of how the Debug Adapter Protocol works with Metals a
 
 # The Debug Adapter Protocol and Scala. How it all works together.
 
-In the last couple years in Scala you've seen a surge in usage of various
-tooling protocols. A growing number of developers are at least familiar with the
+In the last couple years in Scala we've seen a surge in usage of various tooling
+protocols. A growing number of developers are at least familiar with the
 Language Server Protocol (LSP), especially if you're a
 [Metals](https://scalameta.org/metals/) user or were an early user of Dotty when
 it had a built-in LSP server. You've also more than likely been exposed to the
