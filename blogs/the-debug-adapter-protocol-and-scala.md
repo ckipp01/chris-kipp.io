@@ -31,7 +31,7 @@ things like expressions evaluation or breakpoints actually work, but more of an
 overview of all the moving pieces to better understand what happens between all
 of your tools when you trigger a `run` or `debug`.
 
-## What is DAP
+## [What is DAP](#what-is-dap)
 
 If you're familiar with the goals of the LSP, then you're already familiar with
 some of the goals of DAP. Basically, don't re-implement all the debugger
@@ -74,7 +74,7 @@ re-implement it twice. The server side example is exactly what the
 [scala-debug-adapter](https://github.com/scalacenter/scala-debug-adapter) is
 for.
 
-## Two different types of clients
+## [Two different types of clients](#the-two-different-types-of-clients)
 
 I mentioned it up above, but also want to reiterate it here. Different language
 server clients may handle the DAP client part differently. Like in the case of
@@ -107,7 +107,7 @@ Neovim and a plugin like `nvim-dap`, the core client functionality should be
 largely the same. Moving forward all of examples will assume the second setup
 using `nvim-dap`, since that's what I'm most familiar with.
 
-## How does everything get set up
+## [How does everything get set up](#how-does-everything-get-set-up)
 
 I don't want this to necessarily be a "getting started with nvim-dap" guide, as
 there are already guides out there, plus the
@@ -394,7 +394,7 @@ diagram showing what we've all covered.
 ![all communication between nvim-metals, nvim-dap, and
 metals](/images/dap-setup.svg)
 
-## The actual DAP communication
+## [The actual DAP communication](#the-actual-dap-communication)
 
 So after all of the set up above happens you're ready to actual have some DAP
 communication. At this point in `nvim-metals` `nvim-dap` pretty much fully takes
@@ -468,7 +468,7 @@ You can see all sorts of examples of the communication that can take place if
 you look through the types of events in the [specification
 documentation](https://microsoft.github.io/debug-adapter-protocol/specification).
 
-## Without code lenses
+## [Without code lenses](#without-code-lenses)
 
 So let's revisit the function from up above that we gave to
 `dap.adapters.scala` and now take a look at the `else` branch that we ignored
@@ -524,9 +524,9 @@ select which you'd like if there are multiple mains or test suites to choose
 from. Here is a diagram showing the changed order of things when you trigger a
 `run` this way.
 
-![debug discover communication](/images/debug-discovery.svg)
+[![debug discover communication](/images/debug-discovery.svg)](/images/debug-discovery.svg){target="_blank"}
 
-## I'm amazed this all works
+## [I'm amazed this all works](#i'm-amazed-this-all-works)
 
 Even without going into the technical details of how each part of this works,
 it's incredible that it even does with the amount of moving parts, different
