@@ -36,7 +36,7 @@ So without further ado, here are my personal Dos and Don'ts
 - [Do stick to `lazy val`s everywhere](#do-stick-to-lazy-vals-everywhere)
 - [Don't ever hardcode constants](#dont-ever-hardcode-constants)
 - [Do stay away from crazy meta meta build stuff](#do-stay-away-from-crazy-meta-meta-build-stuff)
-- [Don't put stuff in `project/` unless it is a collection of something or is "standalone"](#dont-put-stuff-in-project-unless-its-standalone-or-a-collection)
+- [Don't put stuff in `project/` unless it is a collection of something or is "standalone"](#dont-put-stuff-in-project-unless-it-is-a-collection-of-something-or-is-standalone)
 - [Do have a conversation with your team about standards and consistency](#do-have-a-conversation-with-your-team-about-standards-and-consistency)
 - [Don't make your own way to do something if sbt already provides a way](#dont-make-your-own-way-to-do-something-if-sbt-already-provides-a-way)
 - [Do document it when you do weird shit](#do-document-it-when-you-do-weird-shit)
@@ -308,7 +308,7 @@ would also need to add the plugin in your `project/project/project/` dir. You
 get the idea. This goes to show that in reality there _are_ some use cases for
 this, but they are very few. If you can, avoid it.
 
-## [Don't put stuff in `project/` unless it is a collection of something or is "standalone"](#dont-put-stuff-in-project-unless-its-standalone-or-a-collection)
+## [Don't put stuff in `project/` unless it is a collection of something or is "standalone"](#dont-put-stuff-in-project-unless-it-is-a-collection-of-something-or-is-standalone)
 
 Another rule I like to follow is to not include things in `project/` unless it's
 something that is "standalone" or a collection. A couple examples of these.
