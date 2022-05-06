@@ -1,6 +1,6 @@
 ---
 title: Music of the Month - April 2022
-date: 2022-06-05
+date: 2022-05-06
 description: Music I enjoyed this past month
 ---
 
@@ -22,12 +22,11 @@ when visiting Paris in Saint-Chapelle, and the rendition I'm about to suggest is
 just incredible. Max Richter is such a gifted composer and beautiful human
 being. This past month was the ten year anniversary of his _Recomposed by Max
 Richter: Vivaldi - The Four Seasons_, which is my album of the month this month.
-Due to it being the anniversary he released some new videos of the performance
-which are fantastic. I'll include one down below as well as a full live
-performance.
-
 
 <iframe max-width="560" height="315" src="https://www.youtube-nocookie.com/embed/Ebm69gW9UlI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Due to it being the anniversary he released some new videos of the performance
+which are fantastic.
 
 <iframe max-width="560" height="315" src="https://www.youtube-nocookie.com/embed/6T0MFCX9SLI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
