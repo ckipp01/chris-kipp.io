@@ -26,7 +26,7 @@ created just by the two of them surprises me every time I listen.
 They did a filming of this in St Thomas's Church in London, and it equally as
 fantastic. Here is a video showing a few of the songs.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/P9urWc1yJ_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe max-width="560" height="315" src="https://www.youtube-nocookie.com/embed/P9urWc1yJ_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Song of the Month
 
