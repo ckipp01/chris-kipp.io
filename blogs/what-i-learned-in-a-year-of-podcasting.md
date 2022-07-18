@@ -173,11 +173,9 @@ will provide for you.
 
 Since I use Buzzsprout, distribution was also pretty easy. Most of them were
 just button clicks, but there were a couple more that involved going to their
-respective sites and registering, and sometimes submitting the feed manually.
-You can see a snapshot of where you can all listen to my podcast (minus a
-couple that don't integrate with Buzzsprout) below:
-
-![Places that host my podcast](/images/hosters.png)
+respective sites and registering, and sometimes submitting the feed manually. I
+have my podcast being circulated on around 20 different site mostly thanks to
+how easy the process was.
 
 I haven't mentioned it yet, but if you host your own site, you obviously need a
 domain name. Here is also the part you could talk some about branding, using a
