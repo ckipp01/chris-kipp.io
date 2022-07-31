@@ -1,6 +1,6 @@
 ---
 title: Music of the Month - July 2022
-date: 2022-06-31
+date: 2022-07-31
 description: Music I enjoyed this past month
 ---
 
