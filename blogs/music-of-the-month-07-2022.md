@@ -37,6 +37,6 @@ listening to over and over is Moya from the record _Slow Riot from New Zero
 Kanada_. Again, if you've never listened to them before, take a seat, make sure
 to listen to the whole thing, and enjoy.
 
-<iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=3803531554/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/track=1587484362/transparent=true/" seamless><a href="https://godspeedyoublackemperor.bandcamp.com/album/slow-riot-for-new-zero-kanada">Slow Riot for New Zero Kanada by Godspeed You! Black Emperor</a></iframe>
+<iframe style="border: 0; max-width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=3803531554/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/track=1587484362/transparent=true/" seamless><a href="https://godspeedyoublackemperor.bandcamp.com/album/slow-riot-for-new-zero-kanada">Slow Riot for New Zero Kanada by Godspeed You! Black Emperor</a></iframe>
 
 _See you next month_
