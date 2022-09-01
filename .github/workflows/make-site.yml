@@ -20,7 +20,7 @@ jobs:
           sudo dpkg -i pandoc-2.13-1-amd64.deb
 
       - name: setup scala-cli
-        uses: coursier/setup-action@v1.2.0
+        uses: coursier/setup-action@v1.2.1
         with:
           apps: scala-cli
 
