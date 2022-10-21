@@ -24,9 +24,9 @@ Some would say too many.
 - [Scala 3 reference docs](https://docs.scala-lang.org/scala3/reference/)
 - [Scala 3 nightly API docs](https://dotty.epfl.ch/api/index.html)
 - [Scala 3 nightly reference](https://dotty.epfl.ch/docs/reference/index.html)
-- [Scala 2.13 Library API docs](https://www.scala-lang.org/files/archive/api/2.13.x/)
-- [Scala 2.13 Compiler API docs](https://www.scala-lang.org/api/2.13.x/scala-compiler/scala/)
-- [Scala 2.13 Reflection API docs](https://www.scala-lang.org/api/2.13.x/scala-reflect/scala/reflect/)
+- [Scala 2.13 library API docs](https://www.scala-lang.org/files/archive/api/2.13.x/)
+- [Scala 2.13 compiler API docs](https://www.scala-lang.org/api/2.13.x/scala-compiler/scala/)
+- [Scala 2.13 reflection API docs](https://www.scala-lang.org/api/2.13.x/scala-reflect/scala/reflect/)
 - [Scala 2.13 language specification docs](https://scala-lang.org/files/archive/spec/2.13/)
 
 ## Repos
