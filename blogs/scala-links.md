@@ -6,7 +6,7 @@ description: A collection of links that lead you to the various Scala pages, doc
 
 # Scala Links
 
-The amount of times I need to look at this stuff up drives me mad. So here's a
+The amount of times I need to look this stuff up drives me mad. So here's a
 collection of Scala-related links to the various official pages, documentation
 sites, repos, etc. Useful if you need to periodically go to all these places
 like I do for contributing, reference, or desire for documentation. There a lot.
@@ -18,9 +18,9 @@ Some would say too many.
 - [scala-lang.org](https://scala-lang.org/)
 - [scala.epfl.ch (The Scala Center)](https://scala.epfl.ch/)
 
-## API / Development Docs
+## API / Reference Docs
 
-- [Scala 3 API docs]](https://scala-lang.org/api/3.x/)
+- [Scala 3 API docs](https://scala-lang.org/api/3.x/)
 - [Scala 3 reference docs](https://docs.scala-lang.org/scala3/reference/)
 - [Scala 3 nightly API docs](https://dotty.epfl.ch/api/index.html)
 - [Scala 3 nightly reference](https://dotty.epfl.ch/docs/reference/index.html)
