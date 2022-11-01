@@ -19,16 +19,14 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  *:focus {
-    outline: none
-  }
+
   /* MINIMAL RESET END*/
 
  :root {
    --dark-color: #000;
    --light-color: rgb(252, 243, 217);
  }
-  
+
   @import url('https://rsms.me/inter/inter.css');
   html {
     font-family: 'Inter Light', sans-serif;
@@ -39,6 +37,12 @@
     html {
       font-family: 'Inter var', sans-serif;
     }
+  }
+
+  *:focus {
+    outline: 0;
+    background: var(--dark-color);
+    color: var(--light-color);
   }
 
   .wrapper {
