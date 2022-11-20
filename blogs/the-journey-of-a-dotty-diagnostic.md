@@ -15,8 +15,7 @@ decided to do the same. This is meant to be a companion article for my talk,
 In this talk I dove into a few different areas exploring what actually makes up
 a diagnostic, how useful Scala diagnostics are, how a diagnostic actually gets
 from the compiler to your editor, and look at what work is being done to improve
-this. Much of this was a learning experience for me, so thanks for following
-along.
+this. Much of this was a learning experience for me, so come along for the ride.
 
 - [What actually makes up a diagnostic?][what-actually-makes-up-a-diagnostic]
 - [The diagnostic usefulness scale][the-diagnostic-usefulness-scale]
@@ -1075,7 +1074,9 @@ using the tooling chain we outlined above, and also an eagerness to see more
 structured and actionable diagnostics coming from the compiler. The entire
 ecosystem will benefit from this, from newcomers to experts alike. If you'd like
 to follow along with the ongoing work in this area, you can follow the [Progress
-Issue][progress-issue] about this in the Dotty repo. Thanks for following along!
+Issue][progress-issue] about this in the Dotty repo.
+
+Cheers, and thanks for following along.
 
 [https://github.com/scalameta/metals/pull/4239]: https://github.com/scalameta/metals/pull/4239
 [https://github.com/sbt/sbt/pull/6874]: https://github.com/sbt/sbt/pull/6874
