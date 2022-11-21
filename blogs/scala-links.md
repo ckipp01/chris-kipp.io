@@ -2,6 +2,7 @@
 title: Scala Links
 date: 2022-10-21
 description: A collection of links that lead you to the various Scala pages, documentations, repos, etc.
+updated: 2022-11-21
 ---
 
 # Scala Links
@@ -33,6 +34,7 @@ Some would say too many.
 
 - [lampepfl/dotty (Scala 3 development, issues, and community build)](https://github.com/lampepfl/dotty)
 - [lampepfl/scala3-reference-docs (Scala 3 language reference documentation sources)](https://github.com/lampepfl/scala3-reference-docs)
+- [lampepfl/dotty-feature-requests (Feature requests for scala 3)](https://github.com/lampepfl/dotty-feature-requests)
 - [scala/scala (Scala 2 development)](https://github.com/scala/scala)
 - [scala/scala-lang (Scala website sources)](https://github.com/scala/scala-lang)
 - [scala/docs.scala-lang (Scala documentation website sources)](https://github.com/scala/docs.scala-lang)
