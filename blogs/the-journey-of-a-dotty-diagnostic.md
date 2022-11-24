@@ -14,7 +14,7 @@ decided to do the same. This is meant to be a companion article for my talk,
 
 In this talk I dove into a few different areas exploring what actually makes up
 a diagnostic, how useful Scala diagnostics are, how a diagnostic actually gets
-from the compiler to your editor, and look at what work is being done to improve
+from the compiler to your editor, and looked at what work is being done to improve
 this. Much of this was a learning experience for me, so come along for the ride.
 
 - [What actually makes up a diagnostic?][what-actually-makes-up-a-diagnostic]
