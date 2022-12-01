@@ -882,7 +882,7 @@ glory:
 There are some other tools in the ecosystem that are starting to jump on board
 with this idea of diagnostics that can just include a fix. For example
 [scala-cli][scala-cli] has one that was somewhat recently added to metals by
-[@lwronski][lwronski] that given a `using lib` directive that is out of date,
+[`@lwronski`][lwronski] that given a `using lib` directive that is out of date,
 `scala-cli` will actually provide a diagnostic not only notifying the user that
 it's out of date, but offering a quick fix to update it to the latest:
 
