@@ -36,6 +36,7 @@ description: "
 </div>
 
 ## Other talks
+  - [Language Tailored Plugins: An Experience Like No Other](/slides/language-tailored-plugins)
   - [The Journey of a Dotty Diagnostic](/slides/dotty-diagnostics)
   - [What I've learned in open source, and why I think you should  contribute](/slides/slides-open-source)
   - [How Metals and LSP allow you to use your favorite editor for Scala](/slides/slides-lsp-metals)
