@@ -73,6 +73,10 @@ echo "Copied images"
 cp vercel.json site/vercel.json
 echo "Copied config file"
 
+mkdir -p site/.well-known
+cp webfinger site/.well-known/webfinger
+echo "Copied webfinger"
+
 cp chris-kipp-resume.pdf site/chris-kipp-resume.pdf
 echo "Copied resume"
 
