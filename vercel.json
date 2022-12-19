@@ -8,10 +8,6 @@
     {
       "source": "/blog/my-dos-and-don'ts-in-sbt-build-definitions",
       "destination": "/blog/my-dos-and-donts-in-sbt-build-definitions"
-    },
-    {
-      "source": "/.well-known/webfinger/{val?}",
-      "destination": "/.well-known/webfinger"
     }
   ],
   "headers": [
