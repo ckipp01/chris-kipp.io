@@ -242,7 +242,7 @@ Basically you could look at it in one of two ways:
 Well why [Zinc][zinc]? Where does Zinc come into the picture? If you look into
 the [Dotty codebase][dotty-codebase] you'll notice a directory, `sbt-bridge`:
 
-```
+```text
 ❯ tree -L 5 sbt-bridge/
 sbt-bridge
 ├── resources
@@ -458,7 +458,7 @@ class Greeting extends Foo
 We'll use [`scala-cli`][scala-cli] and run this snippet. You'll see the
 following output:
 
-```
+```text
 Compiling project (Scala 3.2.0, JVM)
 [error] ./demo.scala:5:7: class Greeting needs to be abstract, since:
 [error] it has 2 unimplemented members.
@@ -495,13 +495,13 @@ inline def second[A]: Int =
 This one is a bit more interesting and we'll show the error it produces in a few
 different ways. Firstly, in your editor you'll just see:
 
-```
+```text
 No given instance of type Foo[String] was found
 ```
 
 Same if you run it with `scala-cli`:
 
-```
+```text
 Compiling project (Scala 3.2.0, JVM)
 [error] ./demo.scala:5:3: No given instance of type Foo[String] was found
 [error]   second[String]
@@ -512,7 +512,7 @@ Compilation failed
 
 But now notice the difference if you run it with `scala` directly, sbt, or Mill:
 
-```
+```text
 -- Error: /Users/ckipp/Documents/scala-workspace/scripts/demo.scala:5:8 --------
  5 |  second[String]
    |  ^^^^^^^^^^^^^^
@@ -604,7 +604,7 @@ So there is a short error message which is pretty clear, but notice the `E0384`
 here. What is this? It's also at this point that I'm curious if you've ever
 noticed this in Scala. When running your code have you ever seen the following:
 
-```
+```text
 -- [E003] Syntax Deprecation Warning: examples/003_DeprecatedWithOperatorID.scala:4:18 
 4 |  type A = Double with Int
   |                  ^

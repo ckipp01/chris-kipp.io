@@ -1,3 +1,6 @@
-site/*
-.scala-build
-.vercel
+.scala-build/
+.vercel/
+.bsp/
+.metals/
+.bloop/
+*.html
