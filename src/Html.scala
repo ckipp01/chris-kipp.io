@@ -75,7 +75,7 @@ object Html:
             tags2.main(
               talks.map { talk =>
                 div(
-                  p(a(href := s"${talk.slides}", talk.title)),
+                  p(a(href := s"slides/${talk.slides}", talk.title)),
                   raw(talk.video.getOrElse(""))
                 )
               }
