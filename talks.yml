@@ -1,0 +1,43 @@
+- title: "Language Tailored Plugins: An Experience Like No Other"
+  slides: language-tailored-plugins
+  video: !!null
+
+- title: The Journey of a Dotty Diagnostic
+  slides: dotty-diagnostics
+  video: !!null
+
+- title: What I've learned in open source, and why I think you should contribute
+  slides: slides-open-source
+  video: !!null
+  
+- title: Code Coverage in Scala 3
+  slides: slides-code-coverage-in-scala3
+  video: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SIkNgemGmYQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+- title: What I've learned in open source, and why I think you should contribute
+  slides: slides-open-source
+  video: !!null
+
+- title: A Dive into how Metals works
+  slides: slides-a-dive-into-how-metals-works
+  video: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fpzN_vTBy18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+- title: A Metals Retrospective
+  slides: slides-a-metals-retrospective
+  video: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DRKx1a19c80" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+- title: Scala Development with Vim in 2020
+  slides: slides-vim-scala-2020
+  video: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/zuP5qrTUetw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+- title: A Zero to Hero Vim + Metals setup for Scala
+  slides: slides-zero-to-hero
+  video: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VUOw4thpb1I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+- title: How Metals and LSP allow you to use your favorite editor for Scala
+  slides: slides-lsp-metals
+  video: !!null
+
+- title: Demystifying serverless functions with Zeit Now
+  slides: slides-faas-zeit-now
+  video: !!null
