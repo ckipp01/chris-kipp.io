@@ -44,14 +44,13 @@ object Html:
             headerFrag(),
             tags2.main(
               Style.overview,
-              ul(
-                blogPosts.map { blogPost =>
-                  li(
-                    span(blogPost.date),
-                    a(href := s"./blog/${blogPost.urlify}")(blogPost.title)
-                  )
-                }
-              )
+              blogPosts.map { blogPost =>
+                div(
+                  Style.blogListing,
+                  a(href := s"./blog/${blogPost.urlify}")(blogPost.title),
+                  span(blogPost.date)
+                )
+              }
             ),
             footerFrag()
           )

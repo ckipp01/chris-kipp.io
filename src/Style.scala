@@ -162,6 +162,12 @@ object Style extends CascadingStyleSheet:
     a(fontSize := "1.25rem")
   )
 
+  val blogListing = cls(
+    display.flex,
+    flexDirection.column,
+    paddingBottom := 10
+  )
+
   val `youtube-container` = cls(
     position.relative,
     paddingBottom := "56.25%",
