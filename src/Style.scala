@@ -91,7 +91,7 @@ object Style extends CascadingStyleSheet:
         listStyleType.circle
       ),
       em(fontStyle.italic),
-      img(display.block, margin.auto, maxWidth := "100%"),
+      img(display.block, margin.auto, maxWidth := "100%", maxHeight := "500px"),
       iframe(margin.auto, display.block)
     ),
     footer(

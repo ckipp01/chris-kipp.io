@@ -9,6 +9,10 @@ import java.time.format.DateTimeFormatter
 
 import Text.all.*
 
+// To give credit where crediet is due, some of this is yanked from Anton.
+// https://github.com/indoorvivants/subatomic/blob/master/modules/builders/src/main/scala/rss/Rss.scala
+// Some of this is also stolen from my old old site
+// https://github.com/ckipp01/chronica/blob/live/scripts/rss.sc
 object Rss:
 
   def generate(posts: Seq[BlogPost]) =
