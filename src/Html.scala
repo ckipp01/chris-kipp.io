@@ -200,7 +200,7 @@ object Html:
       ),
       link(
         rel := "icon",
-        href := "images/favicon.ico",
+        href := "../images/favicon.ico",
         `type` := "image/x-icon"
       ),
       tags2.title(pageTitle),
