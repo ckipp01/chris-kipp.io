@@ -75,6 +75,8 @@ object Html:
             tags2.main(
               talks.map { talk =>
                 div(
+                  if (talk.video.nonEmpty) then Style.`youtube-container`
+                  else "",
                   p(a(href := s"slides/${talk.slides}", talk.title)),
                   raw(talk.video.getOrElse(""))
                 )

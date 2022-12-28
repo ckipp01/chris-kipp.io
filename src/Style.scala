@@ -85,7 +85,6 @@ object Style extends CascadingStyleSheet:
       maxWidth := 750,
       margin := "10px auto",
       padding := "10px",
-      flexGrow := 1,
       lineHeight := "1.75rem",
       li(
         marginLeft := 20,
@@ -166,26 +165,23 @@ object Style extends CascadingStyleSheet:
   val `youtube-container` = cls(
     position.relative,
     paddingBottom := "56.25%",
-    paddingTop := "30px",
     height := 0,
     overflow.hidden,
     iframe(
       position.absolute,
-      top := 0,
       left := 0,
+      right := 0,
       width := "100%",
       height := "100%"
     ),
     `object`(
       position.absolute,
-      top := 0,
       left := 0,
       width := "100%",
       height := "100%"
     ),
     embed(
       position.absolute,
-      top := 0,
       left := 0,
       width := "100%",
       height := "100%"

@@ -14,78 +14,77 @@ import dotty.tools.dotc.config.ScalaSettings
 object Main:
 
   @main def buildSite() =
-    println(os.pwd)
-  val blogPosts =
-    getBlogPosts(Constants.BLOG_DIR).sortBy(_.date).reverse
-  val blogPages =
-    blogPosts.map { post =>
-      scribe.info(s"putting together ${post.urlify}")
-      post.copy(content = Html.blogPage(post).render)
+    val blogPosts =
+      getBlogPosts(Constants.BLOG_DIR).sortBy(_.date).reverse
+    val blogPages =
+      blogPosts.map { post =>
+        scribe.info(s"putting together ${post.urlify}")
+        post.copy(content = Html.blogPage(post).render)
+      }
+
+    val talks = getTalks(Constants.TALKS_FILE)
+    scribe.info("putting together talks page")
+    val talksPage = Html.talksOverview(talks)
+
+    scribe.info("putting together overivew page")
+    val blogOverview = Html.blogOverview(blogPages)
+    scribe.info("putting together about page")
+    val aboutPage = Html.aboutPage()
+
+    scribe.info("""cleaning "site" dir""")
+    val keep = Seq(
+      ".well-known",
+      "vercel.json",
+      "slides",
+      "images",
+      "js",
+      "css",
+      "chris-kipp-resume.pdf"
+    )
+    val filesToClean =
+      os.walk(Constants.SITE_DIR, skip = path => keep.contains(path.last))
+    filesToClean.foreach(os.remove.all)
+
+    blogPages.foreach { post =>
+      scribe.info(s"writing blog/${post.urlify}.html")
+      os.write(
+        os.Path(Constants.SITE_DIR / "blog" / (post.urlify + ".html"), os.pwd),
+        post.content,
+        createFolders = true
+      )
     }
 
-  val talks = getTalks(Constants.TALKS_FILE)
-  scribe.info("putting together talks page")
-  val talksPage = Html.talksOverview(talks)
-
-  scribe.info("putting together overivew page")
-  val blogOverview = Html.blogOverview(blogPages)
-  scribe.info("putting together about page")
-  val aboutPage = Html.aboutPage()
-
-  scribe.info("""cleaning "site" dir""")
-  val keep = Seq(
-    ".well-known",
-    "vercel.json",
-    "slides",
-    "images",
-    "js",
-    "css",
-    "chris-kipp-resume.pdf"
-  )
-  val filesToClean =
-    os.walk(Constants.SITE_DIR, skip = path => keep.contains(path.last))
-  filesToClean.foreach(os.remove.all)
-
-  blogPages.foreach { post =>
-    scribe.info(s"writing blog/${post.urlify}.html")
+    scribe.info("writing index.html")
     os.write(
-      os.Path(Constants.SITE_DIR / "blog" / (post.urlify + ".html"), os.pwd),
-      post.content,
-      createFolders = true
+      os.Path(Constants.SITE_DIR / "index.html", os.pwd),
+      blogOverview.render
     )
-  }
 
-  scribe.info("writing index.html")
-  os.write(
-    os.Path(Constants.SITE_DIR / "index.html", os.pwd),
-    blogOverview.render
-  )
+    scribe.info("writing blog.html")
+    os.write(
+      os.Path(Constants.SITE_DIR / "blog.html", os.pwd),
+      blogOverview.render
+    )
 
-  scribe.info("writing blog.html")
-  os.write(
-    os.Path(Constants.SITE_DIR / "blog.html", os.pwd),
-    blogOverview.render
-  )
+    scribe.info("writing talks.html")
+    os.write(
+      os.Path(Constants.SITE_DIR / "talks.html", os.pwd),
+      talksPage.render
+    )
 
-  scribe.info("writing talks.html")
-  os.write(
-    os.Path(Constants.SITE_DIR / "talks.html", os.pwd),
-    talksPage.render
-  )
+    scribe.info("writing about.html")
+    os.write(
+      os.Path(Constants.SITE_DIR / "about.html", os.pwd),
+      aboutPage.render
+    )
 
-  scribe.info("writing about.html")
-  os.write(
-    os.Path(Constants.SITE_DIR / "about.html", os.pwd),
-    aboutPage.render
-  )
-
-  val allSettings = new ScalaSettings().allSettings
-  val htmlSettings = Html.scalacSettings(allSettings)
-  scribe.info("writing hideen scala3-scalac-options.txt")
-  os.write(
-    os.Path(Constants.SITE_DIR / "scala3-scalac-options.html", os.pwd),
-    htmlSettings.render
-  )
+    val allSettings = new ScalaSettings().allSettings
+    val htmlSettings = Html.scalacSettings(allSettings)
+    scribe.info("writing hideen scala3-scalac-options.txt")
+    os.write(
+      os.Path(Constants.SITE_DIR / "scala3-scalac-options.html", os.pwd),
+      htmlSettings.render
+    )
 
   private def getBlogPosts(path: os.Path) =
     scribe.info(s"Fetching blogs from ${path.baseName}")
