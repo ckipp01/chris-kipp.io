@@ -34,7 +34,6 @@ object Main:
 
   scribe.info("""cleaning "site" dir""")
   val keep = Seq(
-    ".vercel",
     ".well-known",
     "vercel.json",
     "slides",

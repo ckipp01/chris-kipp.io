@@ -16,7 +16,6 @@ object Style extends CascadingStyleSheet:
     minHeight := "100%",
     body(
       height := "100vh",
-      display.flex,
       background := cream
     ),
     header(
@@ -150,8 +149,6 @@ object Style extends CascadingStyleSheet:
 
   val wrapper = cls(
     minHeight := "100%",
-    display.flex,
-    flexDirection.column,
     margin.auto
   )
 
