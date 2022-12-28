@@ -16,7 +16,8 @@ final case class BlogPost(
     date: String,
     updated: Option[String],
     description: String,
-    content: String
+    content: String,
+    thumbnail: Option[String]
 ):
   val urlify =
     title.replace("-", "").replace(" ", "-").replace("--", "-").toLowerCase()
@@ -37,20 +38,21 @@ object BlogPost:
     val articleHtml = renderer.render(document)
 
     BlogPost(
-      metadata.getOrElse(
+      title = metadata.getOrElse(
         "title",
         throw new RuntimeException(s"Missing title in ${path}")
       ),
-      metadata.getOrElse(
+      date = metadata.getOrElse(
         "date",
         throw new RuntimeException(s"Missing date in ${path}")
       ),
-      metadata.get("updated"),
-      metadata.getOrElse(
+      updated = metadata.get("updated"),
+      description = metadata.getOrElse(
         "description",
         throw new RuntimeException(s"Missing description in ${path}")
       ),
-      articleHtml
+      content = articleHtml,
+      thumbnail = metadata.get("thumbnail")
     )
 
   private val extentsions: ju.Collection[Extension] =

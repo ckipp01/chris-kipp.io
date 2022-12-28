@@ -2,6 +2,7 @@
 title: My Top Albums of 2022
 date: 2022-12-28
 description: These are some of my favorite albums of 2022
+thumbnail: tana-talk-4.png
 ---
 
 # My Top albums of 2022

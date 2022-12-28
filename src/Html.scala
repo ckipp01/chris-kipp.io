@@ -12,7 +12,8 @@ object Html:
         Style.cascasdeRoot,
         headFrag(
           pageTitle = blogPost.title,
-          description = blogPost.description
+          description = blogPost.description,
+          thumbnail = blogPost.thumbnail
         ),
         body(
           div(
@@ -164,7 +165,8 @@ object Html:
 
   private def headFrag(
       pageTitle: String,
-      description: String
+      description: String,
+      thumbnail: Option[String] = None
   ) = {
     head(
       meta(charset := "utf-8"),
@@ -179,8 +181,7 @@ object Html:
       ),
       meta(
         name := "thumbnail",
-        // TODO do I want it to be this?
-        content := "../images/me.png"
+        content := s"../images/${thumbnail.getOrElse("me-cream.png")}"
       ),
       meta(
         name := "og:type",
@@ -192,7 +193,7 @@ object Html:
       ),
       meta(
         name := "og:image",
-        content := "../images/me.png"
+        content := s"../images/${thumbnail.getOrElse("me-cream.png")}"
       ),
       meta(
         name := "og:description",
