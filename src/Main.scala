@@ -21,6 +21,8 @@ object Main:
         scribe.info(s"putting together ${post.urlify}")
         post.copy(content = Html.blogPage(post).render)
       }
+    scribe.info("generating rss feed")
+    val blogRss = Rss.generate(blogPosts)
 
     val talks = getTalks(Constants.TALKS_FILE)
     scribe.info("putting together talks page")
@@ -85,6 +87,9 @@ object Main:
       os.Path(Constants.SITE_DIR / "scala3-scalac-options.html", os.pwd),
       htmlSettings.render
     )
+
+    scribe.info("writting rss feed")
+    os.write(os.Path(Constants.SITE_DIR / "rss.xml", os.pwd), blogRss.render)
 
   private def getBlogPosts(path: os.Path) =
     scribe.info(s"Fetching blogs from ${path.baseName}")

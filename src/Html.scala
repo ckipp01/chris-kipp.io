@@ -274,6 +274,15 @@ object Html:
           src := "../images/mastodon.svg",
           alt := "mastodon logo"
         )
+      ),
+      a(
+        href := "https://www.chris-kipp.io/rss.xml"
+      )(
+        img(
+          Style.scaleOnHover,
+          src := "../images/rss.svg",
+          alt := "rss icon"
+        )
       )
     )
   }
