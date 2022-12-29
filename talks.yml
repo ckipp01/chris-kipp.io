@@ -1,43 +1,69 @@
 - title: "Language Tailored Plugins: An Experience Like No Other"
   slides: language-tailored-plugins
   video: !!null
+  place:
+    name: NeovimConf 2022
+    link: https://www.neovimconf.live/
 
 - title: The Journey of a Dotty Diagnostic
   slides: dotty-diagnostics
   video: !!null
+  place:
+    name: ScalaIO 2022
+    link: https://scala.io/
 
 - title: What I've learned in open source, and why I think you should contribute
   slides: slides-open-source
   video: !!null
+  place:
+    name: Lunaconf 2022
+    link: https://lunatech.com/
   
 - title: Code Coverage in Scala 3
   slides: slides-code-coverage-in-scala3
-  video: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SIkNgemGmYQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-- title: What I've learned in open source, and why I think you should contribute
-  slides: slides-open-source
-  video: !!null
+  video: https://youtu.be/SIkNgemGmYQ
+  place:
+    name: ScalaCon 2021
+    link: https://www.scalacon.org/
 
 - title: A Dive into how Metals works
   slides: slides-a-dive-into-how-metals-works
-  video: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fpzN_vTBy18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  video: https://youtu.be/fpzN_vTBy18
+  place:
+    name: Streamed on Twitch 2021
+    link: https://www.twitch.tv/ckipp
 
 - title: A Metals Retrospective
   slides: slides-a-metals-retrospective
-  video: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DRKx1a19c80" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  video: https://youtu.be/DRKx1a19c80
+  place:
+    name: SF Scala 2021
+    link: https://www.meetup.com/SF-Scala/
 
 - title: Scala Development with Vim in 2020
   slides: slides-vim-scala-2020
-  video: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/zuP5qrTUetw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  video: https://www.youtube.com/watch?v=zuP5qrTUetw
+  place:
+    name: ScalaUA 2020
+    link: https://twitter.com/ScalaUA_Conf
 
 - title: A Zero to Hero Vim + Metals setup for Scala
   slides: slides-zero-to-hero
-  video: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VUOw4thpb1I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  video: https://www.youtube.com/watch?v=VUOw4thpb1I
+  place:
+    name: Northeast Scala Symposium 2020
+    link: https://nescala.io/
 
-- title: How Metals and LSP allow you to use your favorite editor for Scala
+- title: How Metals and LSP allow you to use your favorite editor for Scala 2020
   slides: slides-lsp-metals
   video: !!null
+  place:
+    name: Lunaconf
+    link: https://lunatech.com/
 
 - title: Demystifying serverless functions with Zeit Now
   slides: slides-faas-zeit-now
   video: !!null
+  place:
+    name: AmsterdamJS 2019
+    link: https://www.meetup.com/AmsterdamJS/

@@ -48,7 +48,12 @@ object Html:
               blogPosts.map { blogPost =>
                 div(
                   Style.blogListing,
-                  a(href := s"./blog/${blogPost.urlify}")(blogPost.title),
+                  a(
+                    borderBottomStyle.none,
+                    href := s"./blog/${blogPost.urlify}"
+                  )(
+                    blogPost.title
+                  ),
                   span(blogPost.date)
                 )
               }
@@ -73,12 +78,23 @@ object Html:
             Style.wrapper,
             headerFrag(),
             tags2.main(
+              Style.talkListing,
               talks.map { talk =>
                 div(
-                  if (talk.video.nonEmpty) then Style.`youtube-container`
-                  else "",
-                  p(a(href := s"slides/${talk.slides}", talk.title)),
-                  raw(talk.video.getOrElse(""))
+                  p(talk.title),
+                  span(
+                    a(href := talk.place.link, talk.place.name),
+                    " | ",
+                    a(href := s"slides/${talk.slides}", "slides"),
+                    talk.video
+                      .map[scalatags.Text.Modifier] { vid =>
+                        Seq(
+                          stringFrag(" | "),
+                          a(href := vid, "video")
+                        )
+                      }
+                      .getOrElse(Seq.empty[scalatags.Text.Modifier])
+                  )
                 )
               }
             ),

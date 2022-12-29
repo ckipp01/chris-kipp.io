@@ -31,7 +31,8 @@ object Style extends CascadingStyleSheet:
         flexWrap.wrap,
         a(
           fontSize := "1.75rem",
-          margin := 10
+          margin := 5,
+          padding := 5
         )
       )
     ),
@@ -64,9 +65,6 @@ object Style extends CascadingStyleSheet:
     th(fontWeight.bold, margin := 5, padding := 5),
     td(margin := 5, padding := 5),
     a(
-      borderBottomWidth := "2px",
-      borderBottomStyle.dashed,
-      borderColor := black,
       &.hover(
         background := black,
         color := cream
@@ -86,6 +84,11 @@ object Style extends CascadingStyleSheet:
       margin := "10px auto",
       padding := "10px",
       lineHeight := "1.75rem",
+      a(
+        borderBottomWidth := "2px",
+        borderBottomStyle.dashed,
+        borderColor := black
+      ),
       li(
         marginLeft := 20,
         listStyleType.circle
@@ -113,10 +116,6 @@ object Style extends CascadingStyleSheet:
         maxHeight := 20,
         margin := "5px 0"
       )
-    ),
-    li(
-      marginLeft := "20px",
-      listStyleType.circle
     ),
     pre(margin := "15px 0", overflow.auto),
     code(
@@ -157,41 +156,22 @@ object Style extends CascadingStyleSheet:
   )
 
   val overview = cls(
-    li(margin := 10),
-    span(paddingRight := 10, fontStyle.italic, opacity := 0.5),
-    a(fontSize := "1.25rem")
+    span(fontStyle.italic, opacity := 0.5),
+    a(fontSize := "1.25rem", padding := 5),
+    p(fontSize := "1.25rem", marginBottom := 0)
+  )
+
+  val talkListing = cls(
+    div(marginBottom := 20),
+    span(fontStyle.italic, opacity := 0.5),
+    a(padding := 5),
+    p(fontSize := "1.25rem", marginBottom := 0)
   )
 
   val blogListing = cls(
     display.flex,
     flexDirection.column,
     paddingBottom := 10
-  )
-
-  val `youtube-container` = cls(
-    position.relative,
-    paddingBottom := "56.25%",
-    height := 0,
-    overflow.hidden,
-    iframe(
-      position.absolute,
-      left := 0,
-      right := 0,
-      width := "100%",
-      height := "100%"
-    ),
-    `object`(
-      position.absolute,
-      left := 0,
-      width := "100%",
-      height := "100%"
-    ),
-    embed(
-      position.absolute,
-      left := 0,
-      width := "100%",
-      height := "100%"
-    )
   )
 
   // There isn't a good way to do things like @import or * with scalatags, so
@@ -222,5 +202,5 @@ object Style extends CascadingStyleSheet:
                |  }
                |
                |*:focus {
-               |  border: 1px dotted black;
+               |  background: ${gray};
                |}""".stripMargin
