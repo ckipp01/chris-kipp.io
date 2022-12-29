@@ -106,29 +106,33 @@ object Html:
               img(src := "../images/me.png"),
               p(
                 """Hi, I'm Chris. You've stumbled upon my blog and website. It's a simple place
-                  where I write some things and hold links to other places that I'd like to
-                  remember. You'll find me writing or working on things related to developer
-                  tooling, Scala, or Neovim. Most of the time all of those together. I have a
-                  varied background, including growing up on a farm in the United States and
-                  having a M.A. in International Relations. I first got started in tech as I was
-                  finishing grad school, and I haven't really looked back since. I'm currently
-                  located in the Netherlands and working at """,
+                  |where I write some things and hold links to other places that I'd like to
+                  |remember. You'll find me writing or working on things related to developer
+                  |tooling, primarily with Neovim and Scala, talking about music, or sharing stuff
+                  |I find interesting. I have a varied background, including growing up on a farm
+                  |in the United States and having a M.A. in International Relations. I first got
+                  |started in tech as I was finishing grad school, and I haven't really looked back since.
+                  |I'm currently located in the Netherlands with my wife and working at """.stripMargin,
                 a(href := "https://lunatech.nl/", "Lunatech"),
-                "."
+                ", where they are kind enough to lend me out to the ",
+                a(href := "https://scala.epfl.ch/", "Scala Center"),
+                " where I work full-time on Scala tooling."
               ),
               p(
                 "You can take a look at the projects I work on ",
                 a(href := "https://github.com/ckipp01", "here on GitHub"),
                 " find me on ",
+                a(href := "https://hachyderm.io/@ckipp", "Mastodon"),
+                ", ",
                 a(href := "https://twitter.com/ckipp01", "Twitter"),
-                " or find me streaming on ",
+                ", or streaming on ",
                 a(href := "https://www.twitch.tv/ckipp", "Twitch"),
                 "."
               ),
               p(
                 """Over the years this site has taken many shapes ranging from a custom JS
-                  framework powered site, one that fully tracked all my free time, to ultimately
-                  the minimal shape you see it in now. It will continue to change."""
+                  |framework powered site, one that fully tracked all my free time, to ultimately
+                  |the minimal shape you see it in now. It will continue to change and grow as I do.""".stripMargin
               ),
               p("Thanks for stopping by."),
               p("Chris")
