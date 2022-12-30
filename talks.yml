@@ -58,7 +58,7 @@
   slides: slides-lsp-metals
   video: !!null
   place:
-    name: Lunaconf
+    name: Lunaconf 2020
     link: https://lunatech.com/
 
 - title: Demystifying serverless functions with Zeit Now
