@@ -1,6 +1,6 @@
 - title: "Language Tailored Plugins: An Experience Like No Other"
   slides: language-tailored-plugins
-  video: !!null
+  video: https://youtu.be/dLwvmLQsxrw
   place:
     name: NeovimConf 2022
     link: https://www.neovimconf.live/

@@ -83,14 +83,30 @@ object Html:
                 div(
                   p(talk.title),
                   span(
-                    a(href := talk.place.link, talk.place.name),
+                    a(
+                      borderBottomStyle.none,
+                      href := talk.place.link,
+                      target := "_blank",
+                      talk.place.name
+                    ),
                     " | ",
-                    a(href := s"slides/${talk.slides}", "slides"),
+                    a(
+                      borderBottomStyle.none,
+                      href := s"slides/${talk.slides}",
+                      target := "_blank",
+                      "slides"
+                    ),
                     talk.video
                       .map[scalatags.Text.Modifier] { vid =>
                         Seq(
                           stringFrag(" | "),
-                          a(href := vid, "video")
+                          a(
+                            borderBottomStyle.none,
+                            rel := "me noopener noreferrer",
+                            target := "_blank",
+                            href := vid,
+                            "video"
+                          )
                         )
                       }
                       .getOrElse(Seq.empty[scalatags.Text.Modifier])
