@@ -16,7 +16,7 @@ object Html:
           thumbnail = blogPost.thumbnail
         ),
         body(
-          headerFrag(),
+          headerFrag("blog"),
           tags2.main(
             // TODO maybe the date here
             raw(blogPost.content)
@@ -37,7 +37,7 @@ object Html:
             "Collection of blogs posts by Chris Kipp over the years."
         ),
         body(
-          headerFrag(),
+          headerFrag("blog"),
           tags2.main(
             Style.overview,
             blogPosts.map { blogPost =>
@@ -68,7 +68,7 @@ object Html:
           description = "Collection of talks by Chris Kipp over the years."
         ),
         body(
-          headerFrag(),
+          headerFrag("talks"),
           tags2.main(
             Style.talkListing,
             talks.map { talk =>
@@ -122,7 +122,7 @@ object Html:
             "A litte bit about me, Chris Kipp, the author of this blog."
         ),
         body(
-          headerFrag(),
+          headerFrag("about"),
           tags2.main(
             img(src := "../images/me.png"),
             p(
@@ -173,7 +173,7 @@ object Html:
           description = "All the Scala 3 options"
         ),
         body(
-          headerFrag(),
+          headerFrag("hidden"),
           tags2.main(
             settings.map { setting =>
               div(h3(setting.name), p(setting.description))
@@ -244,12 +244,16 @@ object Html:
     )
   }
 
-  private def headerFrag() = {
+  final case class NavItem(link: String, name: String, active: String):
+    def html() =
+      a(if active == name then Style.activePage else "", href := link, name)
+
+  private def headerFrag(active: String) = {
     header(
       tags2.nav(
-        a(href := "/about", "about"),
-        a(href := "/blog", "blog"),
-        a(href := "/talks", "talks"),
+        NavItem("/about", "about", active).html(),
+        NavItem("/blog", "blog", active).html(),
+        NavItem("/talks", "talks", active).html(),
         a(href := "https://www.tooling-talks.com", "tooling talks podcast")
       )
     )

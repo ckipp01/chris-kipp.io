@@ -23,7 +23,6 @@ object Style extends CascadingStyleSheet:
       flexDirection.column,
       justifyContent.center,
       alignItems.center,
-      flexShrink := 0,
       marginTop := "5px",
       Selector("nav")(
         display.flex,
@@ -67,7 +66,8 @@ object Style extends CascadingStyleSheet:
     a(
       &.hover(
         background := black,
-        color := cream
+        color := cream,
+        borderRadius := 2
       )
     ),
     i(fontStyle.italic),
@@ -87,7 +87,8 @@ object Style extends CascadingStyleSheet:
       a(
         borderBottomWidth := "2px",
         borderBottomStyle.dashed,
-        borderColor := black
+        borderColor := black,
+        padding := 2
       ),
       li(
         marginLeft := 20,
@@ -101,10 +102,8 @@ object Style extends CascadingStyleSheet:
       display.flex,
       justifyContent.center,
       margin := "5px 0",
-      flexShrink := 0,
       a(
         width := 40,
-        borderBottomStyle.none,
         &.hover(
           background := "inherit",
           color := "inherit",
@@ -126,6 +125,12 @@ object Style extends CascadingStyleSheet:
       fontFamily := "monospace",
       lineHeight := "1rem"
     )
+  )
+
+  val activePage = cls(
+    background := black,
+    color := cream,
+    borderRadius := 2
   )
 
   val iconContainer = cls(
