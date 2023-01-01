@@ -18,7 +18,7 @@ Bloop at all, but I've been lucky enough to work closely with those that are and
 have hopefully been able to pick up enough to help spread the word, especially
 in relation to [Metals](https://scalameta.org/metals/).
 
-## [What is Bloop](#what-is-bloop)
+## What is Bloop
 
 First things first, taken in part from the [Bloop
 website](https://scalacenter.github.io/bloop/docs/what-is-bloop): Bloop is a
@@ -46,7 +46,7 @@ The [_What is Bloop_](https://scalacenter.github.io/bloop/docs/what-is-bloop)
 portion of the website does a great job at outlining in more detail what I have
 listed above, along with some of the design goals of the project.
 
-## [Metals and Bloop](#metals-and-bloop)
+## Metals and Bloop
 
 If you've seen any of the presentations done about Metals, then you've probably
 seen a graphic similar to what I have below. However, the one below is a bit
@@ -89,7 +89,7 @@ Protocol](https://microsoft.github.io/debug-adapter-protocol/)) support that
 Bloop offers. You can find the entire [debugging reference
 here](https://scalacenter.github.io/bloop/docs/debugging-reference).
 
-## [Bloop CLI](#bloop-cli)
+## Bloop CLI
 
 Especially for Metals users, I highly recommend using Bloop CLI when you have a
 simple workflow of compiling, testing, compiling, etc. Up above I mentioned
@@ -106,7 +106,7 @@ Many of the things that you would imagine using like, targeting a specific test
 suite, watching a test suite, passing in arguments, or testing upstream projects
 all exist. However, there are a few differences and nuances worth pointing out. 
 
-### [Pointers](#pointers)
+### Pointers
 
 - You can't run `bloop compile` or `bloop test` without specifying a project.
     You need to use command substitution like below if you want to compile or
@@ -163,7 +163,7 @@ Welcome to the Ammonite Repl 2.1.4-2-ef9b0a0 (Scala 2.12.11 Java 1.8.0_242)
 
 ![metals graphviz diagram](/images/metals-diagram.svg)
 
-## [Takeaways and Things to keep in mind](#takeaways-and-things-to-keep-in-mind)
+## Takeaways and Things to keep in mind
 
 - Whenever you run, test, or debug in Metals, it's all being powered by Bloop.
 - Compilations are cached. Consider using the Bloop CLI rather than your build

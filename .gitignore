@@ -5,3 +5,4 @@
 .bloop/
 *.html
 scala-cli
+rss.xml

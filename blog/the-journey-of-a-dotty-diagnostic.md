@@ -29,7 +29,7 @@ this. Much of this was a learning experience for me, so come along for the ride.
 - [What's keeping this from happening?][whats-keeping-this-from-happening]
 - [Conclusion][conclusion]
 
-## [What actually makes up a diagnostic?][what-actually-makes-up-a-diagnostic]
+## What actually makes up a diagnostic?
 
 Normally this would be the place I break down the reason for even caring about
 diagnostics, but before I give you the actual use-case that spurred me to go
@@ -88,7 +88,7 @@ appears on.
 These three things more or less make up the core parts of a diagnostic. Without
 one of these the diagnostic becomes quite a bit less useful.
 
-## [The diagnostic usefulness scale](#the-diagnostic-usefulness-scale)
+## The diagnostic usefulness scale
 
 So now that we know the core parts of a diagnostic, let's create what I call
 _The Diagnostic Usefulness Scale_.
@@ -112,7 +112,7 @@ questions based off this.
 2. What else is on this scale?
 3. Where are other languages on this scale?
 
-## [How does the diagnostic actually get to your editor?](#how-does-the-diagnostic-actually-get-to-your-editor)
+## How does the diagnostic actually get to your editor?
 
 So before we can really dive into where Scala exactly is on this scale we need
 to take a deeper look at both the actual structure of a diagnostic inside of
@@ -435,7 +435,7 @@ client, which in our case is your editor. So as you can see, the journey from
 the compiler actually reporting the error goes through quite a few places and
 representations before it actually hits your eyes.
 
-## [Where is Scala on the Scale](#where-is-scala-on-the-scale)
+## Where is Scala on the Scale
 
 Now that we've seen the structure of the actual Scala diagnostic coming from the
 compiler we can sort of gauge where Scala is at on our [diagnostic usefulness
@@ -543,7 +543,7 @@ our Diagnostic Usefulness Scale:
 
 ![Scala's new position on the diagnostic usefulness scale](/images/diagnostic-scale-scala-location-updated.png)
 
-## [What else is on the scale?](#what-else-is-on-the-scale)
+## What else is on the scale?
 
 At this point you're probably starting to wonder what else is actually on this
 scale? What other languages have more to offer than what we're seeing. In order
@@ -651,7 +651,7 @@ it much further to the right than Scala.
 
 ![Rust and Scala on the usefulness scale](/images/rust-and-scala-on-scale.png)
 
-## [It's all about Structure](#its-all-about-structure)
+## It's all about Structure
 
 At this point hopefully you're wondering why this all is. Why doesn't Scala 3
 have some of these niceties. The answer to this is sort of twofold. Firstly
@@ -752,7 +752,7 @@ Finally take note that in the `Diagnostic` there is another new field,
 `children`. This `children` shows that a single `Diagnostic` can also hold other
 diagnostics. Another thing that is currently unrepresentable in Dotty.
 
-## [Why did you even look into this?](#why-did-you-even-look-into-this)
+## Why did you even look into this?
 
 At this point you may be wondering _why_? What got you focused on this? So join
 me in going back a while and looking at a real-world tooling use-case that
@@ -810,7 +810,7 @@ it'd be if we had access to a unique ID to know what type of diagnostic we were
 dealing with. We could rid tooling of these types of hacks. Now imagine if they
 even came with a suggested fix! Crazy talk.
 
-## [What work is being done to improve this?](#what-work-is-being-done-to-improve-this)
+## What work is being done to improve this?
 
 The good news is that there has been some progress made in this area. Up
 [above][how-does-the-diagnostic-actually-get-to-your-editor] we saw the
@@ -925,7 +925,7 @@ like, here you go:
   ],
 ```
 
-## [What we could have](#what-we-could-have)
+## What we could have
 
 Let's revisit one of the example we had [up above][where-is-scala-on-the-scale].
 
@@ -1004,7 +1004,7 @@ is an example showing that:
 
 ![nested diagnostic navigation](/images/nested-diagnostic.gif)
 
-## [What's keeping this from happening?](#whats-keeping-this-from-happening)
+## What's keeping this from happening?
 
 I slightly touched on this up above in the [It's All About
 Structure][its-all-about-structure] section, but I believe the major things
@@ -1066,7 +1066,7 @@ and also people like [@smarter][smarter] that seem behind this idea and are
 willing to help. This is incredibly important as without support from the actual
 compiler team, there's no way this will get into the compiler.
 
-## [Conclusion](#conclusion)
+## Conclusion
 
 If you made it this far, bravo! I'm hoping that you now have a bit more clarity
 on what makes up a diagnostic, how that diagnostic gets to your editor when

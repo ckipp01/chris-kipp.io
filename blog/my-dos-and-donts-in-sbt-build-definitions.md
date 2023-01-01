@@ -43,7 +43,7 @@ So without further ado, here are my personal Dos and Don'ts
 - [Don't add stuff to your build definition you don't understand](#dont-add-stuff-to-your-build-definition-you-dont-understand)
 
 
-## [Don't make separate `build.sbt` files for your different modules](#dont-make-separate-build.sbt-files-for-your-different-modules)
+## Don't make separate `build.sbt` files for your different modules
 
 Like everything, there seems to be trends in build definitions. One trend I saw
 for a while (and you may still use it) is to keep a separate build file for
@@ -86,7 +86,7 @@ docs](https://www.scala-sbt.org/1.x/docs/Multi-Project.html)_
 > build.sbt file in order to keep all build definition under a single file.
 > However, it’s up to you.
 
-## [Do stay away from bare settings](#do-stay-away-from-bare-settings)
+## Do stay away from bare settings
 
 My beef with bare settings can be illustrated with a very minimal build
 definition. Let's say we start a new project with an extremely minimal setup:
@@ -155,7 +155,7 @@ time spent explaining to your team why will be time better spent than a new
 teammate banging their head against the wall when they are bit by it later on if
 you don't and you use bare settings.
 
-## [Don't let your settings leak into modules they don't need to be in](#dont-let-your-settings-leak-into-modules-they-dont-need-to-be-in)
+## Don't let your settings leak into modules they don't need to be in
 
 A common approach you'll see in a lot of builds is making use of common
 settings. You'll often see something like the following:
@@ -191,7 +191,7 @@ share every place that is using them. Again, this seems obvious in such a
 minimal example, but add hundreds of lines of sbt code to this and you'll
 quickly see the problem.
 
-## [Do regularly go over your entire build definition](#do-regularly-go-over-your-entire-build-definition)
+## Do regularly go over your entire build definition
 
 This actually relates to the above point about being careful with your common
 settings. I've been amazed at the amount of times I've been looking through a
@@ -211,7 +211,7 @@ settings you copied off Stack Overflow to overcome some issue still need to be
 there. This helps keep those build definitions nice and tidy and avoids the "Is
 this still relevant" question I so often ask when looking at build files.
 
-## [Don't shade things unless you absolutely have to](#dont-shade-things-unless-you-absolutely-have-to)
+## Don't shade things unless you absolutely have to
 
 I hesitated to put this in here since it's maybe more specific to just
 dependency management, but I thought it helped reinforce the idea of keeping
@@ -229,7 +229,7 @@ My default rule is to avoid shading unless you absolutely have to do it and the
 benefit outweighs any complexity and confusion you may be adding to your build
 definition.
 
-## [Do stick to `lazy val`s everywhere](#do-stick-to-lazy-vals-everywhere)
+## Do stick to `lazy val`s everywhere
 
 This one may seem obvious to some, but it's also a commonly asked question. The
 most simple answer is that to avoid having to define everything before you use
@@ -272,7 +272,7 @@ lazy val V = new {
 }
 ```
 
-## [Don't ever hardcode constants](#dont-ever-hardcode-constants)
+## Don't ever hardcode constants
 
 This is actually a best practice taken right [from the
 docs](https://www.scala-sbt.org/1.x/docs/Best-Practices.html#Don%E2%80%99t+hard+code).
@@ -287,7 +287,7 @@ Since it's in the docs I'll directly quote from there and use the same example.
 myDirectory := target.value / "sub-directory"
 ```
 
-## [Do stay away from crazy meta meta build stuff](#do-stay-away-from-crazy-meta-meta-build-stuff)
+## Do stay away from crazy meta meta build stuff
 
 The amount of projects that actually need this is incredibly small, so maybe
 you'll never see this. However, I've come across projects with
@@ -308,7 +308,7 @@ would also need to add the plugin in your `project/project/project/` dir. You
 get the idea. This goes to show that in reality there _are_ some use cases for
 this, but they are very few. If you can, avoid it.
 
-## [Don't put stuff in `project/` unless it is a collection of something or is "standalone"](#dont-put-stuff-in-project-unless-it-is-a-collection-of-something-or-is-standalone)
+## Don't put stuff in `project/` unless it is a collection of something or is "standalone"
 
 Another rule I like to follow is to not include things in `project/` unless it's
 something that is "standalone" or a collection. A couple examples of these.
@@ -338,7 +338,7 @@ I dislike when projects have a bunch of `project/*.scala` files with complex
 logic that conditionally set keys making it very difficult to understand where
 something is being set.
 
-## [Do have a conversation with your team about standards and consistency](#do-have-a-conversation-with-your-team-about-standards-and-consistency)
+## Do have a conversation with your team about standards and consistency
 
 This might be the most important one on the list. Most of the time you don't
 work in isolation meaning that others will be touching your build definition.
@@ -352,7 +352,7 @@ different from one another, build definitions that have mixed ways of doing
 things, and ultimately creating technical debt the moment you add something to
 your build.
 
-## [Don't make your own way to do something if sbt already provides a way](#dont-make-your-own-way-to-do-something-if-sbt-already-provides-a-way)
+## Don't make your own way to do something if sbt already provides a way
 
 It might be tempting to try and come up with your own solutions when you don't
 like the "sbt" way of doing things. For the sake of an illustration let's
@@ -379,7 +379,7 @@ understand the intricacies of your Frankenstein build definition.
 
 Are there exceptions to this rule? Probably.
 
-## [Do document it when you do weird shit](#do-document-it-when-you-do-weird-shit)
+## Do document it when you do weird shit
 
 Picture this, you've been struggling all week on getting something to work. You
 feel like you've read the entire sbt docs site, all the sbt code you could
@@ -391,7 +391,7 @@ it didn't work, why you chose to do whatever you did, and over explain it. I've
 seen projects do wild stuff, and that undocumented wild stuff was enough to make
 them not even attempt to work on the project, even if it desperately needs it.
 
-## [Don't add stuff to your build definition you don't understand](#dont-add-stuff-to-your-build-definition-you-dont-understand)
+## Don't add stuff to your build definition you don't understand
 
 At times it's tempting to copy some code into your build definition, confirm it
 works, and then call it a day. I encourage you not to do this. Mainly because
@@ -402,7 +402,7 @@ questions of all levels. I've asked a lot of sbt questions in the
 [sbt/sbt](https://gitter.im/sbt/sbt) gitter chat, and they almost always got
 answered.
 
-## [Conclusion](#conclusion)
+## Conclusion
 
 After reading this you may totally disagree with some of these rules, and that's
 absolutely fine. Think about them, discuss them with your team, and be

@@ -49,7 +49,7 @@ across a few useful sources that I'll reference since they helped me:
     Martres](https://www.youtube.com/watch?v=R77XYOtuomE), where Guillaume does
     a great job at explaining how IDEs can interact with Dotty.
 
-## [What is the presentation compiler](#what-is-the-presentation-compiler)
+## What is the presentation compiler
 
 The above mentioned post by the Scala IDE teams defines the presentation
 compiler as follows:
@@ -86,7 +86,7 @@ account for this. For example that's why in the Metals
 module, which is a module to abstract over compiler access, you'll see that
 Scala 3 has a completely different implementation.
 
-## [What uses the presentation compiler](#what-uses-the-presentation-compiler)
+## What uses the presentation compiler
 
 If you haven't already gotten this from looking at where these articles are
 coming from, you'll notice that _many_ of the IDE-like tools or tools that
@@ -124,7 +124,7 @@ feature that was just added to Metals in
 [0.10.5](https://scalameta.org/metals/blog/2021/07/14/tungsten#add-support-for-textdocumentselectionrange)
 down below.
 
-## [A minimal example of using the presentation compiler](#a-minimal-example-of-using-the-presentation-compiler)
+## A minimal example of using the presentation compiler
 
 One thing I've found in the past is that there isn't a lot of standalone
 examples out there of using the presentation compiler. It's not that surprising,
@@ -390,7 +390,7 @@ have the entire source file covered.
     println("Hello world!")"""
 ```
 
-## [Conclusion](#conclusion)
+## Conclusion
 
 Hopefully this helps give a somewhat clear picture of a real-world use case of
 the presentation compiler. If you curious about more complex examples of how
@@ -400,7 +400,7 @@ to dig through. As always, if you're interested in getting involved in Scala
 tooling but are unsure where to start, don't hesitate to reach out. Thanks for
 stopping by.
 
-### [Some code to dig through](#some-code-to-dig-through)
+### Some code to dig through
 
 - [`SelectionRanges.scala`](https://github.com/ckipp01/presentation-compiler-examples/blob/main/scala-3-presentation-compiler-examples/src/SelectionRanges.scala)
     The runnable example code shown above. There is also a Scala 2 example in

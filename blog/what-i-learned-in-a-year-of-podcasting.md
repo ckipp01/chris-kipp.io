@@ -25,7 +25,7 @@ reading.
 - [How do you invite guests?](#how-do-you-invite-guests)
 - [How do you control quality?](#how-do-you-control-quality)
 
-## [How do you pick a topic](#how-do-you-pick-a-topic)?
+## How do you pick a topic
 
 When I first wanted to start a podcast, it was for a variety of reasons that
 probably differ a bit per individual, but one of the main reasons for me was
@@ -72,7 +72,7 @@ I started [Tooling Talks](https://www.tooling-talks.com/).
 These are still questions I often think about when I look at the trends in
 listeners, the amount of listeners I have, or when inviting new guests.
 
-## [How do you even make a podcast](#how-do-you-even-make-a-podcast)?
+## How do you even make a podcast
 
 Thankfully, this is a topic pretty well covered out there, so I won't go too
 much into the technical details, but will give an overview of some of the
@@ -111,7 +111,7 @@ leave you with a few things I considered when I chose to use Buzzsprout.
 - Which is commonly reviewed as one of the easiest to use? I don't want some
     no-name cheaper alternative that ends up sucking.
 
-## [What do you need](#what-do-you-need)?
+## What do you need
 
 If we wanted to completely simplify this section, you could just say:
 
@@ -121,7 +121,7 @@ If we wanted to completely simplify this section, you could just say:
 However, that's pretty radically over-simplified. I'll break down what I chose
 to get and why.
 
-### [Recording](#recording)
+### Recording
 
 Arguably the most important thing in making a podcast is audio quality. I have
 an entire section on this down below, but this often translates to three things:
@@ -156,7 +156,7 @@ then Audacity is great. It's also open source and free, which was a nice bonus
 for me. There is actually a ton of useful articles about using Audacity on the
 [Buzzsprout blog](https://www.buzzsprout.com/blog/category/podcast-editing).
 
-### [Hosting and Distributing](#hosting-and-distributing)
+### Hosting and Distributing
 
 I already covered this a bit up above, but I host my podcast on
 [Buzzsprout](https://www.buzzsprout.com/). One of the main features I wanted was
@@ -186,14 +186,14 @@ extension of myself. This is why I don't have a separate dedicated Twitter
 account for Tooling Talks, a separate way to support the show, and why the
 branding on the site looks very similar to my personal site.
 
-## [What does it cost](#what-does-it-cost)?
+## What does it cost
 
 So this section can be radically different depending on how much you want to
 invest in this. You could get by with a pretty minimal budget here if needed,
 but to give you a real idea, I've outlined the setup and regular costs for
 [Tooling Talks](https://www.tooling-talks.com/) down below.
 
-### [Setup costs](#setup-costs)
+### Setup costs
 
 Cost      Item                                                                 
 --------  ---------------------------------------------------------------------
@@ -204,7 +204,7 @@ $24.63    Logo for podcast - Ordered via [Fiverr](https://www.fiverr.com/)
 €34.99    [Mic arm](https://www.tonormic.com/products/tonor-t20-mic-arm-stand) - Not necessary but depends on your mic and greatly helps with placement. 
 
 
-### [Monthly costs](#setup-costs)
+### Monthly costs
 
 Cost      Item                                
 --------  ------------------------------------
@@ -223,7 +223,7 @@ updates their to justify it. Since I didn't want to do that, I just opted for my
 personal GitHub Sponsors page since that's where most of my activity can be seen
 anyways.
 
-## [How much time does it take?](#how-much-time-does-it-take)
+## How much time does it take?
 
 This is arguably as important or more important than the actual monthly
 financial cost to have a podcast. Depending on how much you value your time,
@@ -256,7 +256,7 @@ perspective the amount of time that goes into making episodes. NOTE, my episodes
 are *long*. They don't need to be this long. If I'd aim for like a 45 min
 average, this would shave off hours of time.
 
-## [How do you invite guests?](#how-do-you-invite-guests)
+## How do you invite guests?
 
 This is something I still feel like I haven't nailed down. In theory the ideal
 way this goes for me is:
@@ -295,7 +295,7 @@ respond, I give it a couple months and then try again. If they don't respond the
 second time, I move on unless I come across a mutual contact that is willing to
 make an introduction.
 
-## [How do you control quality?](#how-do-you-control-quality)
+## How do you control quality?
 
 This is another one I'm still working on. Especially if you have guests that
 aren't local to you and you're doing your interviews remotely, there isn't a lot

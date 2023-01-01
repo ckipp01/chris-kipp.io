@@ -13,7 +13,7 @@ not, I'll take this opportunity to actual outline the different sites that I've
 had along the way leading up to this one as they've radically changed along the
 way.
 
-## [Version 1](#version-1)
+## Version 1
 
 I originally had a site that was fully JavaScript powered, and built from
 scratch. I even created a tiny micro-framework that I used to build it called
@@ -25,7 +25,7 @@ blogging platforms. This also corresponded with a project I started called
 `ándaga` which was a way for me to track my own free-time to try and find
 patterns. Everything was integrated.
 
-## [Version 2](#version-2)
+## Version 2
 As I got more into Scala, I wanted to see if I could generate my site using that
 instead of JS. This lead me to a collection of tools and a process that I'll
 outline below.
@@ -54,7 +54,7 @@ change something, the entire system needed to change. During this time I also
 stopped logging my free time, which is a whole other story, and also just wanted
 to simplify the process further. That's what lead me to my current process.
 
-## [The current process](#the-current-process)
+## The current process
 
 The way that the site is currently built is quite simple. It just uses
 [Pandoc](https://pandoc.org) to transform my markdown pages you see in the repo
