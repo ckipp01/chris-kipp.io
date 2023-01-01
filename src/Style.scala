@@ -145,11 +145,6 @@ object Style extends CascadingStyleSheet:
     styles2.transform := "scale(1.1)"
   )
 
-  val wrapper = cls(
-    minHeight := "100%",
-    margin.auto
-  )
-
   val maxAndCenter = cls(
     maxWidth := 750,
     margin := "5px auto"

@@ -16,15 +16,12 @@ object Html:
           thumbnail = blogPost.thumbnail
         ),
         body(
-          div(
-            Style.wrapper,
-            headerFrag(),
-            tags2.main(
-              // TODO maybe the date here
-              raw(blogPost.content)
-            ),
-            footerFrag()
-          )
+          headerFrag(),
+          tags2.main(
+            // TODO maybe the date here
+            raw(blogPost.content)
+          ),
+          footerFrag()
         )
       )
     )
@@ -40,26 +37,23 @@ object Html:
             "Collection of blogs posts by Chris Kipp over the years."
         ),
         body(
-          div(
-            Style.wrapper,
-            headerFrag(),
-            tags2.main(
-              Style.overview,
-              blogPosts.map { blogPost =>
-                div(
-                  Style.blogListing,
-                  a(
-                    borderBottomStyle.none,
-                    href := s"./blog/${blogPost.urlify}"
-                  )(
-                    blogPost.title
-                  ),
-                  span(blogPost.date)
-                )
-              }
-            ),
-            footerFrag()
-          )
+          headerFrag(),
+          tags2.main(
+            Style.overview,
+            blogPosts.map { blogPost =>
+              div(
+                Style.blogListing,
+                a(
+                  borderBottomStyle.none,
+                  href := s"./blog/${blogPost.urlify}"
+                )(
+                  blogPost.title
+                ),
+                span(blogPost.date)
+              )
+            }
+          ),
+          footerFrag()
         )
       )
     )
@@ -74,48 +68,45 @@ object Html:
           description = "Collection of talks by Chris Kipp over the years."
         ),
         body(
-          div(
-            Style.wrapper,
-            headerFrag(),
-            tags2.main(
-              Style.talkListing,
-              talks.map { talk =>
-                div(
-                  p(talk.title),
-                  span(
-                    a(
-                      borderBottomStyle.none,
-                      href := talk.place.link,
-                      target := "_blank",
-                      talk.place.name
-                    ),
-                    " | ",
-                    a(
-                      borderBottomStyle.none,
-                      href := s"slides/${talk.slides}",
-                      target := "_blank",
-                      "slides"
-                    ),
-                    talk.video
-                      .map[scalatags.Text.Modifier] { vid =>
-                        Seq(
-                          stringFrag(" | "),
-                          a(
-                            borderBottomStyle.none,
-                            rel := "me noopener noreferrer",
-                            target := "_blank",
-                            href := vid,
-                            "video"
-                          )
+          headerFrag(),
+          tags2.main(
+            Style.talkListing,
+            talks.map { talk =>
+              div(
+                p(talk.title),
+                span(
+                  a(
+                    borderBottomStyle.none,
+                    href := talk.place.link,
+                    target := "_blank",
+                    talk.place.name
+                  ),
+                  " | ",
+                  a(
+                    borderBottomStyle.none,
+                    href := s"slides/${talk.slides}",
+                    target := "_blank",
+                    "slides"
+                  ),
+                  talk.video
+                    .map[scalatags.Text.Modifier] { vid =>
+                      Seq(
+                        stringFrag(" | "),
+                        a(
+                          borderBottomStyle.none,
+                          rel := "me noopener noreferrer",
+                          target := "_blank",
+                          href := vid,
+                          "video"
                         )
-                      }
-                      .getOrElse(Seq.empty[scalatags.Text.Modifier])
-                  )
+                      )
+                    }
+                    .getOrElse(Seq.empty[scalatags.Text.Modifier])
                 )
-              }
-            ),
-            footerFrag()
-          )
+              )
+            }
+          ),
+          footerFrag()
         )
       )
     )
@@ -131,13 +122,11 @@ object Html:
             "A litte bit about me, Chris Kipp, the author of this blog."
         ),
         body(
-          div(
-            Style.wrapper,
-            headerFrag(),
-            tags2.main(
-              img(src := "../images/me.png"),
-              p(
-                """Hi, I'm Chris. You've stumbled upon my blog and website. It's a simple place
+          headerFrag(),
+          tags2.main(
+            img(src := "../images/me.png"),
+            p(
+              """Hi, I'm Chris. You've stumbled upon my blog and website. It's a simple place
                   |where I write some things and hold links to other places that I'd like to
                   |remember. You'll find me writing or working on things related to developer
                   |tooling, primarily with Neovim and Scala, talking about music, or sharing stuff
@@ -145,32 +134,31 @@ object Html:
                   |in the United States and having a M.A. in International Relations. I first got
                   |started in tech as I was finishing grad school, and I haven't really looked back since.
                   |I'm currently located in the Netherlands with my wife and working at """.stripMargin,
-                a(href := "https://lunatech.nl/", "Lunatech"),
-                ", where they are kind enough to lend me out to the ",
-                a(href := "https://scala.epfl.ch/", "Scala Center"),
-                " where I work full-time on Scala tooling."
-              ),
-              p(
-                "You can take a look at the projects I work on ",
-                a(href := "https://github.com/ckipp01", "here on GitHub"),
-                " find me on ",
-                a(href := "https://hachyderm.io/@ckipp", "Mastodon"),
-                ", ",
-                a(href := "https://twitter.com/ckipp01", "Twitter"),
-                ", or streaming on ",
-                a(href := "https://www.twitch.tv/ckipp", "Twitch"),
-                "."
-              ),
-              p(
-                """Over the years this site has taken many shapes ranging from a custom JS
+              a(href := "https://lunatech.nl/", "Lunatech"),
+              ", where they are kind enough to lend me out to the ",
+              a(href := "https://scala.epfl.ch/", "Scala Center"),
+              " where I work full-time on Scala tooling."
+            ),
+            p(
+              "You can take a look at the projects I work on ",
+              a(href := "https://github.com/ckipp01", "here on GitHub"),
+              " find me on ",
+              a(href := "https://hachyderm.io/@ckipp", "Mastodon"),
+              ", ",
+              a(href := "https://twitter.com/ckipp01", "Twitter"),
+              ", or streaming on ",
+              a(href := "https://www.twitch.tv/ckipp", "Twitch"),
+              "."
+            ),
+            p(
+              """Over the years this site has taken many shapes ranging from a custom JS
                   |framework powered site, one that fully tracked all my free time, to ultimately
                   |the minimal shape you see it in now. It will continue to change and grow as I do.""".stripMargin
-              ),
-              p("Thanks for stopping by."),
-              p("Chris")
             ),
-            footerFrag()
-          )
+            p("Thanks for stopping by."),
+            p("Chris")
+          ),
+          footerFrag()
         )
       )
     )
@@ -185,15 +173,12 @@ object Html:
           description = "All the Scala 3 options"
         ),
         body(
-          div(
-            Style.wrapper,
-            headerFrag(),
-            tags2.main(
-              settings.map { setting =>
-                div(h3(setting.name), p(setting.description))
-              },
-              footerFrag()
-            )
+          headerFrag(),
+          tags2.main(
+            settings.map { setting =>
+              div(h3(setting.name), p(setting.description))
+            },
+            footerFrag()
           )
         )
       )
