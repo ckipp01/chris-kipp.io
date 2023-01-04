@@ -96,7 +96,7 @@ object Style extends CascadingStyleSheet:
       ),
       em(fontStyle.italic),
       img(display.block, margin.auto, maxWidth := "100%", maxHeight := "500px"),
-      iframe(margin.auto, display.block)
+      iframe(margin.auto, display.block, width := "100%")
     ),
     footer(
       display.flex,
