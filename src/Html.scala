@@ -16,7 +16,7 @@ object Html:
           thumbnail = blogPost.thumbnail
         ),
         body(
-          headerFrag("blog"),
+          headerFrag(blogPost.title),
           tags2.main(
             // TODO maybe the date here
             raw(blogPost.content)
