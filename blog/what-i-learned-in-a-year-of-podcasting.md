@@ -195,22 +195,22 @@ but to give you a real idea, I've outlined the setup and regular costs for
 
 ### Setup costs
 
-Cost      Item                                                                 
---------  ---------------------------------------------------------------------
-$14.16    Domain name and ICANN fee - Purchased for one year via [Namecheap](https://www.namecheap.com/)
-$0        Hosting on [Vercel](https://vercel.com/) - The free account is fine for this
-$24.63    Logo for podcast - Ordered via [Fiverr](https://www.fiverr.com/)
-€255      Creative Bundle (mic and interface) - Included a [RØDE NT1-A](https://rode.com/en/microphones/studio-condenser/nt1a) and a [Focusrite Scarlett Solo](https://focusrite.com/en/audio-interface/scarlett/scarlett-solo). Both of these I can use for streaming and for work calls.
-€34.99    [Mic arm](https://www.tonormic.com/products/tonor-t20-mic-arm-stand) - Not necessary but depends on your mic and greatly helps with placement. 
+|Cost    |      Item
+|:-------|:--------------------------------------------------------------------
+|$14.16  | Domain name and ICANN fee - Purchased for one year via [Namecheap](https://www.namecheap.com/)
+|$0      | Hosting on [Vercel](https://vercel.com/) - The free account is fine for this
+|$24.63  | Logo for podcast - Ordered via [Fiverr](https://www.fiverr.com/)
+|€255    | Creative Bundle (mic and interface) - Included a [RØDE NT1-A](https://rode.com/en/microphones/studio-condenser/nt1a) and a [Focusrite Scarlett Solo](https://focusrite.com/en/audio-interface/scarlett/scarlett-solo). Both of these I can use for streaming and for work calls.
+|€34.99  | [Mic arm](https://www.tonormic.com/products/tonor-t20-mic-arm-stand) - Not necessary but depends on your mic and greatly helps with placement. 
 
 
 ### Monthly costs
 
-Cost      Item                                
---------  ------------------------------------
-€7        Avatar for guest - Again, from the same artist on Fiverr. Price fluctuates a bit due to tipping.
-$12       Monthly cost to host on Buzzsprout - They do have a free account, but it only keeps your episodes for 90 days.
-$20       Monthly cost for Squadcast - This is the cheapest tier they have.
+|Cost     |Item                                
+|:------- |:-----------------------------------
+|€7       |Avatar for guest - Again, from the same artist on Fiverr. Price fluctuates a bit due to tipping.
+|$12      |Monthly cost to host on Buzzsprout - They do have a free account, but it only keeps your episodes for 90 days.
+|$20      |Monthly cost for Squadcast - This is the cheapest tier they have.
 
 
 One way to offset these costs is to provide a way for people to support the show
@@ -241,13 +241,13 @@ Unison](https://www.tooling-talks.com/episode-6). So consider all of the vales
 down below as averages.
 
 
-Time       Activity                                                              
----------  ------------------------------------------------------------
-1 Hour     Figuring out how to contact and actually inviting, and fully planning the episode (average)
-3 Hours    Playing around with the project we'll talk about or doing research on it
-1.5 Hours  The actual recording of the episode
-2 Hours    Editing the podcast. It typically takes me about 2 times the episode length to edit it
-.5 Hour    Writing the intro, update the website, communicating with the avatar artist
+|Time     |Activity                                                              
+|:--------|:-----------------------------------------------------------
+|1 Hour   |Figuring out how to contact and actually inviting, and fully planning the episode (average)
+|3 Hours  |Playing around with the project we'll talk about or doing research on it
+|1.5 Hours|The actual recording of the episode
+|2 Hours  |Editing the podcast. It typically takes me about 2 times the episode length to edit it
+|.5 Hour  |Writing the intro, update the website, communicating with the avatar artist
 
 8 hours per episode is probably a pretty accurate estimate of the average time I
 spend on a single episode. Originally, I was really surprised by this as I

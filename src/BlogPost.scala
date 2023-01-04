@@ -10,6 +10,7 @@ import com.vladsch.flexmark.util.misc.Extension
 
 import java.{util => ju}
 import scala.jdk.CollectionConverters.*
+import com.vladsch.flexmark.ext.tables.TablesExtension
 
 final case class BlogPost(
     title: String,
@@ -58,7 +59,8 @@ object BlogPost:
   private val extentsions: ju.Collection[Extension] =
     List(
       YamlFrontMatterExtension.create(),
-      AnchorLinkExtension.create()
+      AnchorLinkExtension.create(),
+      TablesExtension.create()
     ).asJavaCollection
 
   private val options = new MutableDataSet()
