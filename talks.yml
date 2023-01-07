@@ -7,14 +7,12 @@
 
 - title: The Journey of a Dotty Diagnostic
   slides: dotty-diagnostics
-  video: !!null
   place:
     name: ScalaIO 2022
     link: https://scala.io/
 
 - title: What I've learned in open source, and why I think you should contribute
   slides: slides-open-source
-  video: !!null
   place:
     name: Lunaconf 2022
     link: https://lunatech.com/
@@ -56,14 +54,12 @@
 
 - title: How Metals and LSP allow you to use your favorite editor for Scala 2020
   slides: slides-lsp-metals
-  video: !!null
   place:
     name: Lunaconf 2020
     link: https://lunatech.com/
 
 - title: Demystifying serverless functions with Zeit Now
   slides: slides-faas-zeit-now
-  video: !!null
   place:
     name: AmsterdamJS 2019
     link: https://www.meetup.com/AmsterdamJS/

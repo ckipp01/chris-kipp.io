@@ -3,9 +3,10 @@
 //> using lib "com.lihaoyi::os-lib:0.9.0"
 //> using lib "com.lihaoyi::scalatags:0.12.0"
 //> using lib "com.lihaoyi::pprint:0.8.1"
-//> using lib "com.outr::scribe:3.10.5"
+//> using lib "com.outr::scribe:3.10.6"
 //> using lib "com.vladsch.flexmark:flexmark-all:0.64.0"
-//> using lib "org.virtuslab::scala-yaml:0.0.6"
+//> using lib "io.circe::circe-yaml:0.14.2"
+//> using lib "io.circe::circe-generic:0.14.3"
 
 package io.kipp.site
 
@@ -96,16 +97,24 @@ object Main:
     os.list(path).map(BlogPost.apply)
 
   private def getTalks(path: os.Path) =
-    import org.virtuslab.yaml.*
+    import io.circe.yaml.parser
+    import io.circe.generic.auto.*
 
     scribe.info(s"Fetching talks from ${path.baseName}")
     val contents = os.read(path)
-    val decoded = contents.as[Seq[Talk]]
+    val json = parser.parse(contents)
 
-    decoded match
-      case Left(e) =>
-        scribe.error(e.msg)
+    json match
+      case Left(err) =>
+        scribe.error(err.getMessage)
         throw new RuntimeException(
-          "Unable to correctly decode talks, so quitting."
+          "Unable to correctly decode talks from yaml to json, so quitting."
         )
-      case Right(talks) => talks
+      case Right(json) =>
+        json.as[Seq[Talk]] match
+          case Left(failure) =>
+            scribe.info(failure.reason.toString())
+            throw new RuntimeException(
+              "Unable to correctly decode talks from json to talks, so quitting."
+            )
+          case Right(talks) => talks
