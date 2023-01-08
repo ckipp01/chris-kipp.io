@@ -39,10 +39,16 @@ object Main:
       //////////////////////
       scribe.info("putting together talks page")
       val talks =
-        lists.collectFirst { case talks: ListOf.talks =>
+        lists.collectFirst { case talks: Talks =>
           talks
         }.get // TODO quick and dirty since we just refactored all of this.. probaly move this up later
-      val talksPage = Html.talksOverview(talks.items.toSeq)
+      val talksPage = Html.talksOverview(talks)
+
+      //////////////////////
+      // PROCESSING LISTS //
+      //////////////////////
+      scribe.info("putting together lists page")
+      // val listsOverview = Html.listsOverview(lists.)
 
       ///////////////////////
       // PROCESSING ABOUT ///
@@ -126,36 +132,12 @@ object Main:
       blog <- blogs.map(BlogPost.fromPath).sequence
     yield blog
 
-  private def getTalks(path: os.Path) =
-    import io.circe.yaml.parser
-    import io.circe.generic.auto.*
-
-    scribe.info(s"Fetching talks from ${path.baseName}")
-    val contents = os.read(path)
-    val json = parser.parse(contents)
-
-    json match
-      case Left(err) =>
-        scribe.error(err.getMessage)
-        throw new RuntimeException(
-          "Unable to correctly decode talks from yaml to json, so quitting."
-        )
-      case Right(json) =>
-        json.as[Seq[Talk]] match
-          case Left(failure) =>
-            scribe.info(failure.reason.toString())
-            throw new RuntimeException(
-              "Unable to correctly decode talks from json to talks, so quitting."
-            )
-          case Right(talks) => talks
-
-  private def getLists(path: os.Path): Either[String, Seq[
-    (ListOf.albums | ListOf.articles | ListOf.sites | ListOf.talks |
-      ListOf.videos)
-  ]] =
+  private def getLists(
+      path: os.Path
+  ): Either[String, Seq[Albums | Articles | Sites | Talks | Videos]] =
     scribe.info(s"Fetching lists from ${path.baseName}")
     for
       lists <- Try(os.list(path)).toEither.left.map(_.getMessage)
-      list <- lists.map(ListOf.fromPath).sequence
+      list <- lists.map(SiteList.fromPath).sequence
     yield list
 end Main

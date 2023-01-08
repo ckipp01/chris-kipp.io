@@ -58,59 +58,29 @@ object Html:
       )
     )
 
-  def talksOverview(talks: Seq[Talk]) =
+  def talksOverview(talks: Talks) =
     doctype("html")(
       html(
         lang := "en",
         Style.cascasdeRoot,
         headFrag(
-          pageTitle = "chris-kipp.io - talks",
-          description = "Collection of talks by Chris Kipp over the years."
+          pageTitle = s"chris-kipp.io - s${talks.title}",
+          description = talks.description
         ),
         body(
           headerFrag("talks"),
           tags2.main(
             Style.talkListing,
-            talks.map { talk =>
-              div(
-                p(talk.title),
-                span(
-                  a(
-                    borderBottomStyle.none,
-                    href := talk.place.link,
-                    target := "_blank",
-                    talk.place.name
-                  ),
-                  " | ",
-                  a(
-                    borderBottomStyle.none,
-                    href := s"slides/${talk.slides}",
-                    target := "_blank",
-                    "slides"
-                  ),
-                  talk.video
-                    .map[scalatags.Text.Modifier] { vid =>
-                      Seq(
-                        stringFrag(" | "),
-                        a(
-                          borderBottomStyle.none,
-                          rel := "me noopener noreferrer",
-                          target := "_blank",
-                          href := vid,
-                          "video"
-                        )
-                      )
-                    }
-                    .getOrElse(Seq.empty[scalatags.Text.Modifier])
-                )
-              )
-            }
+            talks.listHtml()
           ),
           footerFrag()
         )
       )
     )
 
+  def listsOverview(lists: Seq[Albums | Articles | Sites | Videos]) = ???
+
+  // TODO we'll probably need to make a markdown page of this
   def aboutPage() =
     doctype("html")(
       html(
@@ -252,6 +222,7 @@ object Html:
       tags2.nav(
         NavItem("/about", "about", active).html(),
         NavItem("/blog", "blog", active).html(),
+        NavItem("/lists", "lists", active).html(),
         NavItem("/talks", "talks", active).html(),
         a(href := "https://www.tooling-talks.com", "tooling talks podcast")
       )
