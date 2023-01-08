@@ -1,4 +1,5 @@
 //> using scala "3.2.1"
+//> using options "-deprecation", "-feature", "-explain", "-Xmax-inlines", "50"
 //> using lib "org.scala-lang::scala3-compiler:3.2.1"
 //> using lib "com.lihaoyi::os-lib:0.9.0"
 //> using lib "com.lihaoyi::scalatags:0.12.0"
@@ -25,9 +26,11 @@ object Main:
     scribe.info("generating rss feed")
     val blogRss = Rss.generate(blogPosts)
 
-    val talks = getTalks(Constants.TALKS_FILE)
-    scribe.info("putting together talks page")
-    val talksPage = Html.talksOverview(talks)
+    val lists = getLists(Constants.LIST_DIR)
+
+    // val talks = getTalks(Constants.TALKS_FILE)
+    // scribe.info("putting together talks page")
+    // val talksPage = Html.talksOverview(talks)
 
     scribe.info("putting together overivew page")
     val blogOverview = Html.blogOverview(blogPages)
@@ -35,7 +38,7 @@ object Main:
     val aboutPage = Html.aboutPage()
 
     scribe.info("""cleaning "site" dir""")
-    val keep = Seq(
+    val keep = Set(
       ".well-known",
       "vercel.json",
       "slides",
@@ -70,10 +73,10 @@ object Main:
     )
 
     scribe.info("writing talks.html")
-    os.write(
-      os.Path(Constants.SITE_DIR / "talks.html", os.pwd),
-      talksPage.render
-    )
+    // os.write(
+    //  os.Path(Constants.SITE_DIR / "talks.html", os.pwd),
+    //  talksPage.render
+    // )
 
     scribe.info("writing about.html")
     os.write(
@@ -118,3 +121,7 @@ object Main:
               "Unable to correctly decode talks from json to talks, so quitting."
             )
           case Right(talks) => talks
+
+  private def getLists(path: os.Path) =
+    scribe.info(s"Fetching lists from ${path.baseName}")
+    os.list(path).map(SiteList.fromPath)

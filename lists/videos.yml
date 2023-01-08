@@ -1,0 +1,16 @@
+title: videos
+description: >
+  This is a collection of videos that I've enjoyed watching and that I'd like
+  to come back to in the future. I've attempted to group them by category that
+  makes the most sense. My hope is to start using tags of some sort or related
+  categories to better navigate around to similiar videos or articles.
+
+items:
+  - Language Parsing:
+    - title: Tree-sitter - a new parsing system for programming tools
+      author: Max Brunsfeld
+      link: 'https://www.youtube.com/watch?v=Jes3bD6P0To'
+  - Scala:
+    - title: Folding algebraic data types - Scala tutorial
+      author: Jakub Kozłowski
+      link: 'https://www.youtube.com/watch?v=cS4MOUsuWYc&feature=emb_title'

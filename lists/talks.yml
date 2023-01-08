@@ -1,0 +1,70 @@
+title: talks
+description: >
+  This is a collection of talks I've given over the years.
+
+items:
+  - title: "Language Tailored Plugins: An Experience Like No Other"
+    slides: language-tailored-plugins
+    video: https://youtu.be/dLwvmLQsxrw
+    place:
+      name: NeovimConf 2022
+      link: https://www.neovimconf.live/
+
+  - title: The Journey of a Dotty Diagnostic
+    slides: dotty-diagnostics
+    place:
+      name: ScalaIO 2022
+      link: https://scala.io/
+
+  - title: What I've learned in open source, and why I think you should contribute
+    slides: slides-open-source
+    place:
+      name: Lunaconf 2022
+      link: https://lunatech.com/
+
+  - title: Code Coverage in Scala 3
+    slides: slides-code-coverage-in-scala3
+    video: https://youtu.be/SIkNgemGmYQ
+    place:
+      name: ScalaCon 2021
+      link: https://www.scalacon.org/
+
+  - title: A Dive into how Metals works
+    slides: slides-a-dive-into-how-metals-works
+    video: https://youtu.be/fpzN_vTBy18
+    place:
+      name: Streamed on Twitch 2021
+      link: https://www.twitch.tv/ckipp
+
+  - title: A Metals Retrospective
+    slides: slides-a-metals-retrospective
+    video: https://youtu.be/DRKx1a19c80
+    place:
+      name: SF Scala 2021
+      link: https://www.meetup.com/SF-Scala/
+
+  - title: Scala Development with Vim in 2020
+    slides: slides-vim-scala-2020
+    video: https://www.youtube.com/watch?v=zuP5qrTUetw
+    place:
+      name: ScalaUA 2020
+      link: https://twitter.com/ScalaUA_Conf
+
+  - title: A Zero to Hero Vim + Metals setup for Scala
+    slides: slides-zero-to-hero
+    video: https://www.youtube.com/watch?v=VUOw4thpb1I
+    place:
+      name: Northeast Scala Symposium 2020
+      link: https://nescala.io/
+
+  - title: How Metals and LSP allow you to use your favorite editor for Scala 2020
+    slides: slides-lsp-metals
+    place:
+      name: Lunaconf 2020
+      link: https://lunatech.com/
+
+  - title: Demystifying serverless functions with Zeit Now
+    slides: slides-faas-zeit-now
+    place:
+      name: AmsterdamJS 2019
+      link: https://www.meetup.com/AmsterdamJS/
