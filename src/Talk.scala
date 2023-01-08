@@ -1,7 +1,7 @@
 package io.kipp.site
 
-import io.circe._
-import io.circe.generic.auto._
+import io.circe.*
+import io.circe.generic.auto.*
 
 final case class Talk(
     title: String,

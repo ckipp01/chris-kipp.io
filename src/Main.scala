@@ -121,10 +121,10 @@ object Main:
       path: os.Path
   ): Either[String, Seq[BlogPost]] =
     scribe.info(s"Fetching blogs from ${path.baseName}")
-    for {
+    for
       blogs <- Try(os.list(path)).toEither.left.map(_.getMessage)
       blog <- blogs.map(BlogPost.fromPath).sequence
-    } yield blog
+    yield blog
 
   private def getTalks(path: os.Path) =
     import io.circe.yaml.parser
@@ -154,7 +154,8 @@ object Main:
       ListOf.videos)
   ]] =
     scribe.info(s"Fetching lists from ${path.baseName}")
-    for {
+    for
       lists <- Try(os.list(path)).toEither.left.map(_.getMessage)
       list <- lists.map(ListOf.fromPath).sequence
-    } yield list
+    yield list
+end Main

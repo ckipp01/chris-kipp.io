@@ -8,7 +8,7 @@ import com.vladsch.flexmark.parser.Parser
 import com.vladsch.flexmark.util.data.MutableDataSet
 import com.vladsch.flexmark.util.misc.Extension
 
-import java.{util => ju}
+import java.{util as ju}
 import scala.jdk.CollectionConverters.*
 import com.vladsch.flexmark.ext.tables.TablesExtension
 
@@ -54,22 +54,21 @@ object BlogPost:
 
     val contents = os.read(path)
     val document = parser.parse(contents)
-    val metadata = {
+    val metadata =
       val visitor = new AbstractYamlFrontMatterVisitor()
       visitor.visit(document)
       visitor.getData().asScala.toMap.collect {
         case (key, value) if value.asScala.toList.nonEmpty =>
           key -> value.asScala.toList.mkString
       }
-    }
 
     val articleHtml = renderer.render(document)
 
-    for {
+    for
       title <- metadata.getOrLeft("title")
       date <- metadata.getOrLeft("date")
       description <- metadata.getOrLeft("description")
-    } yield BlogPost(
+    yield BlogPost(
       title,
       date,
       metadata.get("updated"),
@@ -91,3 +90,4 @@ object BlogPost:
 
   private val parser = Parser.builder(options).build()
   private val renderer = HtmlRenderer.builder(options).build()
+end BlogPost

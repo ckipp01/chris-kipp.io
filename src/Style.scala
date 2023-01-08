@@ -204,3 +204,4 @@ object Style extends CascadingStyleSheet:
                |*:focus {
                |  background: ${gray};
                |}""".stripMargin
+end Style

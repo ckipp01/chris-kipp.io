@@ -188,7 +188,7 @@ object Html:
       pageTitle: String,
       description: String,
       thumbnail: Option[String] = None
-  ) = {
+  ) =
     head(
       meta(charset := "utf-8"),
       meta(
@@ -242,13 +242,12 @@ object Html:
         attr("data-code") := "2N1ystwyAD7E52EmuxQkTyoAno02YcQE"
       )
     )
-  }
 
   final case class NavItem(link: String, name: String, active: String):
     def html() =
       a(if active == name then Style.activePage else "", href := link, name)
 
-  private def headerFrag(active: String) = {
+  private def headerFrag(active: String) =
     header(
       tags2.nav(
         NavItem("/about", "about", active).html(),
@@ -257,9 +256,8 @@ object Html:
         a(href := "https://www.tooling-talks.com", "tooling talks podcast")
       )
     )
-  }
 
-  private def footerFrag() = {
+  private def footerFrag() =
     footer(
       a(
         href := "https://github.com/ckipp01",
@@ -311,4 +309,4 @@ object Html:
         )
       )
     )
-  }
+end Html
