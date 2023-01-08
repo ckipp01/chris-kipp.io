@@ -12,92 +12,119 @@
 package io.kipp.site
 
 import dotty.tools.dotc.config.ScalaSettings
+import scala.util.Try
+import Extensions.sequence
 
 object Main:
 
   @main def buildSite() =
-    val blogPosts =
-      getBlogPosts(Constants.BLOG_DIR).sortBy(_.date).reverse
-    val blogPages =
-      blogPosts.map { post =>
+    for
+      blogPosts <- getBlogPosts(Constants.BLOG_DIR)
+      lists <- getLists(Constants.LIST_DIR)
+    yield
+      /////////////////////
+      // PROCESSING BLOG //
+      /////////////////////
+      scribe.info("processing the blog...")
+      val orderedPosts = blogPosts.sortBy(_.date).reverse
+      val blogPages = blogPosts.map { post =>
         scribe.info(s"putting together ${post.urlify}")
         post.copy(content = Html.blogPage(post).render)
       }
-    scribe.info("generating rss feed")
-    val blogRss = Rss.generate(blogPosts)
+      val blogRss = Rss.generate(blogPosts)
+      val blogOverview = Html.blogOverview(blogPages)
 
-    val lists = getLists(Constants.LIST_DIR)
+      //////////////////////
+      // PROCESSING TALKS //
+      //////////////////////
+      scribe.info("putting together talks page")
+      val talks =
+        lists.collectFirst { case talks: ListOf.talks =>
+          talks
+        }.get // TODO quick and dirty since we just refactored all of this.. probaly move this up later
+      val talksPage = Html.talksOverview(talks.items.toSeq)
 
-    // val talks = getTalks(Constants.TALKS_FILE)
-    // scribe.info("putting together talks page")
-    // val talksPage = Html.talksOverview(talks)
+      ///////////////////////
+      // PROCESSING ABOUT ///
+      ///////////////////////
+      scribe.info("putting together about page")
+      val aboutPage = Html.aboutPage()
 
-    scribe.info("putting together overivew page")
-    val blogOverview = Html.blogOverview(blogPages)
-    scribe.info("putting together about page")
-    val aboutPage = Html.aboutPage()
-
-    scribe.info("""cleaning "site" dir""")
-    val keep = Set(
-      ".well-known",
-      "vercel.json",
-      "slides",
-      "images",
-      "js",
-      "css",
-      "chris-kipp-resume.pdf"
-    )
-    val filesToClean =
-      os.walk(Constants.SITE_DIR, skip = path => keep.contains(path.last))
-    filesToClean.foreach(os.remove.all)
-
-    blogPages.foreach { post =>
-      scribe.info(s"writing blog/${post.urlify}.html")
-      os.write(
-        os.Path(Constants.SITE_DIR / "blog" / (post.urlify + ".html"), os.pwd),
-        post.content,
-        createFolders = true
+      //////////////
+      // CLEANING //
+      //////////////
+      scribe.info("""cleaning "site" dir""")
+      val keep = Set(
+        ".well-known",
+        "vercel.json",
+        "slides",
+        "images",
+        "js",
+        "css",
+        "chris-kipp-resume.pdf"
       )
-    }
+      val filesToClean =
+        os.walk(Constants.SITE_DIR, skip = path => keep.contains(path.last))
+      filesToClean.foreach(os.remove.all)
 
-    scribe.info("writing index.html")
-    os.write(
-      os.Path(Constants.SITE_DIR / "index.html", os.pwd),
-      blogOverview.render
-    )
+      ////////////////
+      // GENERATION //
+      ////////////////
+      blogPages.foreach { post =>
+        scribe.info(s"writing blog/${post.urlify}.html")
+        os.write(
+          os.Path(
+            Constants.SITE_DIR / "blog" / (post.urlify + ".html"),
+            os.pwd
+          ),
+          post.content,
+          createFolders = true
+        )
+      }
 
-    scribe.info("writing blog.html")
-    os.write(
-      os.Path(Constants.SITE_DIR / "blog.html", os.pwd),
-      blogOverview.render
-    )
+      scribe.info("writing index.html")
+      os.write(
+        os.Path(Constants.SITE_DIR / "index.html", os.pwd),
+        blogOverview.render
+      )
 
-    scribe.info("writing talks.html")
-    // os.write(
-    //  os.Path(Constants.SITE_DIR / "talks.html", os.pwd),
-    //  talksPage.render
-    // )
+      scribe.info("writing blog.html")
+      os.write(
+        os.Path(Constants.SITE_DIR / "blog.html", os.pwd),
+        blogOverview.render
+      )
 
-    scribe.info("writing about.html")
-    os.write(
-      os.Path(Constants.SITE_DIR / "about.html", os.pwd),
-      aboutPage.render
-    )
+      scribe.info("writing talks.html")
+      os.write(
+        os.Path(Constants.SITE_DIR / "talks.html", os.pwd),
+        talksPage.render
+      )
 
-    val allSettings = new ScalaSettings().allSettings
-    val htmlSettings = Html.scalacSettings(allSettings)
-    scribe.info("writing hideen scala3-scalac-options.txt")
-    os.write(
-      os.Path(Constants.SITE_DIR / "scala3-scalac-options.html", os.pwd),
-      htmlSettings.render
-    )
+      scribe.info("writing about.html")
+      os.write(
+        os.Path(Constants.SITE_DIR / "about.html", os.pwd),
+        aboutPage.render
+      )
 
-    scribe.info("writting rss feed")
-    os.write(os.Path(Constants.SITE_DIR / "rss.xml", os.pwd), blogRss.render)
+      val allSettings = new ScalaSettings().allSettings
+      val htmlSettings = Html.scalacSettings(allSettings)
+      scribe.info("writing hideen scala3-scalac-options.txt")
+      os.write(
+        os.Path(Constants.SITE_DIR / "scala3-scalac-options.html", os.pwd),
+        htmlSettings.render
+      )
 
-  private def getBlogPosts(path: os.Path) =
+      scribe.info("writting rss feed")
+      os.write(os.Path(Constants.SITE_DIR / "rss.xml", os.pwd), blogRss.render)
+
+  private def getBlogPosts(
+      path: os.Path
+  ): Either[String, Seq[BlogPost]] =
     scribe.info(s"Fetching blogs from ${path.baseName}")
-    os.list(path).map(BlogPost.apply)
+    for {
+      blogs <- Try(os.list(path)).toEither.left.map(_.getMessage)
+      blog <- blogs.map(BlogPost.fromPath).sequence
+    } yield blog
 
   private def getTalks(path: os.Path) =
     import io.circe.yaml.parser
@@ -122,6 +149,12 @@ object Main:
             )
           case Right(talks) => talks
 
-  private def getLists(path: os.Path) =
+  private def getLists(path: os.Path): Either[String, Seq[
+    (ListOf.albums | ListOf.articles | ListOf.sites | ListOf.talks |
+      ListOf.videos)
+  ]] =
     scribe.info(s"Fetching lists from ${path.baseName}")
-    os.list(path).map(SiteList.fromPath)
+    for {
+      lists <- Try(os.list(path)).toEither.left.map(_.getMessage)
+      list <- lists.map(ListOf.fromPath).sequence
+    } yield list
