@@ -2,11 +2,14 @@ package io.kipp.site
 
 import scalatags.Text.all.*
 import scalatags.Text.tags2
+import scalatags.Text.TypedTag
 
-sealed trait SiteList[A <: ListItem]:
+sealed trait SiteList:
+  def id: String
   def title: String
   def description: String
-  def items: Set[A] | Set[Map[String, Set[A]]]
+  def items: Seq[ListItem] | Seq[Map[String, Seq[ListItem]]]
+  def renderHtml(): Seq[TypedTag[String]]
 
 object SiteList:
   import io.circe.Json
@@ -15,7 +18,7 @@ object SiteList:
 
   def fromPath(
       path: os.Path
-  ): Either[String, Albums | Articles | Sites | Talks | Videos] =
+  ): Either[String, SiteList] =
     val contents = os.read(path)
     val json = parser.parse(contents)
 
@@ -32,15 +35,15 @@ object SiteList:
 
   private def toListOf(
       json: Json
-  ): Either[String, Albums | Articles | Sites | Talks | Videos] =
+  ): Either[String, SiteList] =
     val cursor = json.hcursor
-    val title = cursor
-      .downField("title")
+    val id = cursor
+      .downField("id")
       .as[String]
 
     // TODO is there a better way to do this?
     // and when I do that get rid of the `-Xmax-inlines`
-    title match
+    id match
       case Right("albums")   => json.as[Albums].left.map(_.message)
       case Right("articles") => json.as[Articles].left.map(_.message)
       case Right("sites")    => json.as[Sites].left.map(_.message)
@@ -50,31 +53,64 @@ object SiteList:
       case Left(err)    => Left(err.getMessage)
 
 final case class Albums(
+    id: String,
     title: String,
     description: String,
-    items: Set[ListItem.Album]
-) extends SiteList[ListItem.Album]
+    items: Seq[Album]
+) extends SiteList:
+  override def renderHtml(): Seq[TypedTag[String]] =
+    Seq(h1(title), p(description)) ++ items.map { album =>
+      div(
+        Style.album,
+        img(
+          src := s"../images/albums/${album.album.replace(" ", "-").toLowerCase()}.jpeg"
+        ),
+        div(
+          Style.albumDescription,
+          // TODO remove inline styling
+          p(marginBottom := 0, b("Band: "), album.artist),
+          b("Album: "),
+          a(
+            href := album.link,
+            target := "_blank",
+            album.album
+          ),
+          p(marginBottom := 0, b("Favorite song: "), album.`favorite-song`)
+        ),
+        div(
+          (1 to album.rating).map(_ =>
+            img(Style.star, src := "../images/star.svg")
+          )
+        )
+      )
+    }
 
 final case class Articles(
+    id: String,
     title: String,
     description: String,
-    items: Set[Map[String, Set[ListItem.Article]]]
-) extends SiteList[ListItem.Article]
+    items: Seq[Map[String, Seq[Article]]]
+) extends SiteList:
+  override def renderHtml(): Seq[TypedTag[String]] = items.map(article => div())
 
 final case class Sites(
+    id: String,
     title: String,
     description: String,
-    items: Set[ListItem.Site]
-) extends SiteList[ListItem.Site]
+    items: Seq[Site]
+) extends SiteList:
+  override def renderHtml(): Seq[TypedTag[String]] = items.map(site => div())
 
 final case class Talks(
+    id: String,
     title: String,
     description: String,
-    items: Set[ListItem.Talk]
-) extends SiteList[ListItem.Talk]:
-  def listHtml() =
-    items.toSeq.map { talk =>
+    items: Seq[Talk]
+) extends SiteList:
+  override def renderHtml(): Seq[TypedTag[String]] =
+    items.map { talk =>
       div(
+        Style.largeFontOverview,
         p(talk.title),
         span(
           a(
@@ -109,7 +145,9 @@ final case class Talks(
     }
 
 final case class Videos(
+    id: String,
     title: String,
     description: String,
-    items: Set[Map[String, Set[ListItem.Video]]]
-) extends SiteList[ListItem.Video]
+    items: Seq[Map[String, Seq[Video]]]
+) extends SiteList:
+  override def renderHtml(): Seq[TypedTag[String]] = items.map(video => div())

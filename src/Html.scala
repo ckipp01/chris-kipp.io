@@ -18,6 +18,7 @@ object Html:
         body(
           headerFrag(blogPost.title),
           tags2.main(
+            Style.blogPost,
             // TODO maybe the date here
             raw(blogPost.content)
           ),
@@ -34,16 +35,17 @@ object Html:
         headFrag(
           pageTitle = "chris-kipp.io - blog",
           description =
-            "Collection of blogs posts by Chris Kipp over the years."
+            "A collection of blogs posts by Chris Kipp over the years."
         ),
         body(
           headerFrag("blog"),
           tags2.main(
-            Style.overview,
+            Style.largeFontOverview,
             blogPosts.map { blogPost =>
               div(
                 Style.blogListing,
                 a(
+                  // TODO remove inline styling
                   borderBottomStyle.none,
                   href := s"./blog/${blogPost.urlify}"
                 )(
@@ -71,14 +73,61 @@ object Html:
           headerFrag("talks"),
           tags2.main(
             Style.talkListing,
-            talks.listHtml()
+            talks.renderHtml()
           ),
           footerFrag()
         )
       )
     )
 
-  def listsOverview(lists: Seq[Albums | Articles | Sites | Videos]) = ???
+  def listsOverview(lists: Seq[SiteList]) =
+    doctype("html")(
+      html(
+        lang := "en",
+        Style.cascasdeRoot,
+        headFrag(
+          pageTitle = "chris-kipp.io - lists",
+          description =
+            "A collection of lists and links that I want to refer back on."
+        ),
+        body(
+          headerFrag("lists"),
+          tags2.main(
+            Style.largeFontOverview,
+            lists.map { list =>
+              div(
+                Style.blogListing,
+                // TODO remove inline styling
+                a(borderBottomStyle.none, href := s"./lists/${list.id}")(
+                  list.title
+                ),
+                span(list.description)
+              )
+            }
+          )
+        ),
+        footerFrag()
+      )
+    )
+
+  def listPage(list: SiteList) =
+    doctype("html")(
+      html(
+        lang := "en",
+        Style.cascasdeRoot,
+        headFrag(
+          pageTitle = s"chris-kipp.io - ${list.id}",
+          description = list.description
+        ),
+        body(
+          headerFrag("lists"),
+          tags2.main(
+            list.renderHtml()
+          )
+        ),
+        footerFrag()
+      )
+    )
 
   // TODO we'll probably need to make a markdown page of this
   def aboutPage() =

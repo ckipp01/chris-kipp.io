@@ -27,10 +27,13 @@ object Main:
       /////////////////////
       scribe.info("processing the blog...")
       val orderedPosts = blogPosts.sortBy(_.date).reverse
-      val blogPages = blogPosts.map { post =>
-        scribe.info(s"putting together ${post.urlify}")
-        post.copy(content = Html.blogPage(post).render)
-      }
+      val blogPages = blogPosts
+        .map { post =>
+          scribe.info(s"putting together ${post.urlify}")
+          post.copy(content = Html.blogPage(post).render)
+        }
+        .sortBy(_.date)
+        .reverse
       val blogRss = Rss.generate(blogPosts)
       val blogOverview = Html.blogOverview(blogPages)
 
@@ -39,6 +42,7 @@ object Main:
       //////////////////////
       scribe.info("putting together talks page")
       val talks =
+        // A little weird but we simply want to grab talks out of here because we're special casing it.
         lists.collectFirst { case talks: Talks =>
           talks
         }.get // TODO quick and dirty since we just refactored all of this.. probaly move this up later
@@ -48,7 +52,8 @@ object Main:
       // PROCESSING LISTS //
       //////////////////////
       scribe.info("putting together lists page")
-      // val listsOverview = Html.listsOverview(lists.)
+      val listsOverview = Html.listsOverview(lists)
+      val listPages = lists.map(list => (list.id -> Html.listPage(list)))
 
       ///////////////////////
       // PROCESSING ABOUT ///
@@ -88,6 +93,19 @@ object Main:
         )
       }
 
+      listPages.foreach { (id, content) =>
+        scribe.info(s"writing lists/${id}.html")
+        os.write(
+          os.Path(
+            Constants.SITE_DIR / "lists" / (id + ".html"),
+            os.pwd
+          ),
+          content,
+          createFolders = true
+        )
+
+      }
+
       scribe.info("writing index.html")
       os.write(
         os.Path(Constants.SITE_DIR / "index.html", os.pwd),
@@ -104,6 +122,12 @@ object Main:
       os.write(
         os.Path(Constants.SITE_DIR / "talks.html", os.pwd),
         talksPage.render
+      )
+
+      scribe.info("writing lists.html")
+      os.write(
+        os.Path(Constants.SITE_DIR / "lists.html", os.pwd),
+        listsOverview.render
       )
 
       scribe.info("writing about.html")
@@ -134,7 +158,7 @@ object Main:
 
   private def getLists(
       path: os.Path
-  ): Either[String, Seq[Albums | Articles | Sites | Talks | Videos]] =
+  ): Either[String, Seq[SiteList]] =
     scribe.info(s"Fetching lists from ${path.baseName}")
     for
       lists <- Try(os.list(path)).toEither.left.map(_.getMessage)

@@ -71,6 +71,7 @@ object Style extends CascadingStyleSheet:
       )
     ),
     i(fontStyle.italic),
+    b(fontWeight.bold),
     blockquote(
       fontSize.small,
       borderLeftWidth := 3,
@@ -95,7 +96,6 @@ object Style extends CascadingStyleSheet:
         listStyleType.circle
       ),
       em(fontStyle.italic),
-      img(display.block, margin.auto, maxWidth := "100%", maxHeight := "500px"),
       iframe(margin.auto, display.block, width := "100%")
     ),
     footer(
@@ -155,7 +155,8 @@ object Style extends CascadingStyleSheet:
     margin := "5px auto"
   )
 
-  val overview = cls(
+  val largeFontOverview = cls(
+    marginBottom := 20,
     span(fontStyle.italic, opacity := 0.5),
     a(fontSize := "1.25rem", padding := 5),
     p(fontSize := "1.25rem", marginBottom := 0)
@@ -168,10 +169,32 @@ object Style extends CascadingStyleSheet:
     p(fontSize := "1.25rem", marginBottom := 0)
   )
 
+  val blogPost = cls(
+    img(display.block, margin.auto, maxWidth := "100%", maxHeight := "500px")
+  )
+
   val blogListing = cls(
     display.flex,
     flexDirection.column,
     paddingBottom := 10
+  )
+
+  val album = cls(
+    display.flex,
+    alignItems.center,
+    img(maxHeight := 100, padding := 10)
+  )
+
+  val albumDescription = cls(
+    flexGrow := 1
+  )
+
+  val noBottomMargin = cls(
+    marginBottom := 0
+  )
+
+  val star = cls(
+    height := 20
   )
 
   // There isn't a good way to do things like @import or * with scalatags, so

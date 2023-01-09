@@ -1,25 +1,27 @@
 package io.kipp.site
 
-enum ListItem:
-  case Album(
-      artist: String,
-      album: String,
-      link: String,
-      `favorite-song`: String,
-      rating: Int
-  )
+sealed trait ListItem
 
-  case Article(title: String, author: String, link: String)
+case class Album(
+    artist: String,
+    album: String,
+    link: String,
+    `favorite-song`: String,
+    rating: Int
+) extends ListItem
 
-  case Site(url: String, owner: String, topics: Set[String])
+case class Article(title: String, author: String, link: String) extends ListItem
 
-  case Talk(
-      title: String,
-      slides: String,
-      video: Option[String],
-      place: Place
-  )
+case class Site(url: String, owner: String, topics: Set[String])
+    extends ListItem
 
-  case Video(title: String, author: String, link: String)
+case class Talk(
+    title: String,
+    slides: String,
+    video: Option[String],
+    place: Place
+) extends ListItem
 
-final case class Place(name: String, link: String)
+case class Video(title: String, author: String, link: String) extends ListItem
+
+final case class Place(name: String, link: String) extends ListItem

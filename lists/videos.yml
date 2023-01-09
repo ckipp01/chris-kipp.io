@@ -1,9 +1,8 @@
-title: videos
+id: videos
+title: Videos I've enjoyed
 description: >
   This is a collection of videos that I've enjoyed watching and that I'd like
-  to come back to in the future. I've attempted to group them by category that
-  makes the most sense. My hope is to start using tags of some sort or related
-  categories to better navigate around to similiar videos or articles.
+  to come back to in the future.
 
 items:
   - Language Parsing:

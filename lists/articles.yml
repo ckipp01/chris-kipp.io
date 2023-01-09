@@ -1,9 +1,8 @@
-title: articles
+id: articles
+title: Articles I've enjoyed
 description: >
   This is a collection of articles that I've enjoyed reading and that I'd like
-  to come back to in the future. I've attempted to group them by category that
-  makes the most sense. My hope is to start using tags of some sort or related
-  categories to better navigate around to similiar videos articles.
+  to come back to in the future.
 
 items:
   - Build Tools:
