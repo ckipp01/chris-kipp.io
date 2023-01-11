@@ -6,7 +6,7 @@ case class Album(
     artist: String,
     album: String,
     link: String,
-    `favorite-song`: String,
+    `favorite-song`: Option[String],
     rating: Int
 ) extends ListItem
 

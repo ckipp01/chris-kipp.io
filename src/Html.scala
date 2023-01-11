@@ -143,6 +143,7 @@ object Html:
         body(
           headerFrag("about"),
           tags2.main(
+            Style.blogPost,
             img(src := "../images/me.png"),
             p(
               """Hi, I'm Chris. You've stumbled upon my blog and website. It's a simple place
@@ -247,6 +248,7 @@ object Html:
       tags2.title(pageTitle),
       tags2.style(Style.raw),
       tags2.style(Style.styleSheetText),
+      tags2.style(Style.mediaQueries),
       script(`type` := "text/javascript", src := "../js/prism.js"),
       link(
         rel := "stylesheet",

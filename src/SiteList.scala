@@ -8,7 +8,7 @@ sealed trait SiteList:
   def id: String
   def title: String
   def description: String
-  def items: Seq[ListItem] | Seq[Map[String, Seq[ListItem]]]
+  def items: Seq[ListItem] | Map[String, Seq[ListItem]]
   def renderHtml(): Seq[TypedTag[String]]
 
 object SiteList:
@@ -75,7 +75,9 @@ final case class Albums(
             target := "_blank",
             album.album
           ),
-          p(marginBottom := 0, b("Favorite song: "), album.`favorite-song`)
+          album.`favorite-song`
+            .map(song => p(marginBottom := 0, b("Favorite song: "), song))
+            .getOrElse("")
         ),
         div(
           (1 to album.rating).map(_ =>
@@ -89,9 +91,21 @@ final case class Articles(
     id: String,
     title: String,
     description: String,
-    items: Seq[Map[String, Seq[Article]]]
+    items: Map[String, Seq[Article]]
 ) extends SiteList:
-  override def renderHtml(): Seq[TypedTag[String]] = items.map(article => div())
+  override def renderHtml(): Seq[TypedTag[String]] =
+    Seq(h1(title), p(description)) ++ items.map { (topic, articles) =>
+      div(
+        Style.article,
+        h2(topic),
+        articles.map { article =>
+          div(
+            a(href := article.link, target := "_blank", article.title),
+            p(article.author)
+          )
+        }
+      )
+    }
 
 final case class Sites(
     id: String,
@@ -99,7 +113,15 @@ final case class Sites(
     description: String,
     items: Seq[Site]
 ) extends SiteList:
-  override def renderHtml(): Seq[TypedTag[String]] = items.map(site => div())
+  override def renderHtml(): Seq[TypedTag[String]] =
+    Seq(h1(title), p(description)) ++ items.map { site =>
+      div(
+        Style.sites,
+        a(href := site.url, target := "_blank", site.url),
+        // TODO get rid of inline shit
+        p(marginBottom := 0, site.owner)
+      )
+    }
 
 final case class Talks(
     id: String,
@@ -148,6 +170,18 @@ final case class Videos(
     id: String,
     title: String,
     description: String,
-    items: Seq[Map[String, Seq[Video]]]
+    items: Map[String, Seq[Video]]
 ) extends SiteList:
-  override def renderHtml(): Seq[TypedTag[String]] = items.map(video => div())
+  override def renderHtml(): Seq[TypedTag[String]] =
+    Seq(h1(title), p(description)) ++ items.map { (topic, videos) =>
+      div(
+        Style.article,
+        h2(topic),
+        videos.map { video =>
+          div(
+            a(href := video.link, target := "_blank", video.title),
+            p(video.author)
+          )
+        }
+      )
+    }

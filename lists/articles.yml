@@ -5,32 +5,32 @@ description: >
   to come back to in the future.
 
 items:
-  - Build Tools:
+  Build Tools:
     - title: 'So, what''s wrong with SBT?'
       author: Li Haoyi
       link: 'https://www.lihaoyi.com/post/SowhatswrongwithSBT.html'
     - title: semantics of dependency resolvers
       author: Eugene Yokota
       link: 'https://eed3si9n.com/dependency-resolver-semantics'
-  - Community:
+  Community:
     - title: The Impact of Toxic Influencers on Communities
       author: Erin Casali
       link: >-
         https://intenseminimalism.com/2020/the-impact-of-toxic-influencers-on-communities/
-  - Compilers:
+  Compilers:
     - title: Favorite compiler and interpreter resources
       author: Phil Eaton
       link: https://lists.eatonphil.com/compilers-and-interpreters.html
-  - Editing:
+  Editing:
     - title: xi-editor retrospective
       author: Raph Levien
       link: 'https://raphlinus.github.io/xi/2020/06/27/xi-retrospective.html'
-  - Editors:
+  Editors:
     - title: 'The values of Emacs, the Neovim revolution, and the VSCode gorilla'
       author: 'Murilo Pereira '
       link: >-
         https://www.murilopereira.com/the-values-of-emacs-the-neovim-revolution-and-the-vscode-gorilla/
-  - IDE:
+  IDE:
     - title: Three Architectures for a Responsive IDE
       author: rust.analyzer
       link: >-
@@ -42,7 +42,7 @@ items:
       author: Aemon Cannon
       link: >-
         https://ensime.blogspot.com/2010/08/building-ide-with-scala-presentation.html
-  - Language Parsing:
+  Language Parsing:
     - title: Abstract vs. Concrete Syntax Trees
       author: Eli Bendersky
       link: >-
@@ -54,37 +54,33 @@ items:
       author: Oscar Boykin
       link: >-
         https://posco.medium.com/designing-a-parsing-library-in-scala-d5076de52536
-  - Open Source:
+  Open Source:
     - title: Scratching Someone Else's Itch (Why Open Source can't do Usability)
       author: Steven Pemberton
       link: 'https://homepages.cwi.nl/~steven/vandf/2004.1-itch.html'
-  - JVM:
+  JVM:
     - title: 'A peek into Java 17: Encapsulating the Java runtime internals'
       author: Ben Evans
       link: >-
         https://blogs.oracle.com/javamagazine/post/a-peek-into-java-17-continuing-the-drive-to-encapsulate-the-java-runtime-internals
-  - Functional Programming:
+  Functional Programming:
     - title: 'Parse, don''t validate'
       author: Alexis King
       link: >-
         https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/#2019-11-05-parse-don-t-validate-footnote-1-definition
-  - Lua:
+  Lua:
     - title: Lua Metatables Tutorial
       author: Michael Ebens
       link: 'https://ebens.me/post/lua-metatables-tutorial/'
-  - Lisp:
-    - title: Beating the Averages
-      author: Paul Graham
-      link: 'http://www.paulgraham.com/avg.html'
-  - Logic:
+  Logic:
     - title: Functions That Go Backwards
       author: Jordan Scalaes
       link: 'https://thatjdanisso.cool/functions-that-go-backwards'
-  - TypeScript:
+  TypeScript:
     - title: The Disposable Pattern in TypeScript
       author: Henning Dieterichs
       link: 'https://blog.hediet.de/post/the_disposable_pattern_in_typescript'
-  - Scala:
+  Scala:
     - title: Make ADTs subtypes of Product and Serializable
       author: Nicolas Rinaudo
       link: >-
@@ -98,7 +94,7 @@ items:
     - title: Generalized type constraints in Scala (without a PhD)
       author: Erik Bruchez
       link: 'https://blog.bruchez.name/posts/generalized-type-constraints-in-scala/'
-  - Software Development:
+  Software Development:
     - title: Principles of Design
       author: Tim Berners-Lee
       link: 'https://www.w3.org/DesignIssues/Principles.html'
@@ -118,7 +114,7 @@ items:
     - title: encoding file path as URI reference
       author: Eugene Yokota
       link: 'https://eed3si9n.com/encoding-file-path-as-URI-reference'
-  - Vim:
+  Vim:
     - title: Oil and vinegar - split windows and the project drawer
       author: Drew Neil
       link: >-
@@ -129,7 +125,7 @@ items:
     - title: Build your own Vim statusline
       author: George Ornbo
       link: 'https://shapeshed.com/vim-statuslines/'
-  - web3:
+  web3:
     - title: My first impressions of web3
       author: Moxie Marlinspike
       link: https://moxie.org/2022/01/07/web3-first-impressions.html

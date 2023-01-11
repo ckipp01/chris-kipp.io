@@ -5,6 +5,9 @@ import scalatags.Text.all.*
 import scalatags.Text.styles2
 
 object Style extends CascadingStyleSheet:
+  // TODO once https://github.com/com-lihaoyi/scalatags/pull/263 is merged and
+  // released, remove this.
+  override def customSheetName: Option[String] = Some("site")
   initStyleSheet()
 
   val cream = "rgb(252, 243, 217)"
@@ -169,6 +172,8 @@ object Style extends CascadingStyleSheet:
     p(fontSize := "1.25rem", marginBottom := 0)
   )
 
+  // TODO maybe rename this since it's used in about, but we need to refactor
+  // this entire thing...
   val blogPost = cls(
     img(display.block, margin.auto, maxWidth := "100%", maxHeight := "500px")
   )
@@ -182,6 +187,7 @@ object Style extends CascadingStyleSheet:
   val album = cls(
     display.flex,
     alignItems.center,
+    flexDirection.column,
     img(maxHeight := 100, padding := 10)
   )
 
@@ -196,6 +202,24 @@ object Style extends CascadingStyleSheet:
   val star = cls(
     height := 20
   )
+
+  val article = cls(
+    p(fontStyle.italic, opacity := 0.5)
+  )
+
+  val sites = cls(
+    marginBottom := 10,
+    p(fontStyle.italic, opacity := 0.5),
+    span(fontStyle.italic, opacity := 0.5, fontSize := "0.8em"),
+  )
+
+  // TODO there really isn't a way to do this with scalatags
+  // https://github.com/com-lihaoyi/scalatags/issues/156
+  val mediaQueries = s"""@media (min-width: 768px) {
+                         |  .site-album {
+                         |    flex-direction: row;
+                         |  }
+                         |}""".stripMargin
 
   // There isn't a good way to do things like @import or * with scalatags, so
   // we just do it raw here.

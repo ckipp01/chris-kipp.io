@@ -1,5 +1,5 @@
 //> using scala "3.2.1"
-//> using options "-deprecation", "-feature", "-explain", "-Xmax-inlines", "50"
+//> using options "-deprecation", "-feature", "-explain"
 //> using lib "org.scala-lang::scala3-compiler:3.2.1"
 //> using lib "com.lihaoyi::os-lib:0.9.0"
 //> using lib "com.lihaoyi::scalatags:0.12.0"
