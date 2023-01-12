@@ -94,17 +94,18 @@ final case class Articles(
     items: Map[String, Seq[Article]]
 ) extends SiteList:
   override def renderHtml(): Seq[TypedTag[String]] =
-    Seq(h1(title), p(description)) ++ items.map { (topic, articles) =>
-      div(
-        Style.article,
-        h2(topic),
-        articles.map { article =>
-          div(
-            a(href := article.link, target := "_blank", article.title),
-            p(article.author)
-          )
-        }
-      )
+    Seq(h1(title), p(description)) ++ items.toSeq.sortBy(_._1).map {
+      (topic, articles) =>
+        div(
+          Style.article,
+          h2(topic),
+          articles.map { article =>
+            div(
+              a(href := article.link, target := "_blank", article.title),
+              p(article.author)
+            )
+          }
+        )
     }
 
 final case class Sites(
@@ -173,15 +174,16 @@ final case class Videos(
     items: Map[String, Seq[Video]]
 ) extends SiteList:
   override def renderHtml(): Seq[TypedTag[String]] =
-    Seq(h1(title), p(description)) ++ items.map { (topic, videos) =>
-      div(
-        Style.article,
-        h2(topic),
-        videos.map { video =>
-          div(
-            a(href := video.link, target := "_blank", video.title),
-            p(video.author)
-          )
-        }
-      )
+    Seq(h1(title), p(description)) ++ items.toSeq.sortBy(_._1).map {
+      (topic, videos) =>
+        div(
+          Style.article,
+          h2(topic),
+          videos.map { video =>
+            div(
+              a(href := video.link, target := "_blank", video.title),
+              p(video.author)
+            )
+          }
+        )
     }
