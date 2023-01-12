@@ -1,6 +1,6 @@
-//> using scala "3.2.1"
+//> using scala "3.2.2"
 //> using options "-deprecation", "-feature", "-explain"
-//> using lib "org.scala-lang::scala3-compiler:3.2.1"
+//> using lib "org.scala-lang::scala3-compiler:3.2.2"
 //> using lib "com.lihaoyi::os-lib:0.9.0"
 //> using lib "com.lihaoyi::scalatags:0.12.0"
 //> using lib "com.lihaoyi::pprint:0.8.1"
