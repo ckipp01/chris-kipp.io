@@ -5,11 +5,48 @@ description: >
   to come back to in the future.
 
 items:
+  Adventure:
+    - title: ZABARDAST - A high altitude travel diary
+      author: Picture Organic Clothing
+      link: https://youtu.be/AkigzUFr3ys
+  Interviews:
+    - title: Bon Iver and Zane Lowe - Official ‘i,i' Interview
+      author: Bon Iver
+      link: https://youtu.be/hGFndAXtnro
   Language Parsing:
     - title: Tree-sitter - a new parsing system for programming tools
       author: Max Brunsfeld
-      link: 'https://www.youtube.com/watch?v=Jes3bD6P0To'
+      link: https://www.youtube.com/watch?v=Jes3bD6P0To
+  Music:
+    - title: Nils Frahm - Says (Live on KEXP)
+      author: KEXP (Nils Frahm)
+      link: https://youtu.be/xLNeZogTsK8
+    - title: Vega Trails – St Thomas' Church (Official Video)
+      author: Gondwana Records (Vega Trails)
+      link: https://youtu.be/P9urWc1yJ_Q
+    - title: "Yo-Yo Ma: NPR Music Tiny Desk Concert"
+      author: NPR Music (Yo-Yo Ma)
+      link: https://youtu.be/3uiUHvET_jg
+  Neovim:
+    - title: "[Demo] vim.schedule demystified (hopefully)"
+      author: TJ DeVries
+      link: https://youtu.be/GMS0JvS7W1Y
+  NFTS:
+    - title: Line Goes Up – The Problem With NFTs
+      author: Dan Olson
+      link: https://youtu.be/YQ_xWvX1n9g
+  Programming:
+    - title: The Future of Programming
+      author: Bret Victor
+      link: https://youtu.be/8pTEmbeENF4
   Scala:
     - title: Folding algebraic data types - Scala tutorial
       author: Jakub Kozłowski
-      link: 'https://www.youtube.com/watch?v=cS4MOUsuWYc&feature=emb_title'
+      link: https://www.youtube.com/watch?v=cS4MOUsuWYc&feature=emb_title
+    - title: Vivisecting the Veil of Variance
+      author: Kit Langton 
+      link: https://youtu.be/dPbbqrhm-WY 
+  Vim:
+    - title: How to Do 90% of What Plugins Do (With Just Vim)
+      author: Max Cantor
+      link: https://youtu.be/XA2WjJbmmoM
