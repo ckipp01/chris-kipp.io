@@ -33,7 +33,7 @@ Here we go, in no particular order.
 
 ## Benny The Butcher - Tana Talk 4
 
-![tana talk 4 album cover](../images/tana-talk-4.png)
+![tana talk 4 album cover](../images/albums/tana-talk-4.png)
 
 - [Listen Here](https://bennythebutcher.ffm.to/tanatalk4)
 - [Genius Lyrics](https://genius.com/albums/Benny-the-butcher/Tana-talk-4)
@@ -43,7 +43,7 @@ Here we go, in no particular order.
 
 ## JID - The Forever Story
 
-![the forever story album cover](../images/the-forever-story.jpeg)
+![the forever story album cover](../images/albums/the-forever-story.jpeg)
 
 - [Listen Here](https://jid.lnk.to/TheForeverStory)
 - [Genius Lyrics](https://genius.com/albums/Jid/The-forever-story)
@@ -53,7 +53,7 @@ Here we go, in no particular order.
 
 ## Kenny Beats - LOUIE
 
-![LOUIE album cover](../images/louie.jpeg)
+![LOUIE album cover](../images/albums/louie.jpeg)
 
 - [Listen Here](https://kennybeats.bandcamp.com/album/louie)
 - [Genius Lyrics](https://pitchfork.com/reviews/albums/kenny-beats-louie/)
@@ -63,7 +63,7 @@ Here we go, in no particular order.
 
 ## Messa - Close
 
-![close album cover](../images/close.jpeg)
+![close album cover](../images/albums/close.jpeg)
 
 - [Listen Here](https://messaproject.bandcamp.com/album/close)
 - [Messa](https://linktr.ee/messaband)
@@ -71,28 +71,28 @@ Here we go, in no particular order.
 
 ## Moncho y Su Banda - Que Bellas Son
 
-![que bellas son album cover](../images/que-bellas-son.jpeg)
+![que bellas son album cover](../images/albums/que-bellas-son.jpeg)
 
 - [Listen Here](https://monchoysubanda.bandcamp.com/album/que-bellas-son)
 
 
 ## Tomppabeats - Habbits
 
-![habbits album cover](../images/habbits.jpeg)
+![habbits album cover](../images/albums/habbits.jpeg)
 
 - [Listen Here](https://tomppabeats.bandcamp.com/album/habits)
 - [Tomppabeats](https://www.instagram.com/tomppabeats/?hl=en)
 
 ## Vega Trails - Tremors in the Static
 
-![tremors in the static album cover](../images/tremors-in-the-static.jpeg)
+![tremors in the static album cover](../images/albums/tremors-in-the-static.jpeg)
 
 - [Listen Here](https://vegatrails.bandcamp.com/album/tremors-in-the-static)
 - [Vega Trails](https://vegatrails.com/)
 
 ## Wilma Vritra - Grotto
 
-![grotto album cover](../images/grotto.jpeg)
+![grotto album cover](../images/albums/grotto.jpeg)
 
 - [Listen Here](https://wilmavritra.bandcamp.com/album/grotto)
 - [Genius Lyrics](https://genius.com/albums/Wilma-vritra/Grotto)
@@ -101,7 +101,7 @@ Here we go, in no particular order.
 
 ## Yaya Bey - Remember Your North Star
 
-![remember your north star album cover](../images/remember-your-north-star.jpeg)
+![remember your north star album cover](../images/albums/remember-your-north-star.jpeg)
 
 - [Listen Here](https://yayabey.bandcamp.com/album/remember-your-north-star)
 - [Genius Lyrics](https://genius.com/albums/Yaya-bey/Remember-your-north-star)
@@ -110,7 +110,7 @@ Here we go, in no particular order.
 
 ## Zack Fox - wood tip EP
 
-![wood tip album cover](../images/wood-tip.jpeg)
+![wood tip album cover](../images/albums/wood-tip.jpeg)
 
 - [Listen Here](https://soundcloud.com/corduroycondom/sets/wood-tip)
 - [Genius Lyrics](https://genius.com/albums/Zack-fox/Wood-tip-ep)

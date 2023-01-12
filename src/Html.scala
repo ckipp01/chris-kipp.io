@@ -18,6 +18,7 @@ object Html:
         body(
           headerFrag(blogPost.title),
           tags2.main(
+            Style.blogPost,
             // TODO maybe the date here
             raw(blogPost.content)
           ),
@@ -34,16 +35,17 @@ object Html:
         headFrag(
           pageTitle = "chris-kipp.io - blog",
           description =
-            "Collection of blogs posts by Chris Kipp over the years."
+            "A collection of blogs posts by Chris Kipp over the years."
         ),
         body(
           headerFrag("blog"),
           tags2.main(
-            Style.overview,
+            Style.largeFontOverview,
             blogPosts.map { blogPost =>
               div(
                 Style.blogListing,
                 a(
+                  // TODO remove inline styling
                   borderBottomStyle.none,
                   href := s"./blog/${blogPost.urlify}"
                 )(
@@ -58,59 +60,76 @@ object Html:
       )
     )
 
-  def talksOverview(talks: Seq[Talk]) =
+  def talksOverview(talks: Talks) =
     doctype("html")(
       html(
         lang := "en",
         Style.cascasdeRoot,
         headFrag(
-          pageTitle = "chris-kipp.io - talks",
-          description = "Collection of talks by Chris Kipp over the years."
+          pageTitle = s"chris-kipp.io - s${talks.title}",
+          description = talks.description
         ),
         body(
           headerFrag("talks"),
           tags2.main(
             Style.talkListing,
-            talks.map { talk =>
-              div(
-                p(talk.title),
-                span(
-                  a(
-                    borderBottomStyle.none,
-                    href := talk.place.link,
-                    target := "_blank",
-                    talk.place.name
-                  ),
-                  " | ",
-                  a(
-                    borderBottomStyle.none,
-                    href := s"slides/${talk.slides}",
-                    target := "_blank",
-                    "slides"
-                  ),
-                  talk.video
-                    .map[scalatags.Text.Modifier] { vid =>
-                      Seq(
-                        stringFrag(" | "),
-                        a(
-                          borderBottomStyle.none,
-                          rel := "me noopener noreferrer",
-                          target := "_blank",
-                          href := vid,
-                          "video"
-                        )
-                      )
-                    }
-                    .getOrElse(Seq.empty[scalatags.Text.Modifier])
-                )
-              )
-            }
+            talks.renderHtml()
           ),
           footerFrag()
         )
       )
     )
 
+  def listsOverview(lists: Seq[SiteList]) =
+    doctype("html")(
+      html(
+        lang := "en",
+        Style.cascasdeRoot,
+        headFrag(
+          pageTitle = "chris-kipp.io - lists",
+          description =
+            "A collection of lists and links that I want to refer back on."
+        ),
+        body(
+          headerFrag("lists"),
+          tags2.main(
+            Style.largeFontOverview,
+            lists.map { list =>
+              div(
+                Style.blogListing,
+                // TODO remove inline styling
+                a(borderBottomStyle.none, href := s"./lists/${list.id}")(
+                  list.title
+                ),
+                span(list.description)
+              )
+            }
+          )
+        ),
+        footerFrag()
+      )
+    )
+
+  def listPage(list: SiteList) =
+    doctype("html")(
+      html(
+        lang := "en",
+        Style.cascasdeRoot,
+        headFrag(
+          pageTitle = s"chris-kipp.io - ${list.id}",
+          description = list.description
+        ),
+        body(
+          headerFrag("lists"),
+          tags2.main(
+            list.renderHtml()
+          )
+        ),
+        footerFrag()
+      )
+    )
+
+  // TODO we'll probably need to make a markdown page of this
   def aboutPage() =
     doctype("html")(
       html(
@@ -124,6 +143,7 @@ object Html:
         body(
           headerFrag("about"),
           tags2.main(
+            Style.blogPost,
             img(src := "../images/me.png"),
             p(
               """Hi, I'm Chris. You've stumbled upon my blog and website. It's a simple place
@@ -188,7 +208,7 @@ object Html:
       pageTitle: String,
       description: String,
       thumbnail: Option[String] = None
-  ) = {
+  ) =
     head(
       meta(charset := "utf-8"),
       meta(
@@ -228,6 +248,7 @@ object Html:
       tags2.title(pageTitle),
       tags2.style(Style.raw),
       tags2.style(Style.styleSheetText),
+      tags2.style(Style.mediaQueries),
       script(`type` := "text/javascript", src := "../js/prism.js"),
       link(
         rel := "stylesheet",
@@ -242,24 +263,23 @@ object Html:
         attr("data-code") := "2N1ystwyAD7E52EmuxQkTyoAno02YcQE"
       )
     )
-  }
 
   final case class NavItem(link: String, name: String, active: String):
     def html() =
       a(if active == name then Style.activePage else "", href := link, name)
 
-  private def headerFrag(active: String) = {
+  private def headerFrag(active: String) =
     header(
       tags2.nav(
         NavItem("/about", "about", active).html(),
         NavItem("/blog", "blog", active).html(),
+        NavItem("/lists", "lists", active).html(),
         NavItem("/talks", "talks", active).html(),
         a(href := "https://www.tooling-talks.com", "tooling talks podcast")
       )
     )
-  }
 
-  private def footerFrag() = {
+  private def footerFrag() =
     footer(
       a(
         href := "https://github.com/ckipp01",
@@ -311,4 +331,4 @@ object Html:
         )
       )
     )
-  }
+end Html

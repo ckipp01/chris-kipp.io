@@ -6,4 +6,5 @@ object Constants:
   // from the root of the project, not in src, not anywhere else.
   final val BLOG_DIR = os.Path("./blog/", os.pwd)
   final val SITE_DIR = os.Path("./site/", os.pwd)
+  final val LIST_DIR = os.Path("./lists/", os.pwd)
   final val TALKS_FILE = os.Path("./talks.yml", os.pwd)

@@ -1,0 +1,29 @@
+id: sites
+title: Personal websites that I enjoy or draw inspiration from.
+description: >
+  I really appreciate coming across personal webistes. They are often put
+  together with care and have thoughtful content. This is a collection of sites
+  I draw inspiration from or resonate with and often read their content.
+
+items:
+  - url: https://craze.co.uk/
+    owner: Rutherford Craze
+    topics: [ typography, thoughts, food ]
+  - url: https://eatonphil.com/
+    owner: Phil Eaton
+    topics: [ compilers, thoughts, databases ]
+  - url: https://eed3si9n.com/
+    owner: Eugene Yokota
+    topics: [ build tools, scala, food, music ]
+  - url: https://indoorvivants.com/
+    owner: Anton Sviridov
+    topics: [ computing, scala ]
+  - url: https://macwright.com/
+    owner: Tom MacWright
+    topics: [ web, books, music, thoughts, art, photography ]
+  - url: https://rsms.me/
+    owner: Rasmus Andersson
+    topics: [ software, computing, typography, thoughts, photography ]
+  - url: https://wiki.xxiivv.com/site/home.html
+    owner: Devine Lu Linvega
+    topics: [ computing, thoughts, art, music ]
