@@ -2,11 +2,16 @@ id: albums
 title: Album ratings for 2023
 description: >
   This year I'm attempting to track all the new albums I listen to. The idea is
-  pretty simple. Every time I listen to a new album in its entiretiy that was
+  pretty simple. Every time I listen to a new album in its entirety that was
   released in 2023 and that I enjoy (considered at least a 3/5), then I'll
   throw it up here.
 
 items:
+  - artist: Rozi Plain
+    album: Prize
+    link: https://roziplain.bandcamp.com/album/prize
+    favorite-song: Complicated
+    rating: 4
   - artist: Nicole Dollanganger
     album: Married in Mount Airy
     link: https://nicoledollanganger.bandcamp.com/album/married-in-mount-airy
