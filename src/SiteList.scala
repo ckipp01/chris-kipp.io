@@ -24,12 +24,12 @@ object SiteList:
 
     json match
       case Left(err) =>
-        scribe.error(s"Choked when processing ${path}")
+        scribe.error(s"Choked when processing ${path} to json")
         Left(err.getMessage)
       case Right(json) =>
         toListOf(json) match
           case Left(err) =>
-            scribe.error(s"Choked when processing ${path}")
+            scribe.error(s"Choked when processing ${path} to it's case class")
             Left(err)
           case Right(value) => Right(value)
 
@@ -44,11 +44,11 @@ object SiteList:
     // TODO is there a better way to do this?
     // and when I do that get rid of the `-Xmax-inlines`
     id match
-      case Right("albums")   => json.as[Albums].left.map(_.message)
-      case Right("articles") => json.as[Articles].left.map(_.message)
-      case Right("sites")    => json.as[Sites].left.map(_.message)
-      case Right("talks")    => json.as[Talks].left.map(_.message)
-      case Right("videos")   => json.as[Videos].left.map(_.message)
+      case Right("albums")   => json.as[Albums].left.map(_.getMessage)
+      case Right("articles") => json.as[Articles].left.map(_.getMessage)
+      case Right("sites")    => json.as[Sites].left.map(_.getMessage)
+      case Right("talks")    => json.as[Talks].left.map(_.getMessage)
+      case Right("videos")   => json.as[Videos].left.map(_.getMessage)
       case Right(value) => Left(s"${value} seems to be unmapped for decoded.")
       case Left(err)    => Left(err.getMessage)
 

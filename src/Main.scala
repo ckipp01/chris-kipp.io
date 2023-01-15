@@ -12,13 +12,15 @@
 package io.kipp.site
 
 import dotty.tools.dotc.config.ScalaSettings
+
 import scala.util.Try
+
 import Extensions.sequence
 
 object Main:
 
   @main def buildSite() =
-    for
+    val result: Either[String, Unit] = for
       blogPosts <- getBlogPosts(Constants.BLOG_DIR)
       lists <- getLists(Constants.LIST_DIR)
     yield
@@ -146,6 +148,12 @@ object Main:
 
       scribe.info("writting rss feed")
       os.write(os.Path(Constants.SITE_DIR / "rss.xml", os.pwd), blogRss.render)
+
+    result match
+      case Left(value)  => scribe.error(value)
+      case Right(value) => scribe.info("Successfully built site")
+
+  end buildSite
 
   private def getBlogPosts(
       path: os.Path
