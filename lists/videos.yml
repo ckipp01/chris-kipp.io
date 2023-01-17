@@ -13,6 +13,9 @@ items:
     - title: Bon Iver and Zane Lowe - Official ‘i,i' Interview
       author: Bon Iver
       link: https://youtu.be/hGFndAXtnro
+    - title: André 3000 | Broken Record (Hosted by Rick Rubin)
+      author: Broken Record Podcast
+      link: https://youtu.be/LjHcHTJ8D5k
   Language Parsing:
     - title: Tree-sitter - a new parsing system for programming tools
       author: Max Brunsfeld
