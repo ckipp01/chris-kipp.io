@@ -18,9 +18,9 @@ items:
       link: https://scala.io/
 
   - title: What I've learned in open source, and why I think you should contribute
-    slides: slides-open-source
+    slides: open-source
     place:
-      name: Lunaconf 2022
+      name: Lunaconf 2022 | HackDay 2023
       link: https://lunatech.com/
 
   - title: Code Coverage in Scala 3
