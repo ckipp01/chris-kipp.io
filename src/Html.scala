@@ -5,125 +5,107 @@ import scalatags.Text.tags2
 import dotty.tools.dotc.config.Settings.Setting
 
 object Html:
+
   def blogPage(blogPost: BlogPost) =
-    doctype("html")(
-      html(
-        lang := "en",
-        Style.cascasdeRoot,
-        headFrag(
-          pageTitle = blogPost.title,
-          description = blogPost.description,
-          thumbnail = blogPost.thumbnail
+    htmlWrapper(
+      headFrag(
+        pageTitle = blogPost.title,
+        description = blogPost.description,
+        thumbnail = blogPost.thumbnail
+      ),
+      body(
+        Style.bodyBase,
+        headerFrag(blogPost.title),
+        tags2.main(
+          Style.headings,
+          Style.writing,
+          // TODO maybe the date here
+          raw(blogPost.content)
         ),
-        body(
-          headerFrag(blogPost.title),
-          tags2.main(
-            Style.blogPost,
-            // TODO maybe the date here
-            raw(blogPost.content)
-          ),
-          footerFrag()
-        )
+        footerFrag()
       )
     )
 
   def blogOverview(blogPosts: Seq[BlogPost]) =
-    doctype("html")(
-      html(
-        lang := "en",
-        Style.cascasdeRoot,
-        headFrag(
-          pageTitle = "chris-kipp.io - blog",
-          description =
-            "A collection of blogs posts by Chris Kipp over the years."
+    htmlWrapper(
+      headFrag(
+        pageTitle = "chris-kipp.io - blog",
+        description =
+          "A collection of blogs posts by Chris Kipp over the years."
+      ),
+      body(
+        Style.bodyBase,
+        headerFrag("blog"),
+        tags2.main(
+          Style.tableBase,
+          Style.largeFontOverview,
+          blogPosts.map { blogPost =>
+            div(
+              Style.blogListing,
+              a(href := s"./blog/${blogPost.urlify}")(blogPost.title),
+              span(blogPost.date)
+            )
+          }
         ),
-        body(
-          headerFrag("blog"),
-          tags2.main(
-            Style.largeFontOverview,
-            blogPosts.map { blogPost =>
-              div(
-                Style.blogListing,
-                a(
-                  // TODO remove inline styling
-                  borderBottomStyle.none,
-                  href := s"./blog/${blogPost.urlify}"
-                )(
-                  blogPost.title
-                ),
-                span(blogPost.date)
-              )
-            }
-          ),
-          footerFrag()
-        )
+        footerFrag()
       )
     )
 
   def talksOverview(talks: Talks) =
-    doctype("html")(
-      html(
-        lang := "en",
-        Style.cascasdeRoot,
-        headFrag(
-          pageTitle = s"chris-kipp.io - ${talks.title}",
-          description = talks.description
+    htmlWrapper(
+      headFrag(
+        pageTitle = s"chris-kipp.io - s${talks.title}",
+        description = talks.description
+      ),
+      body(
+        Style.bodyBase,
+        headerFrag("talks"),
+        tags2.main(
+          Style.talkListing,
+          talks.renderHtml()
         ),
-        body(
-          headerFrag("talks"),
-          tags2.main(
-            Style.talkListing,
-            talks.renderHtml()
-          ),
-          footerFrag()
-        )
+        footerFrag()
       )
     )
 
   def listsOverview(lists: Seq[SiteList]) =
-    doctype("html")(
-      html(
-        lang := "en",
-        Style.cascasdeRoot,
-        headFrag(
-          pageTitle = "chris-kipp.io - lists",
-          description =
-            "A collection of lists and links that I want to refer back on."
-        ),
-        body(
-          headerFrag("lists"),
-          tags2.main(
-            Style.largeFontOverview,
-            lists.map { list =>
-              div(
-                Style.blogListing,
-                // TODO remove inline styling
-                a(borderBottomStyle.none, href := s"./lists/${list.id}")(
-                  list.title
-                ),
-                span(list.description)
-              )
-            }
-          )
+    htmlWrapper(
+      headFrag(
+        pageTitle = "chris-kipp.io - lists",
+        description =
+          "A collection of lists and links that I want to refer back on."
+      ),
+      body(
+        Style.bodyBase,
+        headerFrag("lists"),
+        tags2.main(
+          Style.largeFontOverview,
+          lists.map { list =>
+            div(
+              Style.blogListing,
+              a(href := s"./lists/${list.id}")(list.title),
+              span(list.description)
+            )
+          }
         ),
         footerFrag()
       )
     )
 
   def listPage(list: SiteList) =
-    doctype("html")(
-      html(
-        lang := "en",
-        Style.cascasdeRoot,
-        headFrag(
-          pageTitle = s"chris-kipp.io - ${list.id}",
-          description = list.description
-        ),
-        body(
-          headerFrag("lists"),
-          tags2.main(
-            list.renderHtml()
-          )
+    htmlWrapper(
+      headFrag(
+        pageTitle = s"chris-kipp.io - ${list.id}",
+        description = list.description
+      ),
+      body(
+        Style.bodyBase,
+        headerFrag("lists"),
+        tags2.main(
+          Style.headings,
+          Style.linkBase,
+          Style.linkHoverBase,
+          list.renderHtml()
         ),
         footerFrag()
       )
@@ -131,22 +113,20 @@ object Html:
 
   // TODO we'll probably need to make a markdown page of this
   def aboutPage() =
-    doctype("html")(
-      html(
-        lang := "en",
-        Style.cascasdeRoot,
-        headFrag(
-          pageTitle = "about - chris-kipp.io",
-          description =
-            "A litte bit about me, Chris Kipp, the author of this blog."
-        ),
-        body(
-          headerFrag("about"),
-          tags2.main(
-            Style.blogPost,
-            img(src := "../images/me.png"),
-            p(
-              """Hi, I'm Chris. You've stumbled upon my blog and website. It's a simple place
+    htmlWrapper(
+      headFrag(
+        pageTitle = "about - chris-kipp.io",
+        description =
+          "A litte bit about me, Chris Kipp, the author of this blog."
+      ),
+      body(
+        Style.bodyBase,
+        headerFrag("about"),
+        tags2.main(
+          Style.writing,
+          img(src := "../images/me.png"),
+          p(
+            """Hi, I'm Chris. You've stumbled upon my blog and website. It's a simple place
                   |where I write some things and hold links to other places that I'd like to
                   |remember. You'll find me writing or working on things related to developer
                   |tooling, primarily with Neovim and Scala, talking about music, or sharing stuff
@@ -154,55 +134,54 @@ object Html:
                   |in the United States and having a M.A. in International Relations. I first got
                   |started in tech as I was finishing grad school, and I haven't really looked back since.
                   |I'm currently located in the Netherlands with my wife and working at """.stripMargin,
-              a(href := "https://lunatech.nl/", "Lunatech"),
-              ", where they are kind enough to lend me out to the ",
-              a(href := "https://scala.epfl.ch/", "Scala Center"),
-              " where I work full-time on Scala tooling."
-            ),
-            p(
-              "You can take a look at the projects I work on ",
-              a(href := "https://github.com/ckipp01", "here on GitHub"),
-              " find me on ",
-              a(href := "https://hachyderm.io/@ckipp", "Mastodon"),
-              ", ",
-              a(href := "https://twitter.com/ckipp01", "Twitter"),
-              ", or streaming on ",
-              a(href := "https://www.twitch.tv/ckipp", "Twitch"),
-              "."
-            ),
-            p(
-              """Over the years this site has taken many shapes ranging from a custom JS
+            a(href := "https://lunatech.nl/", "Lunatech"),
+            ", where they are kind enough to lend me out to the ",
+            a(href := "https://scala.epfl.ch/", "Scala Center"),
+            " where I work full-time on Scala tooling."
+          ),
+          p(
+            "You can take a look at the projects I work on ",
+            a(href := "https://github.com/ckipp01", "here on GitHub"),
+            " find me on ",
+            a(href := "https://hachyderm.io/@ckipp", "Mastodon"),
+            ", ",
+            a(href := "https://twitter.com/ckipp01", "Twitter"),
+            ", or streaming on ",
+            a(href := "https://www.twitch.tv/ckipp", "Twitch"),
+            "."
+          ),
+          p(
+            """Over the years this site has taken many shapes ranging from a custom JS
                   |framework powered site, one that fully tracked all my free time, to ultimately
                   |the minimal shape you see it in now. It will continue to change and grow as I do.""".stripMargin
-            ),
-            p("Thanks for stopping by."),
-            p("Chris")
           ),
+          p("Thanks for stopping by."),
+          p("Chris")
+        ),
+        footerFrag()
+      )
+    )
+
+  def scalacSettings(settings: Seq[Setting[?]]) =
+    htmlWrapper(
+      headFrag(
+        pageTitle = "chris-kipp.io - scalacOptions",
+        description = "All the Scala 3 options"
+      ),
+      body(
+        Style.bodyBase,
+        headerFrag("hidden"),
+        tags2.main(
+          settings.map { setting =>
+            div(h3(setting.name), p(setting.description))
+          },
           footerFrag()
         )
       )
     )
 
-  def scalacSettings(settings: Seq[Setting[?]]) =
-    doctype("html")(
-      html(
-        lang := "en",
-        Style.cascasdeRoot,
-        headFrag(
-          pageTitle = "chris-kipp.io - scalacOptions",
-          description = "All the Scala 3 options"
-        ),
-        body(
-          headerFrag("hidden"),
-          tags2.main(
-            settings.map { setting =>
-              div(h3(setting.name), p(setting.description))
-            },
-            footerFrag()
-          )
-        )
-      )
-    )
+  private def htmlWrapper(content: scalatags.Text.Modifier*) =
+    doctype("html")(html(lang := "en", Style.root, content))
 
   private def headFrag(
       pageTitle: String,
@@ -270,6 +249,7 @@ object Html:
 
   private def headerFrag(active: String) =
     header(
+      Style.headerBase,
       tags2.nav(
         NavItem("/about", "about", active).html(),
         NavItem("/blog", "blog", active).html(),
@@ -281,6 +261,7 @@ object Html:
 
   private def footerFrag() =
     footer(
+      Style.footerBase,
       a(
         href := "https://github.com/ckipp01",
         target := "_blank",
