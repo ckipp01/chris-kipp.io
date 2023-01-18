@@ -7,6 +7,11 @@ description: >
   throw it up here.
 
 items:
+  - artist: Ryuichi Sakamoto
+    album: "12"
+    link: https://sakamoto.bandcamp.com/album/12
+    rating: 4
+
   - artist: Rozi Plain
     album: Prize
     link: https://roziplain.bandcamp.com/album/prize

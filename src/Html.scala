@@ -66,7 +66,7 @@ object Html:
         lang := "en",
         Style.cascasdeRoot,
         headFrag(
-          pageTitle = s"chris-kipp.io - s${talks.title}",
+          pageTitle = s"chris-kipp.io - ${talks.title}",
           description = talks.description
         ),
         body(
