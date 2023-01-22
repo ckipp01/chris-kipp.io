@@ -4,5 +4,6 @@
 .metals/
 .bloop/
 *.html
+!site/slides/*.html
 scala-cli
 rss.xml
