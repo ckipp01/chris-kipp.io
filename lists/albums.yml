@@ -18,6 +18,11 @@ items:
     favorite-song: Complicated
     rating: 4
 
+  - artist: Mac DeMarco
+    album: Five Easy Hot Dogs
+    link: https://macdemarco.bandcamp.com/album/five-easy-hot-dogs
+    rating: 4
+
   - artist: Skyzoo & The Other Guys
     album: The Mind Of A Saint
     link: https://otherguysmusic.bandcamp.com/album/the-mind-of-a-saint
