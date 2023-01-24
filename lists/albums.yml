@@ -7,6 +7,12 @@ description: >
   throw it up here.
 
 items:
+  - artist: Oddisee
+    album: To What End
+    link: https://oddisee.bandcamp.com/album/to-what-end
+    favorite-song: How Far
+    rating: 4
+
   - artist: Ryuichi Sakamoto
     album: "12"
     link: https://sakamoto.bandcamp.com/album/12
