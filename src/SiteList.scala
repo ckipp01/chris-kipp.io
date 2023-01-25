@@ -1,7 +1,6 @@
 package io.kipp.site
 
 import scalatags.Text.all.*
-import scalatags.Text.tags2
 import scalatags.Text.TypedTag
 
 sealed trait SiteList:

@@ -7,16 +7,16 @@ description: >
   throw it up here.
 
 items:
-  - artist: Oddisee
-    album: To What End
-    link: https://oddisee.bandcamp.com/album/to-what-end
-    favorite-song: How Far
-    rating: 4
-
   - artist: The Murder Capital
     album: Gigi's Recovery
     link: https://themurdercapital.bandcamp.com/album/gigis-recovery
     favorite-song: We Had To Disappear
+    rating: 4
+
+  - artist: Oddisee
+    album: To What End
+    link: https://oddisee.bandcamp.com/album/to-what-end
+    favorite-song: How Far
     rating: 4
 
   - artist: Ryuichi Sakamoto
@@ -28,6 +28,11 @@ items:
     album: Prize
     link: https://roziplain.bandcamp.com/album/prize
     favorite-song: Complicated
+    rating: 4
+
+  - artist: Kali Malone
+    album: Does Spring Hide Its Joy
+    link: https://kalimalone.bandcamp.com/album/does-spring-hide-its-joy
     rating: 4
 
   - artist: Mac DeMarco
