@@ -8,7 +8,9 @@ case class Album(
     link: String,
     `favorite-song`: Option[String],
     rating: Int
-) extends ListItem
+) extends ListItem:
+  def albumImageName =
+    album.replace(" ", "-").replace("'", "").replace(",", "").toLowerCase()
 
 case class Article(title: String, author: String, link: String) extends ListItem
 

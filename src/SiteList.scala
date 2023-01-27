@@ -62,7 +62,7 @@ final case class Albums(
       div(
         Style.album,
         img(
-          src := s"../images/albums/${album.album.replace(" ", "-").replace("'", "").toLowerCase()}.jpeg",
+          src := s"../images/albums/${album.albumImageName}.jpeg",
           attr("loading") := "lazy"
         ),
         div(
