@@ -36,15 +36,15 @@ items:
     link: https://onlytreytrey.bandcamp.com/album/lets-start-here
     rating: 4
 
-  - artist: Ryuichi Sakamoto
-    album: "12"
-    link: https://sakamoto.bandcamp.com/album/12
-    rating: 4
-
   - artist: Rozi Plain
     album: Prize
     link: https://roziplain.bandcamp.com/album/prize
     favorite-song: Complicated
+    rating: 4
+
+  - artist: Ryuichi Sakamoto
+    album: "12"
+    link: https://sakamoto.bandcamp.com/album/12
     rating: 4
 
   - artist: Kali Malone

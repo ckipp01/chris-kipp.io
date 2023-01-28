@@ -15,8 +15,7 @@ items:
   Community:
     - title: The Impact of Toxic Influencers on Communities
       author: Erin Casali
-      link: >-
-        https://intenseminimalism.com/2020/the-impact-of-toxic-influencers-on-communities/
+      link: https://intenseminimalism.com/2020/the-impact-of-toxic-influencers-on-communities/
   Compilers:
     - title: Favorite compiler and interpreter resources
       author: Phil Eaton
@@ -28,32 +27,31 @@ items:
   Editors:
     - title: 'The values of Emacs, the Neovim revolution, and the VSCode gorilla'
       author: 'Murilo Pereira '
-      link: >-
-        https://www.murilopereira.com/the-values-of-emacs-the-neovim-revolution-and-the-vscode-gorilla/
+      link: https://www.murilopereira.com/the-values-of-emacs-the-neovim-revolution-and-the-vscode-gorilla/
   IDE:
     - title: Three Architectures for a Responsive IDE
       author: rust.analyzer
-      link: >-
-        https://rust-analyzer.github.io//blog/2020/07/20/three-architectures-for-responsive-ide.html
+      link: https://rust-analyzer.github.io//blog/2020/07/20/three-architectures-for-responsive-ide.html
     - title: Turning the IDE Inside Out with Datalog
       author: Pete Vilter
       link: 'https://petevilter.me/post/datalog-typechecking/'
     - title: 'Building an IDE with the Scala Presentation Compiler: A Field Report'
       author: Aemon Cannon
-      link: >-
-        https://ensime.blogspot.com/2010/08/building-ide-with-scala-presentation.html
+      link: https://ensime.blogspot.com/2010/08/building-ide-with-scala-presentation.html
+  Independent Web:
+    - title: The Magic of Small Databases
+      author: Tom Critchlow
+      link: https://tomcritchlow.com/2023/01/27/small-databases/
   Language Parsing:
     - title: Abstract vs. Concrete Syntax Trees
       author: Eli Bendersky
-      link: >-
-        https://eli.thegreenplace.net/2009/02/16/abstract-vs-concrete-syntax-trees
+      link: https://eli.thegreenplace.net/2009/02/16/abstract-vs-concrete-syntax-trees
     - title: LL and LR Parsing Demystified
       author: Josh Haberman
       link: 'https://blog.reverberate.org/2013/07/ll-and-lr-parsing-demystified.html'
     - title: Designing a Parsing Library in Scala
       author: Oscar Boykin
-      link: >-
-        https://posco.medium.com/designing-a-parsing-library-in-scala-d5076de52536
+      link: https://posco.medium.com/designing-a-parsing-library-in-scala-d5076de52536
   Open Source:
     - title: Scratching Someone Else's Itch (Why Open Source can't do Usability)
       author: Steven Pemberton
@@ -61,13 +59,11 @@ items:
   JVM:
     - title: 'A peek into Java 17: Encapsulating the Java runtime internals'
       author: Ben Evans
-      link: >-
-        https://blogs.oracle.com/javamagazine/post/a-peek-into-java-17-continuing-the-drive-to-encapsulate-the-java-runtime-internals
+      link: https://blogs.oracle.com/javamagazine/post/a-peek-into-java-17-continuing-the-drive-to-encapsulate-the-java-runtime-internals
   Functional Programming:
     - title: 'Parse, don''t validate'
       author: Alexis King
-      link: >-
-        https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/#2019-11-05-parse-don-t-validate-footnote-1-definition
+      link: https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/#2019-11-05-parse-don-t-validate-footnote-1-definition
   Lua:
     - title: Lua Metatables Tutorial
       author: Michael Ebens
@@ -83,8 +79,7 @@ items:
   Scala:
     - title: Make ADTs subtypes of Product and Serializable
       author: Nicolas Rinaudo
-      link: >-
-        https://nrinaudo.github.io/scala-best-practices/adts/product_with_serializable.html
+      link: https://nrinaudo.github.io/scala-best-practices/adts/product_with_serializable.html
     - title: 'Understanding Type classes in Scala: extending types you don''t own'
       author: Guillaume Bogard
       link: 'https://guillaumebogard.dev/posts/typeclasses/'
@@ -103,8 +98,7 @@ items:
       link: 'https://qntm.org/clean'
     - title: The golden rule of software quality
       author: Gabriel Gonzalez
-      link: >-
-        http://www.haskellforall.com/2020/07/the-golden-rule-of-software-quality.html
+      link: http://www.haskellforall.com/2020/07/the-golden-rule-of-software-quality.html
     - title: Towards Faster Iteration in Industrial Haskell
       author: Patrick Thomson
       link: 'https://blog.sumtypeofway.com/posts/fast-iteration-with-haskell.html'
@@ -117,8 +111,7 @@ items:
   Vim:
     - title: Oil and vinegar - split windows and the project drawer
       author: Drew Neil
-      link: >-
-        http://vimcasts.org/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer
+      link: http://vimcasts.org/blog/2013/01/oil-and-vinegar-split-windows-and-project-drawer
     - title: 'Vim: you don''t need NERDtree or (maybe) netrw'
       author: George Ornbo
       link: 'https://shapeshed.com/vim-netrw/'
