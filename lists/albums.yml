@@ -3,8 +3,10 @@ title: Album ratings for 2023
 description: >
   This year I'm attempting to track all the new albums I listen to. The idea is
   pretty simple. Every time I listen to a new album in its entirety that was
-  released in 2023 and that I enjoy (considered at least a 3/5), then I'll
-  throw it up here.
+  released in 2023 and that I enjoyed, then I'll throw it up here. Albums of
+  the same rating are sorted by my favorite coming first. As I listen more
+  throughout the year I've also already finding myself shifting things around.
+  Nothing is stagnant.
 
 items:
   - artist: The Murder Capital
@@ -29,6 +31,11 @@ items:
     link: https://bruitofficial.bandcamp.com/album/apologie-du-temps-perdu-vol-1
     rating: 4
 
+  - artist: Lil Yachty
+    album: Let's Start Here
+    link: https://onlytreytrey.bandcamp.com/album/lets-start-here
+    rating: 4
+
   - artist: Ryuichi Sakamoto
     album: "12"
     link: https://sakamoto.bandcamp.com/album/12
@@ -48,18 +55,12 @@ items:
   - artist: Mac DeMarco
     album: Five Easy Hot Dogs
     link: https://macdemarco.bandcamp.com/album/five-easy-hot-dogs
-    rating: 4
+    rating: 3
 
   - artist: Skyzoo & The Other Guys
     album: The Mind Of A Saint
     link: https://otherguysmusic.bandcamp.com/album/the-mind-of-a-saint
     favorite-song: 100 to One
-    rating: 4
-
-  - artist: Joesef
-    album: Permanent Damage
-    link: https://joesefband.bandcamp.com/album/permanent-damage
-    favorite-song: Last Orders
     rating: 3
 
   - artist: Nicole Dollanganger
@@ -67,8 +68,14 @@ items:
     link: https://nicoledollanganger.bandcamp.com/album/married-in-mount-airy
     rating: 3
 
+  - artist: Joesef
+    album: Permanent Damage
+    link: https://joesefband.bandcamp.com/album/permanent-damage
+    favorite-song: Last Orders
+    rating: 2
+
   - artist: Oedipus Apartment Complex
     album: The Blissful Sounds of Miracula
     link: https://oedipusapartmentcomplex.bandcamp.com/album/the-blissful-sounds-of-miracula
     favorite-song: The Blissful Sounds
-    rating: 3
+    rating: 2
