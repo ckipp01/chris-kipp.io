@@ -13,9 +13,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: coursier/cache-action@v6
-      - uses: coursier/setup-action@v1.3.0
-        with:
-          apps: scala-cli
+      - uses: VirtusLab/scala-cli-setup@main
+
+      - name: Check formatting
+        run: scala-cli format --check
 
       - name: Make sure it can build
-        run: scala-cli run src/
+        run: scala-cli run .
