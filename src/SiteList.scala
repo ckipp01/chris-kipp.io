@@ -80,9 +80,8 @@ final case class Albums(
             .getOrElse("")
         ),
         div(
-          (1 to album.rating).map(_ =>
+          (1 to album.rating).map: _ =>
             img(Style.star, src := "../images/star.svg")
-          )
         )
       )
     }
@@ -94,19 +93,18 @@ final case class Articles(
     items: Map[String, Seq[Article]]
 ) extends SiteList:
   override def renderHtml(): Seq[TypedTag[String]] =
-    Seq(h1(title), p(description)) ++ items.toSeq.sortBy(_._1).map {
-      (topic, articles) =>
+    Seq(h1(title), p(description)) ++ items.toSeq
+      .sortBy(_._1)
+      .map: (topic, articles) =>
         div(
           Style.article,
           h2(topic),
-          articles.map { article =>
+          articles.map: article =>
             div(
               a(href := article.link, target := "_blank", article.title),
               p(article.author)
             )
-          }
         )
-    }
 
 final case class Sites(
     id: String,
@@ -115,14 +113,13 @@ final case class Sites(
     items: Seq[Site]
 ) extends SiteList:
   override def renderHtml(): Seq[TypedTag[String]] =
-    Seq(h1(title), p(description)) ++ items.map { site =>
+    Seq(h1(title), p(description)) ++ items.map: site =>
       div(
         Style.sites,
         a(href := site.url, target := "_blank", site.url),
         // TODO get rid of inline shit
         p(marginBottom := 0, site.owner)
       )
-    }
 
 final case class Talks(
     id: String,
@@ -131,7 +128,7 @@ final case class Talks(
     items: Seq[Talk]
 ) extends SiteList:
   override def renderHtml(): Seq[TypedTag[String]] =
-    items.map { talk =>
+    items.map: talk =>
       div(
         Style.largeFontOverview,
         p(talk.title),
@@ -150,7 +147,7 @@ final case class Talks(
             "slides"
           ),
           talk.video
-            .map[scalatags.Text.Modifier] { vid =>
+            .map[scalatags.Text.Modifier]: vid =>
               Seq(
                 stringFrag(" | "),
                 a(
@@ -161,11 +158,9 @@ final case class Talks(
                   "video"
                 )
               )
-            }
             .getOrElse(Seq.empty[scalatags.Text.Modifier])
         )
       )
-    }
 
 final case class Videos(
     id: String,
@@ -174,16 +169,15 @@ final case class Videos(
     items: Map[String, Seq[Video]]
 ) extends SiteList:
   override def renderHtml(): Seq[TypedTag[String]] =
-    Seq(h1(title), p(description)) ++ items.toSeq.sortBy(_._1).map {
-      (topic, videos) =>
+    Seq(h1(title), p(description)) ++ items.toSeq
+      .sortBy(_._1)
+      .map: (topic, videos) =>
         div(
           Style.article,
           h2(topic),
-          videos.map { video =>
+          videos.map: video =>
             div(
               a(href := video.link, target := "_blank", video.title),
               p(video.author)
             )
-          }
         )
-    }

@@ -14,7 +14,6 @@ package io.kipp.site
 import dotty.tools.dotc.config.ScalaSettings
 
 import scala.util.Try
-
 import Extensions.sequence
 
 object Main:
@@ -30,10 +29,9 @@ object Main:
       scribe.info("processing the blog...")
       val orderedPosts = blogPosts.sortBy(_.date).reverse
       val blogPages = blogPosts
-        .map { post =>
+        .map: post =>
           scribe.info(s"putting together ${post.urlify}")
           post.copy(content = Html.blogPage(post).render)
-        }
         .sortBy(_.date)
         .reverse
       val blogRss = Rss.generate(blogPosts)
@@ -45,9 +43,10 @@ object Main:
       scribe.info("putting together talks page")
       val talks =
         // A little weird but we simply want to grab talks out of here because we're special casing it.
-        lists.collectFirst { case talks: Talks =>
-          talks
-        }.get // TODO quick and dirty since we just refactored all of this.. probaly move this up later
+        lists
+          .collectFirst:
+            case talks: Talks => talks
+          .get // TODO quick and dirty since we just refactored all of this.. probaly move this up later
       val talksPage = Html.talksOverview(talks)
 
       //////////////////////
@@ -83,7 +82,7 @@ object Main:
       ////////////////
       // GENERATION //
       ////////////////
-      blogPages.foreach { post =>
+      blogPages.foreach: post =>
         scribe.info(s"writing blog/${post.urlify}.html")
         os.write(
           os.Path(
@@ -93,9 +92,8 @@ object Main:
           post.content,
           createFolders = true
         )
-      }
 
-      listPages.foreach { (id, content) =>
+      listPages.foreach: (id, content) =>
         scribe.info(s"writing lists/${id}.html")
         os.write(
           os.Path(
@@ -105,8 +103,6 @@ object Main:
           content,
           createFolders = true
         )
-
-      }
 
       scribe.info("writing index.html")
       os.write(

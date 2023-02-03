@@ -57,10 +57,13 @@ object BlogPost:
     val metadata =
       val visitor = new AbstractYamlFrontMatterVisitor()
       visitor.visit(document)
-      visitor.getData().asScala.toMap.collect {
-        case (key, value) if value.asScala.toList.nonEmpty =>
-          key -> value.asScala.toList.mkString
-      }
+      visitor
+        .getData()
+        .asScala
+        .toMap
+        .collect:
+          case (key, value) if value.asScala.toList.nonEmpty =>
+            key -> value.asScala.toList.mkString
 
     val articleHtml = renderer.render(document)
 
