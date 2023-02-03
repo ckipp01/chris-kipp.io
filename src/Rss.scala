@@ -34,7 +34,7 @@ object Rss:
         t("lanugage")("en-us"),
         t("category")("Blog"),
         t("lastBuildDate")(convertToRFC822(newest)),
-        posts.map { post =>
+        posts.map: post =>
           val link = s"https://www.chris-kipp.io/blog/${post.urlify}"
           t("item")(
             t("title")(post.title),
@@ -45,7 +45,6 @@ object Rss:
             t("guid")(attr("isPermaLink") := true, link),
             t("pubDate")(convertToRFC822(post.date))
           )
-        }
       )
     )
 

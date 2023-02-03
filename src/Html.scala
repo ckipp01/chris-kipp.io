@@ -39,13 +39,12 @@ object Html:
         tags2.main(
           Style.tableBase,
           Style.largeFontOverview,
-          blogPosts.map { blogPost =>
+          blogPosts.map: blogPost =>
             div(
               Style.blogListing,
               a(href := s"./blog/${blogPost.urlify}")(blogPost.title),
               span(blogPost.date)
             )
-          }
         ),
         footerFrag()
       )
@@ -80,13 +79,12 @@ object Html:
         headerFrag("lists"),
         tags2.main(
           Style.largeFontOverview,
-          lists.map { list =>
+          lists.map: list =>
             div(
               Style.blogListing,
               a(href := s"./lists/${list.id}")(list.title),
               span(list.description)
             )
-          }
         ),
         footerFrag()
       )
@@ -172,9 +170,8 @@ object Html:
         Style.bodyBase,
         headerFrag("hidden"),
         tags2.main(
-          settings.map { setting =>
-            div(h3(setting.name), p(setting.description))
-          },
+          settings.map: setting =>
+            div(h3(setting.name), p(setting.description)),
           footerFrag()
         )
       )
