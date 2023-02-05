@@ -160,6 +160,29 @@ object Html:
       )
     )
 
+  def custom404() =
+    htmlWrapper(
+      headFrag(
+        pageTitle = "chris-kipp.io - 404",
+        description = "Page not found"
+      ),
+      body(
+        Style.bodyBase,
+        headerFrag("404"),
+        tags2.main(
+          Style.writing,
+          h1("Page not found"),
+          p(
+            "Please report this ",
+            a(
+              href := "https://github.com/ckipp01/chris-kipp.io/issues",
+              "here."
+            )
+          )
+        )
+      )
+    )
+
   def scalacSettings(settings: Seq[Setting[?]]) =
     htmlWrapper(
       headFrag(

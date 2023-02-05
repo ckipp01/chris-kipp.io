@@ -15,6 +15,7 @@ import dotty.tools.dotc.config.ScalaSettings
 
 import scala.util.Try
 import Extensions.sequence
+import io.kipp.site.Html.custom404
 
 object Main:
 
@@ -132,6 +133,12 @@ object Main:
       os.write(
         os.Path(Constants.SITE_DIR / "about.html", os.pwd),
         aboutPage.render
+      )
+
+      scribe.info("writing 404.html")
+      os.write(
+        os.Path(Constants.SITE_DIR / "404.html", os.pwd),
+        custom404().render
       )
 
       val allSettings = new ScalaSettings().allSettings
