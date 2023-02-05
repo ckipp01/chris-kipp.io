@@ -10,7 +10,16 @@ case class Album(
     rating: Int
 ) extends ListItem:
   def albumImageName =
-    album.replace(" ", "-").replace("'", "").replace(",", "").toLowerCase()
+    val name = album
+      .replace(" ", "-")
+      .replace("'", "")
+      .replace(",", "")
+      .toLowerCase() + ".jpeg"
+    assert(
+      os.isFile(os.pwd / "site" / "images" / "albums" / name),
+      s"can't find album, ${name} -- make sure it exists and that you're running scala-cli from the root"
+    )
+    name
 
 case class Article(title: String, author: String, link: String) extends ListItem
 
