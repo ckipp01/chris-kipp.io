@@ -24,7 +24,7 @@ object Style extends CascadingStyleSheet:
     background := cream,
     i(fontStyle.italic),
     b(fontWeight.bold),
-    p(marginBottom := 15),
+    hr(marginTop := 15, marginBottom := 15),
     Selector("main")(
       maxWidth := 750,
       margin := "10px auto",
@@ -165,6 +165,7 @@ object Style extends CascadingStyleSheet:
 
   val writing = cls(
     img(display.block, margin.auto, maxWidth := "100%", maxHeight := "500px"),
+    p(marginBottom := 15),
     ul(marginBottom := 15, marginLeft := 15),
     ol(marginBottom := 15, marginLeft := 15),
     blockquote(
@@ -211,10 +212,6 @@ object Style extends CascadingStyleSheet:
 
   val albumDescription = cls(
     flexGrow := 1
-  )
-
-  val noBottomMargin = cls(
-    marginBottom := 0
   )
 
   val star = cls(

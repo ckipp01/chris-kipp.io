@@ -58,7 +58,7 @@ final case class Albums(
     items: Seq[Album]
 ) extends SiteList:
   override def renderHtml(): Seq[TypedTag[String]] =
-    Seq(h1(title), p(description)) ++ items.map { album =>
+    Seq(h1(title), p(description), hr) ++ items.map { album =>
       div(
         Style.album,
         img(
@@ -67,13 +67,14 @@ final case class Albums(
         ),
         div(
           Style.albumDescription,
-          // TODO remove inline styling
-          p(marginBottom := 0, b("Band: "), album.artist),
-          b("Album: "),
-          a(
-            href := album.link,
-            target := "_blank",
-            album.album
+          p(b("Band: "), album.artist),
+          p(
+            b("Album: "),
+            a(
+              href := album.link,
+              target := "_blank",
+              album.album
+            )
           ),
           album.`favorite-song`
             .map(song => p(marginBottom := 0, b("Favorite song: "), song))
@@ -113,12 +114,11 @@ final case class Sites(
     items: Seq[Site]
 ) extends SiteList:
   override def renderHtml(): Seq[TypedTag[String]] =
-    Seq(h1(title), p(description)) ++ items.map: site =>
+    Seq(h1(title), p(description), hr) ++ items.map: site =>
       div(
         Style.sites,
         a(href := site.url, target := "_blank", site.url),
-        // TODO get rid of inline shit
-        p(marginBottom := 0, site.owner)
+        p(site.owner)
       )
 
 final case class Talks(
