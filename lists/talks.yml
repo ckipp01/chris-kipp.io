@@ -13,6 +13,7 @@ items:
 
   - title: The Journey of a Dotty Diagnostic
     slides: dotty-diagnostics
+    video: https://youtu.be/EYOre0BGv68
     place:
       name: ScalaIO 2022
       link: https://scala.io/
