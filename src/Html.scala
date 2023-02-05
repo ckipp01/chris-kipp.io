@@ -53,7 +53,7 @@ object Html:
   def talksOverview(talks: Talks) =
     htmlWrapper(
       headFrag(
-        pageTitle = s"chris-kipp.io - s${talks.title}",
+        pageTitle = s"chris-kipp.io - ${talks.title}",
         description = talks.description
       ),
       body(
