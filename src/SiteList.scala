@@ -62,7 +62,7 @@ final case class Albums(
       div(
         Style.album,
         img(
-          src := s"../images/albums/${album.albumImageName}.jpeg",
+          src := s"../images/albums/${album.albumImageName}",
           attr("loading") := "lazy"
         ),
         div(
