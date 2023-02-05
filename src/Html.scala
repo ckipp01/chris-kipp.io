@@ -113,7 +113,7 @@ object Html:
   def aboutPage() =
     htmlWrapper(
       headFrag(
-        pageTitle = "about - chris-kipp.io",
+        pageTitle = "chris-kipp.io - about",
         description =
           "A litte bit about me, Chris Kipp, the author of this blog."
       ),
