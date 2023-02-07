@@ -33,6 +33,9 @@ items:
     - title: "Yo-Yo Ma: NPR Music Tiny Desk Concert"
       author: NPR Music (Yo-Yo Ma)
       link: https://youtu.be/3uiUHvET_jg
+    - title: Beach House | Soirée de Poche
+      author: Blogothèque
+      link: https://youtu.be/hmNEp4D_2R8
   Neovim:
     - title: "[Demo] vim.schedule demystified (hopefully)"
       author: TJ DeVries
