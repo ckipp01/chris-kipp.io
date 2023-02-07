@@ -20,6 +20,10 @@ items:
     - title: Favorite compiler and interpreter resources
       author: Phil Eaton
       link: https://lists.eatonphil.com/compilers-and-interpreters.html
+  Design:
+    - title: Visual design rules you can safely follow every time
+      author: Anthony Hobday
+      link: https://anthonyhobday.com/sideprojects/saferules/
   Editing:
     - title: xi-editor retrospective
       author: Raph Levien
