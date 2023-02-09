@@ -5,6 +5,10 @@ description: >
   to come back to in the future.
 
 items:
+  Big Data:
+    - title: Big Data is Dead
+      author: Jordan Tigani
+      link: https://motherduck.com/blog/big-data-is-dead/
   Build Tools:
     - title: 'So, what''s wrong with SBT?'
       author: Li Haoyi
