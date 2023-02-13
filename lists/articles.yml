@@ -36,6 +36,10 @@ items:
     - title: 'The values of Emacs, the Neovim revolution, and the VSCode gorilla'
       author: 'Murilo Pereira '
       link: https://www.murilopereira.com/the-values-of-emacs-the-neovim-revolution-and-the-vscode-gorilla/
+  Electronics:
+    - title: HOW TO MAKE A KEYBOARD - THE MATRIX
+      author: Michał Trybus
+      link: http://blog.komar.be/how-to-make-a-keyboard-the-matrix/
   IDE:
     - title: Three Architectures for a Responsive IDE
       author: rust.analyzer
