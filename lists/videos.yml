@@ -55,6 +55,10 @@ items:
     - title: Vivisecting the Veil of Variance
       author: Kit Langton 
       link: https://youtu.be/dPbbqrhm-WY 
+  Soldering:
+    - title: "Soldering Crash Course: Basic Techniques, Tips and Advice!"
+      author: sudomod
+      link: https://youtu.be/6rmErwU5E-k
   Vim:
     - title: How to Do 90% of What Plugins Do (With Just Vim)
       author: Max Cantor
