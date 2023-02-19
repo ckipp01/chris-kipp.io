@@ -395,8 +395,7 @@ At this point is when DAP communication actually starts. However, there is a
 fair amount of stuff that has already happened. To recap all of this, here is a
 diagram showing what we've all covered.
 
-[![all communication between nvim-metals, nvim-dap, and
-metals](/images/dap-setup.svg)](/images/dap-setup.svg){target="_blank"}
+![all communication between nvim-metals, nvim-dap, and metals](/images/dap-setup.svg)
 
 ## The actual DAP communication
 
@@ -528,7 +527,7 @@ select which you'd like if there are multiple mains or test suites to choose
 from. Here is a diagram showing the changed order of things when you trigger a
 `run` this way.
 
-[![debug discover communication](/images/debug-discovery.svg)](/images/debug-discovery.svg){target="_blank"}
+![debug discover communication](/images/debug-discovery.svg)
 
 ## I'm amazed this all works
 
