@@ -37,9 +37,15 @@ items:
       author: 'Murilo Pereira '
       link: https://www.murilopereira.com/the-values-of-emacs-the-neovim-revolution-and-the-vscode-gorilla/
   Electronics:
+    - title: Build Your Own Headphone Amplifier For Under $30 – The Kuosch NS-01
+      author: Kai Kuosch
+      link: https://www.headphonesty.com/2020/08/diy-headphone-amplifier-kuosch-ns-01/
     - title: HOW TO MAKE A KEYBOARD - THE MATRIX
       author: Michał Trybus
       link: http://blog.komar.be/how-to-make-a-keyboard-the-matrix/
+    - title: "PCB Basics: PCB Design for Beginners | How to Design a PCB Project for Beginners"
+      author: Gerber Labs
+      link: https://www.gerberlabs.com/pcb-design-for-beginners/
   IDE:
     - title: Three Architectures for a Responsive IDE
       author: rust.analyzer
