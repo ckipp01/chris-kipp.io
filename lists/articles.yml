@@ -78,6 +78,9 @@ items:
     - title: 'A peek into Java 17: Encapsulating the Java runtime internals'
       author: Ben Evans
       link: https://blogs.oracle.com/javamagazine/post/a-peek-into-java-17-continuing-the-drive-to-encapsulate-the-java-runtime-internals
+    - title: Flame graphs on the JVM
+      author: Stephen Fox
+      link: https://foxstephen.net/flamegraphs-on-the-jvm
   Functional Programming:
     - title: 'Parse, don''t validate'
       author: Alexis King
