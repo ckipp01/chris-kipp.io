@@ -79,6 +79,11 @@ items:
     favorite-song: Worth It
     rating: 3
 
+  - artist: Gorillaz
+    album: Cracker Island
+    link: https://www.gorillaz.com/
+    rating: 3
+
   - artist: Day Tripper
     album: What a time to be DEAD
     link: https://dt-cland.bandcamp.com/album/what-a-time-to-be-dead
