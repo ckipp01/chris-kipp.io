@@ -44,6 +44,10 @@
     {
       "source": "blog/music-of-the-month---november-2022",
       "destination": "blog/music-of-the-month-november-2022"
+    },
+    {
+      "source": "blog/lately",
+      "destination": "blog/lately-01"
     }
   ],
   "headers": [

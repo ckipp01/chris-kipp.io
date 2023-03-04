@@ -1,21 +1,21 @@
 //> using scala "3.3.0-RC3"
 //> using options "-deprecation", "-feature", "-explain", "-Wunused:all"
-//> using lib "org.scala-lang::scala3-compiler:3.2.2"
+//> using lib "org.scala-lang::scala3-compiler:3.3.3-RC3"
 //> using lib "com.lihaoyi::os-lib:0.9.0"
 //> using lib "com.lihaoyi::scalatags:0.12.0"
 //> using lib "com.lihaoyi::pprint:0.8.1"
-//> using lib "com.outr::scribe:3.11.0"
+//> using lib "com.outr::scribe:3.11.1"
 //> using lib "com.vladsch.flexmark:flexmark-all:0.64.0"
 //> using lib "io.circe::circe-yaml:0.14.2"
-//> using lib "io.circe::circe-generic:0.14.4"
+//> using lib "io.circe::circe-generic:0.14.5"
 
 package io.kipp.site
 
 import dotty.tools.dotc.config.ScalaSettings
 
 import scala.util.Try
+
 import Extensions.sequence
-import io.kipp.site.Html.custom404
 
 object Main:
 
@@ -137,7 +137,7 @@ object Main:
       scribe.info("writing 404.html")
       os.write(
         os.Path(Constants.SITE_DIR / "404.html", os.pwd),
-        custom404().render
+        Html.custom404().render
       )
 
       val allSettings = new ScalaSettings().allSettings
