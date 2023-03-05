@@ -46,6 +46,10 @@ items:
     - title: "PCB Basics: PCB Design for Beginners | How to Design a PCB Project for Beginners"
       author: Gerber Labs
       link: https://www.gerberlabs.com/pcb-design-for-beginners/
+  Go:
+    - title: Understanding Pointers in Go
+      author: Gopher Guides
+      link: https://www.digitalocean.com/community/conceptual-articles/understanding-pointers-in-go
   IDE:
     - title: Three Architectures for a Responsive IDE
       author: rust.analyzer
