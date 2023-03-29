@@ -40,8 +40,6 @@ object SiteList:
       .downField("id")
       .as[String]
 
-    // TODO is there a better way to do this?
-    // and when I do that get rid of the `-Xmax-inlines`
     id match
       case Right("albums")   => json.as[Albums].left.map(_.getMessage)
       case Right("articles") => json.as[Articles].left.map(_.getMessage)
@@ -142,7 +140,7 @@ final case class Talks(
           " | ",
           a(
             borderBottomStyle.none,
-            href := s"slides/${talk.slides}",
+            href := s"../slides/${talk.slides}",
             target := "_blank",
             "slides"
           ),
