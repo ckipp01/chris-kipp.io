@@ -9,11 +9,10 @@ description: >
   Nothing is stagnant.
 
 items:
-  - artist: The Murder Capital
-    album: Gigi's Recovery
-    link: https://themurdercapital.bandcamp.com/album/gigis-recovery
-    favorite-song: We Had To Disappear
-    rating: 4
+  - artist: Lana Del Rey
+    album: Did you know that there's a tunnel under Ocean Blvd
+    link: https://lanadelrey.lnk.to/oceanblvdWE
+    rating: 5
 
   - artist: Jonah Yano
     album: portrait of a dog
@@ -25,9 +24,15 @@ items:
     link: https://onlytreytrey.bandcamp.com/album/lets-start-here
     rating: 4
 
-  - artist: Lana Del Rey
-    album: Did you know that there's a tunnel under Ocean Blvd
-    link: https://lanadelrey.lnk.to/oceanblvdWE
+  - artist: The Murder Capital
+    album: Gigi's Recovery
+    link: https://themurdercapital.bandcamp.com/album/gigis-recovery
+    favorite-song: We Had To Disappear
+    rating: 4
+
+  - artist: Mammal Hands
+    album: Gift from the Trees
+    link: https://mammalhands.bandcamp.com/album/gift-from-the-trees
     rating: 4
 
   - artist: Oddisee
