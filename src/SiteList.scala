@@ -79,6 +79,7 @@ final case class Albums(
             .getOrElse("")
         ),
         div(
+          Style.albumRating,
           (1 to album.rating).map: _ =>
             img(Style.star, src := "../images/star.svg")
         )

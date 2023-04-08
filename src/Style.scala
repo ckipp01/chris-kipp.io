@@ -214,6 +214,10 @@ object Style extends CascadingStyleSheet:
     flexGrow := 1
   )
 
+  val albumRating = cls(
+    whiteSpace.nowrap
+  )
+
   val star = cls(
     height := 20
   )
