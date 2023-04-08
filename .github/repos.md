@@ -4,3 +4,4 @@
 - ckipp01/mill-github-dependency-graph
 - ckipp01/mill-plugin.g8
 - ckipp01/mill-scip
+- ckipp01/skan
