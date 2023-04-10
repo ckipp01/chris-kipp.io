@@ -17,6 +17,7 @@ case class Album(
       .replace(";", "")
       .replace("(", "")
       .replace(")", "")
+      .replace("ş", "s")
       .toLowerCase() + ".jpeg"
     assert(
       os.isFile(os.pwd / "site" / "images" / "albums" / name),
