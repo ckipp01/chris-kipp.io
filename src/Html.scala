@@ -17,7 +17,6 @@ object Html:
         Style.bodyBase,
         headerFrag(blogPost.title),
         tags2.main(
-          Style.headings,
           Style.writing,
           // TODO maybe the date here
           raw(blogPost.content)
@@ -193,8 +192,12 @@ object Html:
         Style.bodyBase,
         headerFrag("hidden"),
         tags2.main(
+          Style.writing,
           settings.map: setting =>
-            div(h3(setting.name), p(setting.description)),
+            div(
+              h3(setting.name),
+              p(setting.description)
+            ),
           footerFrag()
         )
       )
