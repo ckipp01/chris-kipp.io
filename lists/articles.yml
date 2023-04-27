@@ -114,6 +114,9 @@ items:
     - title: Generalized type constraints in Scala (without a PhD)
       author: Erik Bruchez
       link: 'https://blog.bruchez.name/posts/generalized-type-constraints-in-scala/'
+    - title: Build your vocabulary with Scala affixes
+      author: Ross Baker
+      link: https://rossabaker.com/blog/scala-affixes/
   Software Development:
     - title: Principles of Design
       author: Tim Berners-Lee
