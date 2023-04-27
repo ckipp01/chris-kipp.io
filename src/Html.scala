@@ -19,7 +19,24 @@ object Html:
         tags2.main(
           Style.writing,
           // TODO maybe the date here
-          raw(blogPost.content)
+          raw(blogPost.content),
+          script(
+            src := "https://giscus.app/client.js",
+            data("repo") := "ckipp01/chris-kipp.io",
+            data("repo-id") := "MDEwOlJlcG9zaXRvcnkzMDA5NDE4NTU=",
+            data("category") := "Blog Discussions",
+            data("category-id") := "DIC_kwDOEfACH84CSyMK",
+            data("mapping") := "title",
+            data("strict") := "0",
+            data("reactions-enabled") := "1",
+            data("emit-metadata") := "0",
+            data("input-position") := "top",
+            data("theme") := "dark_dimmed",
+            data("lang") := "en",
+            data("loading") := "lazy",
+            crossorigin := "anonymous",
+            async
+          )
         ),
         footerFrag()
       )
