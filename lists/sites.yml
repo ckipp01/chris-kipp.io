@@ -27,3 +27,6 @@ items:
   - url: https://wiki.xxiivv.com/site/home.html
     owner: Devine Lu Linvega
     topics: [ computing, thoughts, art, music ]
+  - url: https://martinhossbach.com/blog/
+    owner: Martin Hossbach
+    topics: [ wine ]
