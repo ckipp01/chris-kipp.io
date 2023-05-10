@@ -23,6 +23,9 @@ items:
     - title: André 3000 | Broken Record (Hosted by Rick Rubin)
       author: Broken Record Podcast
       link: https://youtu.be/LjHcHTJ8D5k
+    - title: Mac DeMarco goes long with new 199-song album
+      author: Associated Press
+      link: https://www.youtube.com/watch?v=5dn1fgVQIbM
   Language Parsing:
     - title: Tree-sitter - a new parsing system for programming tools
       author: Max Brunsfeld
@@ -73,3 +76,7 @@ items:
     - title: How to Do 90% of What Plugins Do (With Just Vim)
       author: Max Cantor
       link: https://youtu.be/XA2WjJbmmoM
+  Wine:
+    - title: The Wine Magician
+      author: Vice
+      link: https://www.youtube.com/watch?v=D2qBIgTZodU

@@ -5,6 +5,10 @@ description: >
   to come back to in the future.
 
 items:
+  AI:
+    - title: The on about AI
+      author: Tom MacWright
+      link: https://macwright.com/2023/04/15/ai.html
   Big Data:
     - title: Big Data is Dead
       author: Jordan Tigani
