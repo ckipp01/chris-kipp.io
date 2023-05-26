@@ -8,3 +8,4 @@
 scala-cli
 rss.xml
 dest/
+.vercel
