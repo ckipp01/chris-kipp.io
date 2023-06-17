@@ -30,3 +30,6 @@ items:
   - url: https://martinhossbach.com/blog/
     owner: Martin Hossbach
     topics: [ wine ]
+  - url: https://tylerxhobbs.com/
+    owner: Tyler Hobbs
+    topics: [ art, programming, "generative art" ]
