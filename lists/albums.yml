@@ -63,6 +63,11 @@ items:
     rating: 4
     favorite-song: Soft Landing
 
+  - artist: Killer Mike
+    album: MICHAEL
+    link: https://killermike.bandcamp.com/album/michael
+    rating: 4
+
   - artist: Brandon Isaac
     album: "Evolution Of Existence: Love & Power"
     link: https://brandonisaac.bandcamp.com/album/evolution-of-existence-love-power
