@@ -134,7 +134,7 @@ When ran, the image produced will look like this:
 
 Now, all these arrow are just pointing in the same direction, which isn't what
 we want. So we'll introduce a slight turn as we iterate throw all the rows. The
-for loop we have that calls `drawLine` can be changed slightly to do this:
+for loop we have that calls `drawArrow` can be changed slightly to do this:
 
 ```diff
 for col <- 0 until numCols do
@@ -199,7 +199,7 @@ class Three extends PApplet:
 
     for col <- 0 until numCols do
       for row <- 0 until numRows do
-        drawLine(
+        drawArrow(
           col * resolution,
           row * resolution,
           grid(col)(row),
@@ -244,7 +244,7 @@ class Three extends PApplet:
   /** Given x and y coordinates we "GOTO" that part of the grid and then draw an
     * arrow showing the given angle.
     */
-  def drawLine(x: Double, y: Double, angle: Double, len: Double): Unit =
+  def drawArrow(x: Double, y: Double, angle: Double, len: Double): Unit =
     pushMatrix()
     translate(x.toFloat, y.toFloat)
     rotate(angle.toFloat)
@@ -350,7 +350,7 @@ At this point we actually have most of what we need to really start generating
 some things. Now that we understand the grid behind what we're doing the first
 thing we can do is get rid of generating it. Just remember that it's always
 there doing the same thing, but we don't need to generate out the arrows.  We
-can do this by removing the `drawLine` method and also the for loop that calls
+can do this by removing the `drawArrow` method and also the for loop that calls
 it as we iterate through the columns and rows.
 
 No more arrows!
