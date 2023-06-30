@@ -4,6 +4,12 @@ description: >
   This is a collection of talks I've given over the years.
 
 items:
+  - title: "An Intro to Generative Art with Scala"
+    slides: scala-in-the-city.pdf
+    place:
+      name: Scala in the City, June 2023 (London)
+      link: https://www.meetup.com/scala-in-the-city/events/292844959/
+
   - title: "Language Tailored Plugins: An Experience Like No Other"
     slides: language-tailored-plugins
     video: https://youtu.be/dLwvmLQsxrw
