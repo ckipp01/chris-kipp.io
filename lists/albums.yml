@@ -9,6 +9,12 @@ description: >
   Nothing is stagnant.
 
 items:
+  - artist: Sergio Díaz De Rojas
+    album: Muerte en una tarde de verano
+    link: https://bonjoursergio.bandcamp.com/album/muerte-en-una-tarde-de-verano
+    rating: 5
+    favorite-song: Canción para Otto y Elsa
+
   - artist: FACS
     album: Still Life in Decay
     link: https://wearefacs.bandcamp.com/album/still-life-in-decay
@@ -17,11 +23,6 @@ items:
   - artist: Lana Del Rey
     album: Did you know that there's a tunnel under Ocean Blvd
     link: https://lanadelrey.lnk.to/oceanblvdWE
-    rating: 5
-
-  - artist: Sergio Díaz De Rojas
-    album: Muerte en una tarde de verano
-    link: https://bonjoursergio.bandcamp.com/album/muerte-en-una-tarde-de-verano
     rating: 5
 
   - artist: HARRISON
