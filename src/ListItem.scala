@@ -20,6 +20,8 @@ case class Album(
       .replace("ş", "s")
       .replace(":", "")
       .replace("&", "")
+      .replace("?", "")
+      .replace("!", "")
       .replace("--", "-")
       .toLowerCase() + ".jpeg"
     assert(
