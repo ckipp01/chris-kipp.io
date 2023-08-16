@@ -164,7 +164,13 @@ object Style extends CascadingStyleSheet:
   )
 
   val writing = cls(
-    img(display.block, margin.auto, maxWidth := "100%", maxHeight := "500px"),
+    img(
+      display.block,
+      margin.auto,
+      marginBottom := "10px",
+      maxWidth := "100%",
+      maxHeight := "500px"
+    ),
     p(marginBottom := 15),
     ul(marginBottom := 15, marginLeft := 15),
     ol(marginBottom := 15, marginLeft := 15),

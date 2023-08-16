@@ -138,7 +138,7 @@ object Html:
         headerFrag("about"),
         tags2.main(
           Style.writing,
-          img(src := "../images/me.png"),
+          img(src := "../images/me.jpg"),
           p(
             """Hi, I'm Chris. You've stumbled upon my blog and website. It's a simple place
                   |where I write some things and hold links to other places that I'd like to
