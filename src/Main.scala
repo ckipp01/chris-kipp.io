@@ -7,7 +7,7 @@
 //> using lib "com.outr::scribe:3.11.9"
 //> using lib "com.vladsch.flexmark:flexmark-all:0.64.8"
 //> using lib "io.circe::circe-yaml:0.14.2"
-//> using lib "io.circe::circe-generic:0.14.5"
+//> using lib "io.circe::circe-generic:0.14.6"
 
 package io.kipp.site
 
