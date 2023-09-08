@@ -1,4 +1,4 @@
-//> using scala "3.3.0"
+//> using scala "3.3.1"
 //> using options "-deprecation", "-feature", "-explain", "-Wunused:all"
 //> using lib "org.scala-lang::scala3-compiler:3.3.1"
 //> using lib "com.lihaoyi::os-lib:0.9.1"
