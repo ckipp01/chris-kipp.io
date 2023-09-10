@@ -58,6 +58,12 @@ items:
     favorite-song: The Tinker
     rating: 4
 
+  - artist: Puma Blue
+    album: Holy Waters
+    link: https://pumabluemusic.bandcamp.com/album/holy-waters
+    rating: 4
+    favorite-song: Too Much, Too Much
+
   - artist: Jonah Yano
     album: portrait of a dog
     link: https://jonahyano.bandcamp.com/album/portrait-of-a-dog
