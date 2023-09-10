@@ -41,6 +41,11 @@ items:
     rating: 4
     favorite-song: Seaforth
 
+  - artist: Matthew Halsall
+    album: An Ever Changing View
+    rating: 4
+    link: https://matthewhalsall.bandcamp.com/album/an-ever-changing-view
+
   - artist: Protomartyr
     album: Formal Growth In The Desert
     link: https://protomartyr.bandcamp.com/album/formal-growth-in-the-desert
