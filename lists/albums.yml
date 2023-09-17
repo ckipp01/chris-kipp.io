@@ -35,6 +35,11 @@ items:
     rating: 5
     link: https://swans.bandcamp.com/album/the-beggar
 
+  - artist: Mitski
+    album: The Land Is Inhospitable and So Are We
+    rating: 4
+    link: https://mitski.bandcamp.com/album/the-land-is-inhospitable-and-so-are-we
+
   - artist: King Krule
     album: Space Heavy
     link: https://kingkrule.bandcamp.com/album/space-heavy
@@ -51,6 +56,12 @@ items:
     link: https://protomartyr.bandcamp.com/album/formal-growth-in-the-desert
     rating: 4
     favorite-song: Polacrilex Kid
+
+  - artist: Explosions in the Sky
+    album: End
+    link: https://explosionsinthesky.bandcamp.com/album/end
+    rating: 4
+    favorite-song: Peace Or Quiet
 
   - artist: Hania Rani
     album: On Giacometti
