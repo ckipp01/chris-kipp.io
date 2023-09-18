@@ -57,6 +57,13 @@ items:
     - title: "PCB Basics: PCB Design for Beginners | How to Design a PCB Project for Beginners"
       author: Gerber Labs
       link: https://www.gerberlabs.com/pcb-design-for-beginners/
+  "Generative Art":
+    - title: The City - Making of
+      author: r1b2
+      link: https://www.fxhash.xyz/article/%22the-city%22-making-of
+    - title: Flow Fields
+      author: Tyler Hobbs
+      link: https://tylerxhobbs.com/essays/2020/flow-fields
   Go:
     - title: Understanding Pointers in Go
       author: Gopher Guides

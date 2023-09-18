@@ -49,6 +49,9 @@ items:
     - title: Radiohead - In Rainbows From the Basement (April 2008)
       author: Radiohead
       link: https://www.youtube.com/watch?v=DWuAn6C8Mfc
+    - title: Puma Blue - A Late Night Special (full film)
+      author: Puma Blue
+      link: https://youtu.be/s3NhaMVvcWE?si=w_9x-JBufi9P8fd5
   Neovim:
     - title: "[Demo] vim.schedule demystified (hopefully)"
       author: TJ DeVries
