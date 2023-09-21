@@ -64,6 +64,9 @@ items:
     - title: Flow Fields
       author: Tyler Hobbs
       link: https://tylerxhobbs.com/essays/2020/flow-fields
+    - title: What is Generative Art?
+      author: Avant Arte
+      link: https://avantarte.com/insights/avant-advisory/what-is-generative-art
   Go:
     - title: Understanding Pointers in Go
       author: Gopher Guides
@@ -115,6 +118,10 @@ items:
     - title: Functions That Go Backwards
       author: Jordan Scalaes
       link: 'https://thatjdanisso.cool/functions-that-go-backwards'
+  Thought Provoking:
+    - title: The age of average
+      author: Alex Murrell
+      link: https://www.alexmurrell.co.uk/articles/the-age-of-average
   TypeScript:
     - title: The Disposable Pattern in TypeScript
       author: Henning Dieterichs
