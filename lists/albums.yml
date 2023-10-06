@@ -46,6 +46,12 @@ items:
     rating: 4
     favorite-song: Seaforth
 
+  - artist: Okonski
+    album: Magnolia
+    link: https://okonski.bandcamp.com/album/magnolia
+    rating: 4
+    favorite-song: Dark Moon
+
   - artist: Matthew Halsall
     album: An Ever Changing View
     rating: 4
