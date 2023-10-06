@@ -34,7 +34,7 @@ object Main:
           post.copy(content = Html.blogPage(post).render)
         .sortBy(_.date)
         .reverse
-      val blogRss = Rss.generate(blogPosts)
+      val blogRss = Rss.generate(blogPages)
       val blogOverview = Html.blogOverview(blogPages)
 
       //////////////////////
