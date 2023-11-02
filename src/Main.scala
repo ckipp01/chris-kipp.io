@@ -6,7 +6,7 @@
 //> using lib "com.lihaoyi::pprint:0.8.1"
 //> using lib "com.outr::scribe:3.12.2"
 //> using lib "com.vladsch.flexmark:flexmark-all:0.64.8"
-//> using lib "io.circe::circe-yaml:0.14.2"
+//> using lib "io.circe::circe-yaml:1.15.0"
 //> using lib "io.circe::circe-generic:0.14.6"
 
 package io.kipp.site
