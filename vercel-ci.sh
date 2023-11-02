@@ -13,5 +13,5 @@ else
   echo uname -s
   curl -fL https://github.com/Virtuslab/scala-cli/releases/latest/download/scala-cli-x86_64-pc-linux.gz | gzip -d > scala-cli
   chmod +x scala-cli
-  ./scala-cli run .
+  ./scala-cli run . --server=false
 fi
