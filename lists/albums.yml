@@ -30,15 +30,20 @@ items:
     link: https://wearefacs.bandcamp.com/album/still-life-in-decay
     rating: 5
 
-  - artist: HARRISON
-    album: Birds, Bees, The Clouds & The Trees
-    link: https://prodbyharrison.bandcamp.com/album/birds-bees-the-clouds-the-trees
+  - artist: Sufjan Stevens
+    album: Javelin
     rating: 5
+    link: https://sufjanstevens.bandcamp.com/album/javelin
 
   - artist: SWANS
     album: The Beggar
     rating: 4
     link: https://swans.bandcamp.com/album/the-beggar
+
+  - artist: HARRISON
+    album: Birds, Bees, The Clouds & The Trees
+    link: https://prodbyharrison.bandcamp.com/album/birds-bees-the-clouds-the-trees
+    rating: 4
 
   - artist: Mitski
     album: The Land Is Inhospitable and So Are We
