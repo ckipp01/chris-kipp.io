@@ -273,13 +273,6 @@ object Html:
         rel := "stylesheet",
         `type` := "text/css",
         href := "../css/prism.css"
-      ),
-      script(
-        defer := true,
-        `type` := "text/javascript",
-        src := "https://api.pirsch.io/pirsch.js",
-        id := "pirschjs",
-        attr("data-code") := "2N1ystwyAD7E52EmuxQkTyoAno02YcQE"
       )
     )
 
