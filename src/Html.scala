@@ -147,11 +147,8 @@ object Html:
                   |I find interesting. I have a varied background, including growing up on a farm
                   |in the United States and having a M.A. in International Relations. I first got
                   |started in tech as I was finishing grad school, and I haven't really looked back since.
-                  |I'm currently located in the Netherlands with my wife and working at """.stripMargin,
-            a(href := "https://lunatech.nl/", "Lunatech"),
-            ", where they are kind enough to lend me out to the ",
-            a(href := "https://scala.epfl.ch/", "Scala Center"),
-            " where I work full-time on Scala tooling."
+                  |I'm currently located in the Netherlands working at """.stripMargin,
+            a(href := "https://shellrecharge.com/", "Shell Recharge.")
           ),
           p(
             "You can take a look at the projects I work on ",
