@@ -8,12 +8,12 @@ updated: 2020-04-13
 # Why my own blog?
 
 I've been meaning to start this for quite some time. Over the years I've had
-various forms of blogs. I was on Tumblr for some time, I had a Medium page, and
-my wife and I even had a blog together on Squarespace. None of them stuck, and I
-only have theories of why that is. One of the main reasons I believe is that I
-didn't have full control over the content. My hope with the blog portion of
-chronica is that it's a place for me to dump my ramblings, talk about my
-experiments, and even share some stuff I've been working on.
+various forms of blogs. I was on Tumblr for some time and then I had a Medium
+page, but none of them stuck, and I only have theories of why that is. One of
+the main reasons I believe is that I didn't have full control over the content.
+My hope with the blog portion of chronica is that it's a place for me to dump my
+ramblings, talk about my experiments, and even share some stuff I've been
+working on.
 
 A while back I read a blog post, that I regretfully can't find anymore, but it
 resonated more than any other blog post had for quite some time. It made a

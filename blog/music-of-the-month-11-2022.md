@@ -32,10 +32,7 @@ Typically when I get stuck on someone for a while I branch out to other projects
 they've worked on or artists they've worked with. One of the many incredibly
 artists that Kenny has worked with has been Denzel Curry. On his album _Melt My
 Eyez See Your Future_ he's got this song called _Walkin_ which just gets in your
-head and stays there. It's the song of the month for me this last month. It was
-one of those unique months where my wife and I are stuck on the same thing for a
-while, and I'm pretty sure she listened to this song as much as I have. Proof
-that once you hear it, it sticks.
+head and stays there. It's the song of the month for me this last month.
 
 <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2576649463/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/track=3208063144/transparent=true/" seamless><a href="https://denzelcurrymusic.bandcamp.com/album/melt-my-eyez-see-your-future">Melt My Eyez See Your Future by Denzel Curry</a></iframe>
 

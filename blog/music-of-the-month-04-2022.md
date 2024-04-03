@@ -16,12 +16,12 @@ of albums and songs. However, here are a couple that stood out to me this month.
 ## Album of the Month
 
 I listen to a fair amount of classical and 4 Seasons by Vivaldi has always been
-a favorite of mine as cliche as it sounds. My wife and I even had a chunk of it
-played at our wedding, it was one of my favorite live performances I've seen
-when visiting Paris in Saint-Chapelle, and the rendition I'm about to suggest is
-just incredible. Max Richter is such a gifted composer and beautiful human
-being. This past month was the ten year anniversary of his _Recomposed by Max
-Richter: Vivaldi - The Four Seasons_, which is my album of the month this month.
+a favorite of mine as cliche as it sounds. It was one of my favorite live
+performances I've seen when visiting Paris in Saint-Chapelle, and the rendition
+I'm about to suggest is just incredible. Max Richter is such a gifted composer
+and beautiful human being. This past month was the ten year anniversary of his
+_Recomposed by Max Richter: Vivaldi - The Four Seasons_, which is my album of
+the month this month.
 
 <iframe max-width="560" height="315" src="https://www.youtube-nocookie.com/embed/Ebm69gW9UlI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
