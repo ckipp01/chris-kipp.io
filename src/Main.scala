@@ -1,13 +1,13 @@
 //> using scala "3.4.2"
 //> using options "-deprecation", "-feature", "-explain", "-Wunused:all"
-//> using dep "org.scala-lang::scala3-compiler:3.4.1"
-//> using dep "com.lihaoyi::os-lib:0.9.3"
-//> using dep "com.lihaoyi::scalatags:0.12.0"
-//> using dep "com.lihaoyi::pprint:0.8.1"
-//> using dep "com.outr::scribe:3.13.2"
+//> using dep "org.scala-lang::scala3-compiler:3.4.2"
+//> using dep "com.lihaoyi::os-lib:0.10.0"
+//> using dep "com.lihaoyi::scalatags:0.13.1"
+//> using dep "com.lihaoyi::pprint:0.9.0"
+//> using dep "com.outr::scribe:3.13.5"
 //> using dep "com.vladsch.flexmark:flexmark-all:0.64.8"
 //> using dep "io.circe::circe-yaml:1.15.0"
-//> using dep "io.circe::circe-generic:0.14.6"
+//> using dep "io.circe::circe-generic:0.14.7"
 
 package io.kipp.site
 
@@ -140,7 +140,7 @@ object Main:
         Html.custom404().render
       )
 
-      val allSettings = new ScalaSettings().allSettings
+      val allSettings = ScalaSettings.allSettings
       val htmlSettings = Html.scalacSettings(allSettings)
       scribe.info("writing hideen scala3-scalac-options.txt")
       os.write(
