@@ -1,7 +1,7 @@
 //> using scala "3.5.1"
 //> using options "-deprecation", "-feature", "-explain", "-Wunused:all"
 //> using dep "org.scala-lang::scala3-compiler:3.4.2"
-//> using dep "com.lihaoyi::os-lib:0.10.0"
+//> using dep "com.lihaoyi::os-lib:0.10.7"
 //> using dep "com.lihaoyi::scalatags:0.13.1"
 //> using dep "com.lihaoyi::pprint:0.9.0"
 //> using dep "com.outr::scribe:3.15.2"
