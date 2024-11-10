@@ -7,7 +7,7 @@
 //> using dep "com.outr::scribe:3.13.5"
 //> using dep "com.vladsch.flexmark:flexmark-all:0.64.8"
 //> using dep "io.circe::circe-yaml:1.15.0"
-//> using dep "io.circe::circe-generic:0.14.7"
+//> using dep "io.circe::circe-generic:0.14.10"
 
 package io.kipp.site
 
