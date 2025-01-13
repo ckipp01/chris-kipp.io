@@ -8,7 +8,7 @@ import com.vladsch.flexmark.parser.Parser
 import com.vladsch.flexmark.util.data.MutableDataSet
 import com.vladsch.flexmark.util.misc.Extension
 
-import java.{util as ju}
+import java.util as ju
 import scala.jdk.CollectionConverters.*
 import com.vladsch.flexmark.ext.tables.TablesExtension
 
