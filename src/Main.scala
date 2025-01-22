@@ -1,6 +1,6 @@
 //> using scala "3.6.3"
 //> using options "-deprecation", "-feature", "-explain", "-Wunused:all"
-//> using dep "org.scala-lang::scala3-compiler:3.6.2"
+//> using dep "org.scala-lang::scala3-compiler:3.6.3"
 //> using dep "com.lihaoyi::os-lib:0.11.3"
 //> using dep "com.lihaoyi::scalatags:0.13.1"
 //> using dep "com.lihaoyi::pprint:0.9.0"
