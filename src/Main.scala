@@ -1,5 +1,5 @@
-//> using scala "3.6.3"
-//> using options "-deprecation", "-feature", "-explain", "-Wunused:all"
+//> using scala "3.6.4"
+//> using options "-deprecation" "-feature" "-explain" "-Wunused:all"
 //> using dep "org.scala-lang::scala3-compiler:3.6.4"
 //> using dep "com.lihaoyi::os-lib:0.11.4"
 //> using dep "com.lihaoyi::scalatags:0.13.1"
@@ -172,6 +172,9 @@ object Main:
     scribe.info(s"Fetching lists from ${path.baseName}")
     for
       lists <- Try(os.list(path)).toEither.left.map(_.getMessage)
-      list <- lists.map(SiteList.fromPath).sequence
+      list <- lists
+        .filterNot(_.last.contains("book"))
+        .map(SiteList.fromPath)
+        .sequence
     yield list
 end Main

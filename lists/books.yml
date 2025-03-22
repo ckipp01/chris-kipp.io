@@ -1,0 +1,10 @@
+id: books
+title: Books I've read 
+description: >
+  This is a collection of books I've read.
+
+2025:
+  books:
+    - title: "Why Empires Fall"
+      author: "Peter Heather and John Rapley"
+      rating: 3
