@@ -148,18 +148,14 @@ object Html:
                   |in the United States and having a M.A. in International Relations. I first got
                   |started in tech as I was finishing grad school, and I haven't really looked back since.
                   |I'm currently located in the Netherlands working at """.stripMargin,
-            a(href := "https://shellrecharge.com/", "Shell Recharge.")
+            a(href := "https://www.reflek.io/", "reflek.io.")
           ),
           p(
             "You can take a look at the projects I work on ",
             a(href := "https://github.com/ckipp01", "here on GitHub"),
-            " find me on ",
+            " or find me on ",
             a(href := "https://hachyderm.io/@ckipp", "Mastodon"),
-            ", ",
-            a(href := "https://twitter.com/ckipp01", "Twitter"),
-            ", or streaming on ",
-            a(href := "https://www.twitch.tv/ckipp", "Twitch"),
-            "."
+            ". "
           ),
           p(
             """Over the years this site has taken many shapes ranging from a custom JS
