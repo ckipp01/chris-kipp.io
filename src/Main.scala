@@ -1,14 +1,3 @@
-//> using scala "3.6.4"
-//> using options "-deprecation" "-feature" "-explain" "-Wunused:all"
-//> using dep "org.scala-lang::scala3-compiler:3.6.4"
-//> using dep "com.lihaoyi::os-lib:0.11.4"
-//> using dep "com.lihaoyi::scalatags:0.13.1"
-//> using dep "com.lihaoyi::pprint:0.9.0"
-//> using dep "com.outr::scribe:3.16.1"
-//> using dep "com.vladsch.flexmark:flexmark-all:0.64.8"
-//> using dep "io.circe::circe-yaml:1.15.0"
-//> using dep "io.circe::circe-generic:0.14.12"
-
 package io.kipp.site
 
 import dotty.tools.dotc.config.ScalaSettings
@@ -21,7 +10,8 @@ object Main:
 
   @main def buildSite() =
     val result: Either[String, Unit] = for
-      blogPosts <- getBlogPosts(Constants.BLOG_DIR)
+      blogPosts <- getMarkdownPages(Constants.BLOG_DIR)
+      ukrainianNotes <- getMarkdownPages(Constants.UKRAINIAN)
       lists <- getLists(Constants.LIST_DIR)
     yield
       /////////////////////
@@ -36,6 +26,17 @@ object Main:
         .reverse
       val blogRss = Rss.generate(blogPages)
       val blogOverview = Html.blogOverview(blogPages)
+      /////////////////////////
+      // PROCESSING Ukrainian//
+      /////////////////////////
+      scribe.info("processing ukrainian notes...")
+      val ukrainianPages = ukrainianNotes
+        .map: page =>
+          scribe.info(s"putting together ${page.urlify}")
+          page.copy(content = Html.blogPage(page).render)
+        .sortBy(_.date)
+        .reverse
+      // val blogOverview = Html.blogOverview(blogPages)
 
       //////////////////////
       // PROCESSING TALKS //
@@ -90,6 +91,17 @@ object Main:
             os.pwd
           ),
           post.content,
+          createFolders = true
+        )
+
+      ukrainianPages.foreach: page =>
+        scribe.info(s"writing ukrainian/${page.urlify}.html")
+        os.write(
+          os.Path(
+            Constants.SITE_DIR / "ukrainian" / (page.urlify + ".html"),
+            os.pwd
+          ),
+          page.content,
           createFolders = true
         )
 
@@ -157,14 +169,21 @@ object Main:
 
   end buildSite
 
-  private def getBlogPosts(
+  private def getMarkdownPages(
       path: os.Path
-  ): Either[String, Seq[BlogPost]] =
-    scribe.info(s"Fetching blogs from ${path.baseName}")
+  ): Either[String, Seq[MarkdownPage]] =
+    scribe.info(s"Fetching markdown pages from ${path.baseName}")
     for
-      blogs <- Try(os.list(path)).toEither.left.map(_.getMessage)
-      blog <- blogs.map(BlogPost.fromPath).sequence
-    yield blog
+      pages <- Try(os.list(path)).toEither.left.map(_.getMessage)
+      page <- pages
+        .collect:
+          case page
+              if os.isFile(page) && !Constants.PAGES_TO_IGNORE.contains(
+                page.baseName
+              ) =>
+            MarkdownPage.fromPath(page)
+        .sequence
+    yield page
 
   private def getLists(
       path: os.Path

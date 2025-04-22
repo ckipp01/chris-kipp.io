@@ -8,3 +8,6 @@ object Constants:
   final val SITE_DIR = os.Path("./site/", os.pwd)
   final val LIST_DIR = os.Path("./lists/", os.pwd)
   final val TALKS_FILE = os.Path("./talks.yml", os.pwd)
+  final val UKRAINIAN = os.Path("./ukrainian/", os.pwd)
+
+  final val PAGES_TO_IGNORE = List(".obsidian.vimrc", ".obsidian")

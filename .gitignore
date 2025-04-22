@@ -9,3 +9,5 @@ scala-cli
 rss.xml
 dest/
 .vercel
+.DS_STORE
+ukrainian/.obsidian/

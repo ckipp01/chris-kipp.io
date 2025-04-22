@@ -6,7 +6,7 @@ import dotty.tools.dotc.config.Settings.Setting
 
 object Html:
 
-  def blogPage(blogPost: BlogPost) =
+  def blogPage(blogPost: MarkdownPage) =
     htmlWrapper(
       headFrag(
         pageTitle = blogPost.title,
@@ -18,31 +18,15 @@ object Html:
         headerFrag(blogPost.title),
         tags2.main(
           Style.writing,
+          Style.tableBase,
           // TODO maybe the date here
-          raw(blogPost.content),
-          script(
-            src := "https://giscus.app/client.js",
-            data("repo") := "ckipp01/chris-kipp.io",
-            data("repo-id") := "MDEwOlJlcG9zaXRvcnkzMDA5NDE4NTU=",
-            data("category") := "Blog Discussions",
-            data("category-id") := "DIC_kwDOEfACH84CSyMK",
-            data("mapping") := "title",
-            data("strict") := "0",
-            data("reactions-enabled") := "1",
-            data("emit-metadata") := "0",
-            data("input-position") := "top",
-            data("theme") := "dark_dimmed",
-            data("lang") := "en",
-            data("loading") := "lazy",
-            crossorigin := "anonymous",
-            async
-          )
+          raw(blogPost.content)
         ),
         footerFrag()
       )
     )
 
-  def blogOverview(blogPosts: Seq[BlogPost]) =
+  def blogOverview(blogPosts: Seq[MarkdownPage]) =
     htmlWrapper(
       headFrag(
         pageTitle = "chris-kipp.io - blog",
@@ -304,17 +288,6 @@ object Html:
           Style.scaleOnHover,
           src := "../images/email.svg",
           alt := "email logo"
-        )
-      ),
-      a(
-        href := "https://twitter.com/ckipp01",
-        target := "_blank",
-        rel := "noopener noreferrer"
-      )(
-        img(
-          Style.scaleOnHover,
-          src := "../images/twitter.svg",
-          alt := "Twitter logo"
         )
       ),
       a(

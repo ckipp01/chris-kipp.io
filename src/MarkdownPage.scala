@@ -12,22 +12,22 @@ import java.util as ju
 import scala.jdk.CollectionConverters.*
 import com.vladsch.flexmark.ext.tables.TablesExtension
 
-/** Representation of a blog post.
+/** Representation of a markdown page.
   *
   * @param title
-  *   Title of the post
+  *   Title of the page
   * @param date
-  *   Date the post was written
+  *   Date the page was written
   * @param updated
-  *   Date if the post has been updated
+  *   Date if the page has been updated
   * @param description
-  *   The description of the post
+  *   The description of the page
   * @param content
-  *   The content of the post (basically the markup)
+  *   The content of the page (basically the markup)
   * @param thumbnail
   *   Possible thumbnail to use for the post
   */
-final case class BlogPost(
+final case class MarkdownPage(
     title: String,
     date: String,
     updated: Option[String],
@@ -38,18 +38,18 @@ final case class BlogPost(
   val urlify: String =
     title.replace("-", "").replace(" ", "-").replace("--", "-").toLowerCase()
 
-object BlogPost:
+object MarkdownPage:
   import Extensions.getOrLeft
 
   /** Given a path, read the file contents and extract what's needed to create a
-    * BlogPost.
+    * page of markdown.
     *
     * @param path
     *   Where we're reading from
     * @return
-    *   either a parse error of some sort or the BlogPost
+    *   Either a parse error of some sort or the page.
     */
-  def fromPath(path: os.Path): Either[String, BlogPost] =
+  def fromPath(path: os.Path): Either[String, MarkdownPage] =
     given os.Path = path
 
     val contents = os.read(path)
@@ -65,18 +65,20 @@ object BlogPost:
           case (key, value) if value.asScala.toList.nonEmpty =>
             key -> value.asScala.toList.mkString
 
-    val articleHtml = renderer.render(document)
+    val pageHtml = renderer.render(document)
 
     for
-      title <- metadata.getOrLeft("title")
+      title <- Right(metadata.getOrElse("title", path.baseName))
       date <- metadata.getOrLeft("date")
-      description <- metadata.getOrLeft("description")
-    yield BlogPost(
+      description <- Right(
+        metadata.getOrElse("description", "Blog of Chris Kipp")
+      )
+    yield MarkdownPage(
       title,
       date,
       metadata.get("updated"),
       description,
-      articleHtml,
+      pageHtml,
       metadata.get("thumbnail")
     )
   end fromPath
@@ -93,4 +95,4 @@ object BlogPost:
 
   private val parser = Parser.builder(options).build()
   private val renderer = HtmlRenderer.builder(options).build()
-end BlogPost
+end MarkdownPage

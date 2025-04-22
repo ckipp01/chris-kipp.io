@@ -15,7 +15,7 @@ import Text.all.*
 // https://github.com/ckipp01/chronica/blob/live/scripts/rss.sc
 object Rss:
 
-  def generate(posts: Seq[BlogPost]) =
+  def generate(posts: Seq[MarkdownPage]) =
     val newest = posts.headOption
       .map(_.date)
       .getOrElse(Instant.now().toString())

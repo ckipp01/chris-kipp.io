@@ -94,7 +94,7 @@ object Style extends CascadingStyleSheet:
 
   val tableBase = cls(
     table(
-      marginBottom := "5px 5px 15px 5px",
+      margin := "5px 5px 15px 5px",
       padding := 5,
       tr(borderBottom := "1px solid")
     ),
