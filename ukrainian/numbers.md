@@ -8,6 +8,9 @@ date: 2025-04-20
 - number/s - число/числа
 - Cardinal Numbers - кількісні числівники
 - Ordinal Numbers - порядкові числівники
+- plus - плюс
+- minus - мінус
+- equals - дорівнює
 
 ## Cardinal Numbers - кількісні числівники
 
@@ -95,3 +98,11 @@ How to form it:
 •	Take the masculine nominative form of the ordinal number.
 •	Replace the ending -ий or -ій with -ого.
 •	For compound numbers, only the last word changes.
+
+## General notes 
+
+Remember when answering questions that are numerical in nature, like:
+- Скільки тобі?
+- Яка температура?
+- etc.
+You need to answer considering [[nouns#числова форма іменника - noun numeral form|noun numeral form]].
