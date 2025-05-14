@@ -3,6 +3,10 @@ date: 2025-04-22
 ---
 # Cases - відміноки
 
+## Nominative - називний відмінок
+
+This is the basic "dictionary" form of the noun.
+
 ## Genitive - Родовий відмінок
 
 Used when to talk about something happening at a specific time.
@@ -25,6 +29,11 @@ and is always used with certain prepositions, most commonly with у/в and на.
 | consonant ending     | just add i                     | стіл -> на столі     |
 | foreign words        | stay the same                  | кафе -> кафе         |
 
+### Plural locative case
+
+The ending here depends on whether or not the last letter of the plural [[cases#Nominative - називний відмінок|nominative form]]. 
+- [[alphabet#Hard / Soft|hard]] endings use ах -- ex. Карпатах
+- [[alphabet#Hard / Soft|soft]] endings use ях -- ex. морях
 
 ## Instrumental
 
