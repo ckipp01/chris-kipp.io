@@ -7,4 +7,4 @@
 //> using dep "com.outr::scribe:3.16.1"
 //> using dep "com.vladsch.flexmark:flexmark-all:0.64.8"
 //> using dep "io.circe::circe-yaml:1.15.0"
-//> using dep "io.circe::circe-generic:0.14.13"
+//> using dep "io.circe::circe-generic:0.14.14"
