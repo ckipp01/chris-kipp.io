@@ -12,6 +12,92 @@ date: 2025-04-30
 
 Infinitives in Ukrainian always have a -ти ending. 
 
+## Present tense conjugation
+
+You can split most verbs into 3 groups of conjugation:
+
+- -ю group
+- -у group
+- -misc/mixed group
+
+Below is a chart which allows you to determine which group words with the most
+popular endings or parts should be placed in.
+
+| ending/pattern            | group      |
+| ------------------------- | ---------- |
+| -ати                      | -ю group   |
+| -яти                      | -ю group   |
+| includes -ува, -юва, -ава | -ю group   |
+| -ити                      | misc/mixed |
+
+### -ю group
+
+Example conjugation
+
+_знати_
+- я знаю
+- ти знаєш
+- він/вона/воно знає
+- ми знаємо
+- ви знаєте
+- вони знають
+
+#### -ува, -юва, -ава
+
+Whenever you come across a verb with the above phrasing in the verb you drop the -ва suffix and then add the correct ending to the conjugation
+
+### -у group
+
+Example conjugation
+
+_хотіти_
+- я хочу
+- ти хочеш
+- він/вона/воно хоче
+- ми хочемо
+- ви хочете
+- вони хочуть
+
+#### -у  group consonant switch
+
+When the final syllable has the following consonant you'll switch it:
+
+NOTE: That this switch takes place in all forms of the conjugation
+
+- г - ж - могти
+- з - ж - різати
+- к - ч - пекти
+- т - ч - хотіти
+- с - ш - писати
+- х - ш - колихаим
+
+### -misc/mixed group
+
+#### -misc  group consonant switch
+
+NOTE: That this switch takes place _only_ in the first person singular 
+
+- д - дж - радити - раджу
+- т - ч - летіти - лечу
+- с - ш - просити - прошу
+- з - ж - возити - вожу
+- зд - ждж - їздити - їжджу
+- ст - щ - мастити мащу
+
+#### Lip letters
+
+When you see these letters at the end of the infinitive before the infinitive ending then you add a л to the conjugation of the 1st person singular and 3rd person plural
+
+- б, п, в, м, ф
+
+Ex: спати
+- я сплю
+- ти спиш
+- він спить
+- ми спимо
+- ви спите
+- вони сплять
+
 ## Reflexive verbs / зворотнi дієслово
 
 Reflexive verbs are verbs where the object is the same as it's subject. These are indicated by having a -ся attached to the end of the verb.

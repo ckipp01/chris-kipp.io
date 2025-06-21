@@ -37,4 +37,12 @@ The ending here depends on whether or not the last letter of the plural [[cases#
 
 ## Instrumental
 
+### Irregulars
+
+There are some nouns that have irregular plural forms. These also have irregular
+forms of instrumental.
+
+- люди - з людьми
+- діти - з дітьми
+
 ## Accusative
