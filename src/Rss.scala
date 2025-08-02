@@ -1,13 +1,12 @@
 package io.kipp.site
 
-import scalatags.Text
-
 import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 
-import Text.all.*
+import scalatags.Text
+import scalatags.Text.all._
 
 // To give credit where crediet is due, some of this is yanked from Anton.
 // https://github.com/indoorvivants/subatomic/blob/master/modules/builders/src/main/scala/rss/Rss.scala

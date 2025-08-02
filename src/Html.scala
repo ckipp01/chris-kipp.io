@@ -1,8 +1,8 @@
 package io.kipp.site
 
-import scalatags.Text.all.*
-import scalatags.Text.tags2
 import dotty.tools.dotc.config.Settings.Setting
+import scalatags.Text.all._
+import scalatags.Text.tags2
 
 object Html:
 

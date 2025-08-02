@@ -1,10 +1,9 @@
 package io.kipp.site
 
-import dotty.tools.dotc.config.ScalaSettings
-
 import scala.util.Try
 
-import Extensions.sequence
+import dotty.tools.dotc.config.ScalaSettings
+import io.kipp.site.Extensions.sequence
 
 object Main:
 
