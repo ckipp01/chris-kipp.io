@@ -1,6 +1,5 @@
 package io.kipp.site
 
-import dotty.tools.dotc.config.Settings.Setting
 import scalatags.Text.all.*
 import scalatags.Text.tags2
 
@@ -109,50 +108,6 @@ object Html:
       )
     )
 
-  // TODO we'll probably need to make a markdown page of this
-  def aboutPage() =
-    htmlWrapper(
-      headFrag(
-        pageTitle = "chris-kipp.io - about",
-        description =
-          "A litte bit about me, Chris Kipp, the author of this blog."
-      ),
-      body(
-        Style.bodyBase,
-        headerFrag("about"),
-        tags2.main(
-          Style.writing,
-          img(src := "../images/me.jpg"),
-          p(
-            """Hi, I'm Chris. You've stumbled upon my blog and website. It's a simple place
-                  |where I write some things and hold links to other places that I'd like to
-                  |remember. You'll find me writing or working on things related to developer
-                  |tooling, primarily with Neovim and Scala, talking about music, or sharing stuff
-                  |I find interesting. I have a varied background, including growing up on a farm
-                  |in the United States and having a M.A. in International Relations. I first got
-                  |started in tech as I was finishing grad school, and I haven't really looked back since.
-                  |I'm currently located in the Netherlands working at """.stripMargin,
-            a(href := "https://www.reflek.io/", "reflek.io.")
-          ),
-          p(
-            "You can take a look at the projects I work on ",
-            a(href := "https://github.com/ckipp01", "here on GitHub"),
-            " or find me on ",
-            a(href := "https://hachyderm.io/@ckipp", "Mastodon"),
-            ". "
-          ),
-          p(
-            """Over the years this site has taken many shapes ranging from a custom JS
-                  |framework powered site, one that fully tracked all my free time, to ultimately
-                  |the minimal shape you see it in now. It will continue to change and grow as I do.""".stripMargin
-          ),
-          p("Thanks for stopping by."),
-          p("Chris")
-        ),
-        footerFrag()
-      )
-    )
-
   def custom404() =
     htmlWrapper(
       headFrag(
@@ -172,27 +127,6 @@ object Html:
               "here."
             )
           )
-        )
-      )
-    )
-
-  def scalacSettings(settings: Seq[Setting[?]]) =
-    htmlWrapper(
-      headFrag(
-        pageTitle = "chris-kipp.io - scalacOptions",
-        description = "All the Scala 3 options"
-      ),
-      body(
-        Style.bodyBase,
-        headerFrag("hidden"),
-        tags2.main(
-          Style.writing,
-          settings.map: setting =>
-            div(
-              h3(setting.name),
-              p(setting.description)
-            ),
-          footerFrag()
         )
       )
     )
@@ -253,7 +187,7 @@ object Html:
       )
     )
 
-  final case class NavItem(link: String, name: String, active: String):
+  case class NavItem(link: String, name: String, active: String):
     def html() =
       a(if active == name then Style.activePage else "", href := link, name)
 

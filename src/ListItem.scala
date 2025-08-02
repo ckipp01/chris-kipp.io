@@ -44,4 +44,4 @@ case class Talk(
 
 case class Video(title: String, author: String, link: String) extends ListItem
 
-final case class Place(name: String, link: String) extends ListItem
+case class Place(name: String, link: String) extends ListItem

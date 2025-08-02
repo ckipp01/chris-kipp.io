@@ -2,7 +2,6 @@ package io.kipp.site
 
 import scala.util.Try
 
-import dotty.tools.dotc.config.ScalaSettings
 import io.kipp.site.Extensions.sequence
 
 object Main:
@@ -11,6 +10,7 @@ object Main:
     val result: Either[String, Unit] = for
       blogPosts <- getMarkdownPages(Constants.BLOG_DIR)
       ukrainianNotes <- getMarkdownPages(Constants.UKRAINIAN)
+      topLevelPages <- getMarkdownPages(Constants.PAGES_DIR)
       lists <- getLists(Constants.LIST_DIR)
     yield
       /////////////////////
@@ -35,7 +35,6 @@ object Main:
           page.copy(content = Html.blogPage(page).render)
         .sortBy(_.date)
         .reverse
-      // val blogOverview = Html.blogOverview(blogPages)
 
       //////////////////////
       // PROCESSING TALKS //
@@ -56,11 +55,14 @@ object Main:
       val listsOverview = Html.listsOverview(lists)
       val listPages = lists.map(list => (list.id -> Html.listPage(list)))
 
-      ///////////////////////
-      // PROCESSING ABOUT ///
-      ///////////////////////
-      scribe.info("putting together about page")
-      val aboutPage = Html.aboutPage()
+      ////////////////////////////
+      // PROCESSING TOP-LEVEL PAGES //
+      ////////////////////////////
+      scribe.info("processing top-level pages...")
+      val processedTopLevelPages = topLevelPages
+        .map: page =>
+          scribe.info(s"putting together ${page.urlify}")
+          page.copy(content = Html.blogPage(page).render)
 
       //////////////
       // CLEANING //
@@ -139,24 +141,17 @@ object Main:
         listsOverview.render
       )
 
-      scribe.info("writing about.html")
-      os.write(
-        os.Path(Constants.SITE_DIR / "about.html", os.pwd),
-        aboutPage.render
-      )
+      processedTopLevelPages.foreach: page =>
+        scribe.info(s"writing ${page.urlify}.html")
+        os.write(
+          os.Path(Constants.SITE_DIR / (page.urlify + ".html"), os.pwd),
+          page.content
+        )
 
       scribe.info("writing 404.html")
       os.write(
         os.Path(Constants.SITE_DIR / "404.html", os.pwd),
         Html.custom404().render
-      )
-
-      val allSettings = ScalaSettings.allSettings
-      val htmlSettings = Html.scalacSettings(allSettings)
-      scribe.info("writing hideen scala3-scalac-options.txt")
-      os.write(
-        os.Path(Constants.SITE_DIR / "scala3-scalac-options.html", os.pwd),
-        htmlSettings.render
       )
 
       scribe.info("writting rss feed")

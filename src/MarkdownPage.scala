@@ -29,7 +29,7 @@ import com.vladsch.flexmark.util.misc.Extension
   * @param thumbnail
   *   Possible thumbnail to use for the post
   */
-final case class MarkdownPage(
+case class MarkdownPage(
     title: String,
     date: String,
     updated: Option[String],

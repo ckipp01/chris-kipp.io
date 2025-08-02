@@ -49,7 +49,7 @@ object SiteList:
       case Right(value) => Left(s"${value} seems to be unmapped for decoded.")
       case Left(err)    => Left(err.getMessage)
 
-final case class Albums(
+case class Albums(
     id: String,
     title: String,
     description: String,
@@ -86,7 +86,7 @@ final case class Albums(
       )
     }
 
-final case class Articles(
+case class Articles(
     id: String,
     title: String,
     description: String,
@@ -106,7 +106,7 @@ final case class Articles(
             )
         )
 
-final case class Sites(
+case class Sites(
     id: String,
     title: String,
     description: String,
@@ -120,7 +120,7 @@ final case class Sites(
         p(site.owner)
       )
 
-final case class Talks(
+case class Talks(
     id: String,
     title: String,
     description: String,
@@ -161,7 +161,7 @@ final case class Talks(
         )
       )
 
-final case class Videos(
+case class Videos(
     id: String,
     title: String,
     description: String,
