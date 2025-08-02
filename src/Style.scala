@@ -1,8 +1,8 @@
 package io.kipp.site
 
-import scalatags.Text.all._
+import scalatags.Text.all.*
 import scalatags.Text.styles2
-import scalatags.stylesheet._
+import scalatags.stylesheet.*
 
 object Style extends CascadingStyleSheet:
   // TODO once https://github.com/com-lihaoyi/scalatags/pull/263 is merged and
