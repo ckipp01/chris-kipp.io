@@ -38,7 +38,12 @@ case class MarkdownPage(
     thumbnail: Option[String]
 ):
   val urlify: String =
-    title.replace("-", "").replace(" ", "-").replace("--", "-").toLowerCase()
+    title
+      .replace(",", "")
+      .replace("-", "")
+      .replace(" ", "-")
+      .replace("--", "-")
+      .toLowerCase()
 
 object MarkdownPage:
   import Extensions.getOrLeft
