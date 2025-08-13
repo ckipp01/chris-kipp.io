@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "numbers.md",
+                "file": "adjectives.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "numbers"
+              "title": "adjectives"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "numbers.md",
+                "file": "pronouns.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for numbers"
+              "title": "Backlinks for pronouns"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "numbers.md",
+                "file": "pronouns.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from numbers"
+              "title": "Outgoing links from pronouns"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "numbers.md",
+                "file": "pronouns.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of numbers"
+              "title": "Outline of pronouns"
             }
           }
         ]
@@ -171,9 +171,13 @@
   },
   "active": "bb2259cbbf14c849",
   "lastOpenFiles": [
-    "dates.md",
-    "nouns.md",
+    "alphabet.md",
+    "cases.md",
     "adverbs.md",
-    "alphabet.md"
+    "adjectives.md",
+    "pronouns.md",
+    "numbers.md",
+    "dates.md",
+    "nouns.md"
   ]
 }

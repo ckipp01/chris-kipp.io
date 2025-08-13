@@ -34,8 +34,10 @@ date: 2025-04-20
 
 ### Genitive
 
-- Introducing your name*
-- Talking about possessions
+_NOTE_: It's important with genitive to differentiate between the two different third person forms. For example if there is a preposition you use the first form. If there is no preposition, you use the second.
+
+- Introducing your name (no preposition, so you use the * form.)
+- Talking about possessions (with a preposition, so you use the first form.)
 
 ### Dative
 
