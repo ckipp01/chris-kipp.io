@@ -2,7 +2,7 @@
 //> using options "-deprecation" "-feature" "-explain" "-Wunused:all"
 //> using dep "com.lihaoyi::os-lib:0.11.6"
 //> using dep "com.lihaoyi::scalatags:0.13.1"
-//> using dep "com.lihaoyi::pprint:0.9.4"
+//> using dep "com.lihaoyi::pprint:0.9.6"
 //> using dep "com.outr::scribe:3.17.0"
 //> using dep "com.vladsch.flexmark:flexmark-all:0.64.8"
 //> using dep "io.circe::circe-yaml:1.15.0"
