@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-22.04
     name: Launch Scala Steward
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: VirtusLab/scala-cli-setup@main
       - name: Launch Scala Steward
         uses: scala-steward-org/scala-steward-action@v2
