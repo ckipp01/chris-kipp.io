@@ -35,6 +35,19 @@ The ending here depends on whether or not the last letter of the plural [[cases#
 - [[alphabet#Hard / Soft|hard]] endings use ах -- ex. Карпатах
 - [[alphabet#Hard / Soft|soft]] endings use ях -- ex. морях
 
+### Vowel Shifts
+
+There are a few vowels that shift during conjugation. The most common shifts are **і → о** and **ї → є.**
+
+These shifts happen in the last closed syllable of the word.
+
+| Nominative | Locative    |
+| ---------- | ----------- |
+| Львів      | у Львові    |
+| стіл       | на столі    |
+| Харків     | у Харкові   |
+| Київ       | у Києві     |
+| Миколаїв   | у Миколаєві |
 ## Instrumental
 
 ### Irregulars
@@ -46,3 +59,17 @@ forms of instrumental.
 - діти - з дітьми
 
 ## Accusative
+
+### Accusative case for inanimate objects
+
+- We use accusative case after a verb followed by a direct object (DO), this DO is in accusative form.
+- A DO is the noun, pronoun, or noun phrase that receives the action of a verb in a sentence. It answers the question, "what" or "whome" after a verb.
+	- Я читаю книгу
+	- Ми любимо солодощі
+	- Я хочу квіти
+	- Він хоче каву
+#### Rules
+- M + N -> these don't change at all
+- F. 
+	- а ending -> у
+	- я ending -> ю

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "adjectives.md",
+                "file": "verbs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "adjectives"
+              "title": "verbs"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "de27fae0b2b78ab6",
@@ -160,6 +161,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -171,13 +173,14 @@
   },
   "active": "bb2259cbbf14c849",
   "lastOpenFiles": [
-    "alphabet.md",
     "cases.md",
+    "numbers.md",
+    "verbs.md",
+    "alphabet.md",
     "adverbs.md",
     "adjectives.md",
-    "pronouns.md",
-    "numbers.md",
     "dates.md",
-    "nouns.md"
+    "nouns.md",
+    "pronouns.md"
   ]
 }

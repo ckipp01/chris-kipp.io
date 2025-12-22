@@ -136,3 +136,23 @@ In general it may see odd to use бути here but when you're saying
 > У мене є ...
 
 You're not actually literally translating "I have..." but rather "In my possession is" with is being є.
+
+## Past Imperfect Tense
+
+To form the past imperfect tense we simply drop the -ти and add the right endings to the end of the verb.
+
+- -В for masculine
+-  -ла for feminine
+-  -ло for neuter
+- -ли for plural
+
+There are two different groups that defy this rule.
+
+1. Verbs with historical changes that have different roots but ordinary endings.
+	1. йти - йшов - йшла - йшло - йшли
+	2. прпйти - прпйшов - прпйшла - прпйшло - прпйшли
+	3. знайти - знайшов - знайшла - знайшло - знайшли
+	4. їсти - їв - їла - їло - їли
+	5. красти - крав - крала - крало - крали
+	6. класти - клав - клала - клало - клали
+2. Verbs that end their roots with a consonant usually have different roots AND different endings for masculine.

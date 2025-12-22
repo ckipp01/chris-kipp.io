@@ -44,3 +44,16 @@ Ex. мій день народження *у вересні*.
 | жовтень               | October   | жовтня             | у жовтні            |
 | листопад              | November  | листопада          | у листопаді         |
 | грудень               | December  | грудня             | у грудні            |
+## Days of the Week
+
+When we are talking about things happening "on this day" like "on Friday" we use [[cases#Accusative|accusative]] case.
+
+| Nominative | English   | Accusative  |
+| ---------- | --------- | ----------- |
+| понеділок  | Monday    | y понеділок |
+| вівторок   | Tuesday   | у вівторок  |
+| середа     | Wednesday | у середу    |
+| четвер     | Thursday  | у четвер    |
+| п'ятниця   | Friday    | у п'ятницю  |
+| субота     | Saturday  | у суботу    |
+| неділя     | Sunday    | у неділю    |
