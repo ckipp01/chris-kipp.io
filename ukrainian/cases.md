@@ -50,6 +50,37 @@ These shifts happen in the last closed syllable of the word.
 | Миколаїв   | у Миколаєві |
 ## Instrumental
 
+- Often used after certain verbs
+- with frequently used prepositions
+	- Most commonly used with the "з" preposition
+		- Я гуляю з собакою
+		- Ми йдемо на свято з друзями
+- When we talk about something "as in instrument"
+	- Note that when we use it in this way there is no preposition
+		- Ми їдемо у Київ машиною
+		- Він дуже гарно говорить українською
+- To congratulate people on specific occurrences
+
+### How do we conjugate it?
+
+- Masc - hard - ом / soft - ем
+	- з другом
+	- з чоловіком
+	- з хлопцем
+- Fem. - hard - ою / soft - ею
+	- з подругою
+	- з жінкою
+	- з кицею
+- Neut. - Just add м
+	- з вином
+	- з сонцем
+	- з кошеням
+- Pl. - и -> ами / і -> ями
+	- чоловіками
+	- друзями
+	- морями
+
+
 ### Irregulars
 
 There are some nouns that have irregular plural forms. These also have irregular

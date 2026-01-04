@@ -4,21 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "f3b970532382031c",
+        "id": "c99c2c4a27db223f",
         "type": "tabs",
         "children": [
           {
-            "id": "bb2259cbbf14c849",
+            "id": "aa4427eadb5854a1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "verbs.md",
+                "file": "cases.md",
                 "mode": "source",
-                "source": false
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
               "icon": "lucide-file",
-              "title": "verbs"
+              "title": "cases"
             }
           }
         ]
@@ -78,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "de27fae0b2b78ab6",
@@ -95,9 +104,9 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "pronouns.md",
-                "collapseAll": false,
-                "extraContext": false,
+                "file": "cases.md",
+                "collapseAll": true,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
@@ -105,7 +114,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for pronouns"
+              "title": "Backlinks for cases"
             }
           },
           {
@@ -143,21 +152,21 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "pronouns.md",
+                "file": "cases.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of pronouns"
+              "title": "Outline of cases"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -171,15 +180,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "bb2259cbbf14c849",
+  "active": "8bc3d22785a49862",
   "lastOpenFiles": [
-    "cases.md",
+    "dates.md",
+    "overview.base",
     "numbers.md",
+    "cases.md",
     "verbs.md",
     "alphabet.md",
     "adverbs.md",
     "adjectives.md",
-    "dates.md",
     "nouns.md",
     "pronouns.md"
   ]
