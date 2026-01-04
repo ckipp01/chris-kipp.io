@@ -13,22 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cases.md",
+                "file": "prepositions.md",
                 "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "cases"
+              "title": "prepositions"
             }
           }
         ]
@@ -104,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cases.md",
+                "file": "prepositions.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -114,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for cases"
+              "title": "Backlinks for prepositions"
             }
           },
           {
@@ -152,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cases.md",
+                "file": "prepositions.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of cases"
+              "title": "Outline of prepositions"
             }
           }
         ],
@@ -180,12 +170,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "8bc3d22785a49862",
+  "active": "aa4427eadb5854a1",
   "lastOpenFiles": [
-    "dates.md",
     "overview.base",
-    "numbers.md",
+    "prepositions.md",
     "cases.md",
+    "dates.md",
+    "numbers.md",
     "verbs.md",
     "alphabet.md",
     "adverbs.md",
