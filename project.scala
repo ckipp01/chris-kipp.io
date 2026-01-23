@@ -1,4 +1,4 @@
-//> using scala "3.7.4"
+//> using scala "3.8.1"
 //> using options "-deprecation" "-feature" "-explain" "-Wunused:all"
 //> using dep "com.lihaoyi::os-lib:0.11.6"
 //> using dep "com.lihaoyi::scalatags:0.13.1"
