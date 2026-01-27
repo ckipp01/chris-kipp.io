@@ -1,6 +1,6 @@
 //> using scala "3.7.4"
 //> using options "-deprecation" "-feature" "-explain" "-Wunused:all"
-//> using dep "com.lihaoyi::os-lib:0.11.6"
+//> using dep "com.lihaoyi::os-lib:0.11.7"
 //> using dep "com.lihaoyi::scalatags:0.13.1"
 //> using dep "com.lihaoyi::pprint:0.9.6"
 //> using dep "com.outr::scribe:3.17.0"
