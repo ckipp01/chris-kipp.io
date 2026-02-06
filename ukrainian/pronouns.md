@@ -72,6 +72,30 @@ usage of the same possessive pronoun.
 - своє - neut.
 - свої - pl.
 
+### Accusative Cases
+
+Similar to nouns, possessive pronouns in [[cases#Accusative||accusative case]] change only for feminine singular when referring to inanimate objects.
+
+- мою
+- твою
+- її
+- його
+- вашу
+- нашу
+- їхию
+### Locative Cases
+Used in normal situations where [[cases#Locative - місцевий відмінок||Locative case]] is called for.
+
+| Masculine | Feminine | Neuter  | Plural |
+| --------- | -------- | ------- | ------ |
+| моєму     | моїй     | моєму   | моїх   |
+| твоєму    | твоїй    | твоєму  | твоїх  |
+| його      | йогo     | йогo    | йогo   |
+| її        | її       | її      | її     |
+| вашому    | вашїй    | вашому  | ваших  |
+| нашому    | нашїй    | нашому  | наших  |
+| їхньому   | їхнїй    | їхньому | їхніх  |
+
 ## Demonstrative pronouns / вказівні займенники
 
 Used to indicate this/that.

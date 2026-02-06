@@ -1,4 +1,3 @@
----
 date: 2025-04-22
 ---
 # Cases - відміноки
@@ -79,8 +78,7 @@ These shifts happen in the last closed syllable of the word.
 	- чоловіками
 	- друзями
 	- морями
-
-
+	
 ### Irregulars
 
 There are some nouns that have irregular plural forms. These also have irregular
@@ -94,11 +92,17 @@ forms of instrumental.
 ### Accusative case for inanimate objects
 
 - We use accusative case after a verb followed by a direct object (DO), this DO is in accusative form.
-- A DO is the noun, pronoun, or noun phrase that receives the action of a verb in a sentence. It answers the question, "what" or "whome" after a verb.
+- A DO is the noun, pronoun, or noun phrase that receives the action of a verb in a sentence. It answers the question, "what" or "whom" after a verb.
 	- Я читаю книгу
 	- Ми любимо солодощі
 	- Я хочу квіти
 	- Він хоче каву
+- In Ukrainian accusative case is used not only for indicating the DO of an action, but also for expressing direction with the prepositions у/в (for places) and на (for events). This usages helps differentiate between location (which requires the [[[cases#Locative - місцевий відмінок||locative case]]) and movement towards a place (which requires the accusative case).
+- There are also other prepositions that require the accusative case. It's best to learn them as pairs to remember this, but the most common ones are listed below:
+	- за
+	- про
+	- через
+	- на
 #### Rules
 - M + N -> these don't change at all
 - F. 
