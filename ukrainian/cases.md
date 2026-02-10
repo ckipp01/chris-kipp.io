@@ -1,3 +1,4 @@
+---
 date: 2025-04-22
 ---
 # Cases - відміноки
@@ -8,7 +9,27 @@ This is the basic "dictionary" form of the noun.
 
 ## Genitive - Родовий відмінок
 
-Used when to talk about something happening at a specific time.
+This is considered to be the most difficult case as there are multiple different ending types.
+
+## When it's used
+
+There are a few main places that we use the genitive case:
+
+1. Possessive case - яблуко Ані, книги Марїї
+2. Instead of the English "of": чашка кави, колір фуболки
+3. After "з" meaning "from": я з України
+4. After немає
+
+## Forming it
+
+### Feminine rules
+
+| Ending | Conjugation Rule | Example                |
+| ------ | ---------------- | ---------------------- |
+| а      | а -> и           | вода -> води           |
+| я      | я -> і           | Аня -> Ані             |
+| ія     | ія -> ії         | Швейцарія -> Швейцарії |
+**NOTE**: ш and other noise letters (ж, з, ч, ш, щ) make other letters after itself soft: груша -> груші
 
 ## Locative - 	місцевий відмінок
 

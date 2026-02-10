@@ -35,7 +35,9 @@ Most commonly used to signify being inside something or at a certain location. D
 | **У тебе** є кіт?    | [[cases#Genitive - Родовий відмінок\|genitive]]  | An expression of possession                            |
 ## за
 
-Most commonly used as **for**. This requires the [[cases#Accusative||accusative case]] after it.
+Most commonly used as **for**. This requires the [[cases#Accusative||accusative case]] after it when it has the meaning for.
+
+It can also mean **behind** and if it's used this way it will require [[cases#Instrumental|instrumental case]].
 
 Ex. Дякую **за** допомогу
 ## про
@@ -56,6 +58,8 @@ Can either mean **at** or **for**. For these usecases, they required the [[cases
 
 Ex. Йому подобається дивитися **на** море.
 
+However when we are talking about using **на** for the locating of something, we need the [[cases#Locative - місцевий відмінок|locative case.]]
+
 ## над
 
 Means **over** or **on** and requires [[cases#Instrumental|the instrumental case]] following it.
@@ -72,6 +76,7 @@ Means for and requires the [[cases#Genitive - Родовий відмінок|ge
 
 In various contexts it means **to/towards/until** and requires the [[cases#Genitive - Родовий відмінок|genitive case]] following it. 
 
+**NOTE**: That we don't use this with events. 
 ## від
 
 In various contexts it means **away from** or **since**. This is also followed by the [[cases#Genitive - Родовий відмінок|genitive case]].
