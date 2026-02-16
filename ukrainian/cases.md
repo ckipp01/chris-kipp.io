@@ -18,7 +18,23 @@ There are a few main places that we use the genitive case:
 1. Possessive case - яблуко Ані, книги Марїї
 2. Instead of the English "of": чашка кави, колір фуболки
 3. After "з" meaning "from": я з України
-4. After немає
+4. After немає and other negations
+5. After "до" meaning "to" for direction
+6. after "без" meaning "without"
+7. After certain prepositions and prepositional phrases of place
+	1. віля
+	2. праворуч від
+	3. ліворуч від
+	4. далеко від
+	5. близько до
+8. After numbers 5+
+9. After quantifiers like:
+	1. багато
+	2. мало
+	3. трохи
+	4. кілька
+	5. більшість
+	6. меншість
 
 ## Forming it
 
@@ -31,6 +47,49 @@ There are a few main places that we use the genitive case:
 | ія     | ія -> ії         | Швейцарія -> Швейцарії |
 **NOTE**: ш and other noise letters (ж, з, ч, ш, щ) make other letters after itself soft: груша -> груші
 
+### Masculine rules
+
+For masculine genitive there are two different endings depending on whether or nothing they fit into one of the following two groups
+
+1. Specific things:  (-а for hard, -я for soft)
+	1. people's names
+	2. subjects
+	3. names of cities and villages
+	4. days of the week, months
+	5. professions, etc
+2. Abstract and uncountable things: (-у for hard, -ю for soft)
+	1. weather
+	2. geographic names
+	3. feelings
+	4. art
+	5. institutions and part of the city
+
+
+### Neuter rules
+
+**NOTE**: that the genitive singular endings for neuter nouns are exactly the same as their nominative plural endings.
+
+- о -> а
+- е -> я
+- double cons + я -> these don't change
+
+### Plural rules
+
+1. Normally we can just drop the и and add -ів to the end
+2. However, there are quite a few oddities here with different words
+	1. Quite a few feminine nouns have -нк-, -шк- or other suffixes with -к- which makes it hard to pronounce when we drop the last vowel, that's why we put "о" before "к" to make it easier
+		1. жінки -> жінок
+	2. But sometimes we put "е" instead of "о" if the "к" is not there and the word sounds softer
+		1. вишні -> вишень
+
+There is also a handful of just irregular ones that you need to remember.
+
+- люоди -> людей
+- діти -> дітей
+- гроші -> грошей
+- гості -> гостей
+- речі -> речей
+- двері -> дверей
 ## Locative - 	місцевий відмінок
 
 Used when we are talking about location.  It answers questions such as “where?”

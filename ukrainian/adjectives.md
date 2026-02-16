@@ -45,3 +45,12 @@ Used in normal situations where [[cases#Locative - місцевий відмін
 | ому        | m . +  n.        | на новому ліжку<br>у гарному місті<br>у великому будинку       |
 | ій         | f.               | у гарній кімнаті<br>у великій шафі<br>у цікавій книзі          |
 | их         | plr.             | у зелених Карпатах<br>на гарних вулицях<br>у Сполучених Штатах |
+## Genitive Endings
+
+Used in situations where the [[cases#Genitive - Родовий відмінок|genitive case]] is called for.
+
+| Ending<br> | Gender/Plurality | Examples           |
+| ---------- | ---------------- | ------------------ |
+| ого        | m . +  n.        | нового<br>синього  |
+| ої         | f.               | розумної<br>старої |
+| их         | plr.             | зелених<br>вулицях |

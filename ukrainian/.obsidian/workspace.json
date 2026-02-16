@@ -8,20 +8,63 @@
         "type": "tabs",
         "children": [
           {
-            "id": "516c53c4f15fe507",
+            "id": "09db7472c475b08c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "verbs.md",
+                "file": "pronouns.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "verbs"
+              "title": "pronouns"
+            }
+          },
+          {
+            "id": "0a04c994ce300c02",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "adjectives.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "adjectives"
+            }
+          },
+          {
+            "id": "84fbca5cd6289db6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "cases.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "cases"
+            }
+          },
+          {
+            "id": "2d598a8c2e8b9a4d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "prepositions.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "prepositions"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -171,21 +214,22 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "516c53c4f15fe507",
+  "active": "84fbca5cd6289db6",
   "lastOpenFiles": [
-    "cases.md",
     "adjectives.md",
-    "alphabet.md",
     "prepositions.md",
+    "cases.md",
+    "pronouns.md",
+    "[cases.md",
+    "verbs.md",
+    "dates.md",
+    "alphabet.md",
     "Untitled 1.base",
     "Untitled.base",
-    "pronouns.md",
     "Untitled 2.base",
     "Untitled 3.base",
-    "dates.md",
     "nouns.md",
     "adverbs.md",
-    "verbs.md",
     "overview.base",
     "numbers.md"
   ]

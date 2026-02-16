@@ -95,6 +95,18 @@ Used in normal situations where [[cases#Locative - місцевий відмін
 | вашому    | вашїй    | вашому  | ваших  |
 | нашому    | нашїй    | нашому  | наших  |
 | їхньому   | їхнїй    | їхньому | їхніх  |
+### Genitive Cases
+Used in normal situations where [[cases#Genitive - Родовий відмінок|genitive case]] is called for.
+
+| Masculine | Feminine | Neuter  | Plural |
+| --------- | -------- | ------- | ------ |
+| мого      | моєї     | мого    | моїх   |
+| твого     | твоєї    | твого   | твоїх  |
+| його      | йогo     | йогo    | йогo   |
+| її        | її       | її      | її     |
+| вашого    | вашої    | вашого  | ваших  |
+| нашого    | нашої    | нашого  | наших  |
+| їхнього   | їхньої   | їхнього | їхніх  |
 
 ## Demonstrative pronouns / вказівні займенники
 
