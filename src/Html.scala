@@ -203,46 +203,80 @@ object Html:
       )
     )
 
+  private val backToTopScript: String =
+    """|(function() {
+      |  var btn = document.getElementById('back-to-top');
+      |  window.addEventListener('scroll', function() {
+      |    var scrollY = window.scrollY;
+      |    var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      |    var show = scrollY > 30;
+      |    btn.style.opacity = show ? '1' : '0';
+      |    btn.style.pointerEvents = show ? 'auto' : 'none';
+      |    var progress = maxScroll > 0 ? (scrollY / maxScroll) * 100 : 0;
+      |    btn.style.setProperty('--progress', progress + '%');
+      |  });
+      |  btn.addEventListener('click', function(e) {
+      |    e.preventDefault();
+      |    window.scrollTo({ top: 0, behavior: 'smooth' });
+      |  });
+      |})();
+    """.stripMargin
+
+  private def backToTopFrag() =
+    frag(
+      a(
+        Style.backToTop,
+        href := "#",
+        id := "back-to-top",
+        attr("aria-label") := "Back to top",
+        span("↑")
+      ),
+      script(raw(backToTopScript))
+    )
+
   private def footerFrag() =
-    footer(
-      Style.footerBase,
-      a(
-        href := "https://github.com/ckipp01",
-        target := "_blank",
-        rel := "noopener noreferrer"
-      )(
-        img(
-          Style.scaleOnHover,
-          src := "../images/github.svg",
-          alt := "GitHub logo"
+    frag(
+      footer(
+        Style.footerBase,
+        a(
+          href := "https://github.com/ckipp01",
+          target := "_blank",
+          rel := "noopener noreferrer"
+        )(
+          img(
+            Style.scaleOnHover,
+            src := "../images/github.svg",
+            alt := "GitHub logo"
+          )
+        ),
+        a(href := "mailto:hello@chris-kipp.io")(
+          img(
+            Style.scaleOnHover,
+            src := "../images/email.svg",
+            alt := "email logo"
+          )
+        ),
+        a(
+          href := "https://hachyderm.io/@ckipp",
+          rel := "me noopener noreferrer",
+          target := "_blank"
+        )(
+          img(
+            Style.scaleOnHover,
+            src := "../images/mastodon.svg",
+            alt := "mastodon logo"
+          )
+        ),
+        a(
+          href := "https://www.chris-kipp.io/rss.xml"
+        )(
+          img(
+            Style.scaleOnHover,
+            src := "../images/rss.svg",
+            alt := "rss icon"
+          )
         )
       ),
-      a(href := "mailto:hello@chris-kipp.io")(
-        img(
-          Style.scaleOnHover,
-          src := "../images/email.svg",
-          alt := "email logo"
-        )
-      ),
-      a(
-        href := "https://hachyderm.io/@ckipp",
-        rel := "me noopener noreferrer",
-        target := "_blank"
-      )(
-        img(
-          Style.scaleOnHover,
-          src := "../images/mastodon.svg",
-          alt := "mastodon logo"
-        )
-      ),
-      a(
-        href := "https://www.chris-kipp.io/rss.xml"
-      )(
-        img(
-          Style.scaleOnHover,
-          src := "../images/rss.svg",
-          alt := "rss icon"
-        )
-      )
+    backToTopFrag()
     )
 end Html
