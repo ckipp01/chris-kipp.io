@@ -244,7 +244,7 @@ that the Debug Adapter Protocol (DAP) is also being used here behind the scenes.
 When this request comes into Metals the flow is:
 
  The flow:
- 
+
  1. Claude Request → MCP (mcp__metals__test tool)
  2. MCP → Metals (McpTestRunner.runTests)
  3. Metals → DAP (TestSuiteDebugAdapter creation)
