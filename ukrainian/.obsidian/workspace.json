@@ -8,21 +8,21 @@
         "type": "tabs",
         "children": [
           {
-            "id": "09db7472c475b08c",
+            "id": "205fd5f6a7358a75",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pronouns.md",
+                "file": "numbers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "pronouns"
+              "title": "numbers"
             }
           },
           {
-            "id": "0a04c994ce300c02",
+            "id": "4fe6a45dc40aed73",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -36,35 +36,34 @@
             }
           },
           {
-            "id": "84fbca5cd6289db6",
+            "id": "f8590fabdd2abd7b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cases.md",
+                "file": "pronouns.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "cases"
+              "title": "pronouns"
             }
           },
           {
-            "id": "2d598a8c2e8b9a4d",
+            "id": "9ef4fd8af877d327",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "prepositions.md",
+                "file": "pronouns.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "prepositions"
+              "title": "pronouns"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -185,13 +184,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "verbs.md",
+                "file": "numbers.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of verbs"
+              "title": "Outline of numbers"
             }
           }
         ],
@@ -199,8 +198,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -214,22 +212,22 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "84fbca5cd6289db6",
+  "active": "205fd5f6a7358a75",
   "lastOpenFiles": [
-    "adjectives.md",
     "prepositions.md",
-    "cases.md",
+    "adjectives.md",
     "pronouns.md",
-    "[cases.md",
     "verbs.md",
-    "dates.md",
+    "cases.md",
     "alphabet.md",
+    "adverbs.md",
+    "nouns.md",
+    "[cases.md",
+    "dates.md",
     "Untitled 1.base",
     "Untitled.base",
     "Untitled 2.base",
     "Untitled 3.base",
-    "nouns.md",
-    "adverbs.md",
     "overview.base",
     "numbers.md"
   ]

@@ -11,7 +11,7 @@ This is the basic "dictionary" form of the noun.
 
 This is considered to be the most difficult case as there are multiple different ending types.
 
-## When it's used
+### When it's used
 
 There are a few main places that we use the genitive case:
 
@@ -36,9 +36,9 @@ There are a few main places that we use the genitive case:
 	5. більшість
 	6. меншість
 
-## Forming it
+### Forming it
 
-### Feminine rules
+#### Feminine rules
 
 | Ending | Conjugation Rule | Example                |
 | ------ | ---------------- | ---------------------- |
@@ -47,7 +47,7 @@ There are a few main places that we use the genitive case:
 | ія     | ія -> ії         | Швейцарія -> Швейцарії |
 **NOTE**: ш and other noise letters (ж, з, ч, ш, щ) make other letters after itself soft: груша -> груші
 
-### Masculine rules
+#### Masculine rules
 
 For masculine genitive there are two different endings depending on whether or nothing they fit into one of the following two groups
 
@@ -65,7 +65,7 @@ For masculine genitive there are two different endings depending on whether or n
 	5. institutions and part of the city
 
 
-### Neuter rules
+#### Neuter rules
 
 **NOTE**: that the genitive singular endings for neuter nouns are exactly the same as their nominative plural endings.
 
@@ -73,7 +73,7 @@ For masculine genitive there are two different endings depending on whether or n
 - е -> я
 - double cons + я -> these don't change
 
-### Plural rules
+#### Plural rules
 
 1. Normally we can just drop the и and add -ів to the end
 2. However, there are quite a few oddities here with different words
