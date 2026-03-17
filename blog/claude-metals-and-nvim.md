@@ -34,7 +34,7 @@ I'm using [Metals](https://github.com/scalameta/metals) through
 code](https://github.com/anthropics/claude-code) with Metals as an MCP server,
 and that's what I'd like to talk about and illustrate here. If you're not
 familiar with MCP servers, the basic idea is that they expose a set of tools
-that can be used from your agent when the deem it appropriate.
+that can be used from your agent when they deem it appropriate.
 
 As of Metals [v1.5.3](https://scalameta.org/metals/blog/2025/05/13/strontium)
 Metals can act as an [MCP Server](https://modelcontextprotocol.io/overview).
@@ -42,11 +42,11 @@ This matters because it can greatly speed up your workflow for some of the most
 common things you'll find claude doing:
 
 - make sure it quickly and accurately finds what it needs in your code base
-- making sure you code compiles after it changes it
-- make sure you tests pass after your changes
+- making sure your code compiles after it changes it
+- make sure your tests pass after your changes
 
 I get giddy about protocols and things working together, and I love the way that
-this ends up working on the hood. Let's assume a couple things in the following
+this ends up working under the hood. Let's assume a couple things in the following
 flow:
 
 1. You're using your build tool as your server (let's say sbt). This matters
@@ -56,7 +56,7 @@ flow:
     this down below further. If you didn't know there is a setting to tell
     Metals to default to this if your build tool supports it instead of relying on
     bloop. In your metals settings just set `defaultBspToBuildTool` to `true`. I
-    recommend you do this regardless of whether your using Metals as an MCP server
+    recommend you do this regardless of whether you're using Metals as an MCP server
     or not.
 2. You're starting Metals as an MCP server. You need to set `startMcpServer` to
    `true` in your settings for this.
@@ -77,13 +77,13 @@ And then if you start `claude` in the root of that same directory you should
 see a little prompt with the message:
 
 ```text
-New MCP server found in .mcp.json: metals 
+New MCP server found in .mcp.json: metals
 ```
 
 And then you need to respond if you want to allow it or not. This choice is
 saved then for your workspace.
 
-It knows to start this because you'll notice a newly create `.mcp.json` file at
+It knows to start this because you'll notice a newly created `.mcp.json` file at
 the root of your project:
 
 ```json
@@ -99,8 +99,8 @@ the root of your project:
 
 ## Letting Metals do its thing
 
-for these examples i'll use the [metals](https://github.com/scalameta/metals)
-codebase, which isn't huge, but it illustrates this well. let's pretend that you
+for these examples I'll use the [metals](https://github.com/scalameta/metals)
+codebase, which isn't huge, but it illustrates this well. Let's pretend that you
 are using another editor that doesn't use bsp to edit your code meaning that
 while you're editing your code it's fine, but if you switch to sbt, you need to
 re-compile your code. the same can be said for using bsp with bloop instead of
@@ -108,7 +108,7 @@ sbt as well. even though your code is fully compiled with metals and with bloop,
 when you drop down into sbt you need to recompile your code. in my opinion this
 is one of the biggest benefits of defaulting to your build tool to be your build
 server: you don't need to pay that cost of compiling twice. so down below, what
-you're seeing is claude issuing a command to compiling your code with sbt.
+you're seeing is claude issuing a command to compile your code with sbt.
 
 ```text
 ⏺ The compilation completed but with some errors at the end. Here are the results:
@@ -133,8 +133,8 @@ you're seeing is claude issuing a command to compiling your code with sbt.
   - CPU utilization: 289% (indicating parallel compilation)
 ```
 
-However realistically part of your code will have already been compiled, but so
-incrementally compilation will have kicked in and it will be a bit faster than
+However realistically part of your code will have already been compiled, and so
+incremental compilation will have kicked in and it will be a bit faster than
 this. I'll have claude just add a single method to a file and then recompile and
 report back.
 
@@ -162,13 +162,12 @@ it's going to at least take this much time.
 
 Now if you're using Metals as your LSP server with MCP enabled and it's hooked
 up to claude every change that claude is making to your codebase ends up being
-registered and accounted for (although this does see to have slightly
-differently behavior depending on your editor for some reason if you read the
+registered and accounted for (although this does seem to have slightly
+different behavior depending on your editor for some reason if you read the
 issue [here](https://github.com/scalameta/metals/issues/7662)). In general
 Metals doesn't just rely on notifications from the LSP client about file changes
-but it also has it's own file watcher. When Metals changes a file even without
+but it also has its own file watcher. When Metals changes a file even without
 any LSP notification being sent this basic flow will happen:
-
 
  1. OS detects file change → PathWatcher receives event
  2. File filter check → watchFilter(path) validates if file should trigger events
@@ -177,11 +176,11 @@ any LSP notification being sent this basic flow will happen:
  5. onCreate invoked → onCreate(path) in MetalsLspService.scala
  6. Compilation triggered → compilers.didChange(path, false) in MetalsLspService.scala
 
- So as claude is making changes your Metals state is consistently compiling and
- being updated to match what's happening on disk. Due to this if you get to a
+ So as claude is making changes, your Metals state is consistently compiling and
+ being updated to match what's happening on disk. Due to this, if you get to a
  point where claude tries to compile your code it's already fully compiled and
- should basically return almost instantaneous with either no errors letting you
- know your code is fine or with diagnostics about what is wrong. The MCP logs
+ should basically return almost instantaneously with either no errors letting you
+ know your code is fine or provides diagnostics about what is wrong. The MCP logs
  for this looks like this:
 
 ```json
@@ -245,6 +244,7 @@ that the Debug Adapter Protocol (DAP) is also being used here behind the scenes.
 When this request comes into Metals the flow is:
 
  The flow:
+
  1. Claude Request → MCP (mcp__metals__test tool)
  2. MCP → Metals (McpTestRunner.runTests)
  3. Metals → DAP (TestSuiteDebugAdapter creation)
@@ -302,4 +302,4 @@ your codebase in a way that can not only speed up your workflow, but provide you
 a more accurate one.
 
 To summarize, if you use Metals and you use a tool like claude, use Metals as an
-MCP serer. It will save you some time.
+MCP server. It will save you some time.

@@ -238,12 +238,46 @@ object Style extends CascadingStyleSheet:
     span(fontStyle.italic, opacity := 0.5, fontSize := "0.8em")
   )
 
+  val backToTop = cls(
+    position.fixed,
+    bottom := "30px",
+    right := "30px",
+    width := "48px",
+    height := "48px",
+    display.flex,
+    alignItems.center,
+    justifyContent.center,
+    borderRadius := "50%",
+    cursor.pointer,
+    opacity := "0"
+  )
+
   // TODO there really isn't a way to do this with scalatags
   // https://github.com/com-lihaoyi/scalatags/issues/156
   val mediaQueries = s"""@media (min-width: 768px) {
                          |  .site-album {
                          |    flex-direction: row;
                          |  }
+                         |}
+                         |.site-backToTop {
+                         |  transition: opacity 0.3s;
+                         |  background: conic-gradient(${black} var(--progress, 0%), rgba(0,0,0,0.1) var(--progress, 0%));
+                         |}
+                         |.site-backToTop span {
+                         |  width: 40px;
+                         |  height: 40px;
+                         |  display: flex;
+                         |  align-items: center;
+                         |  justify-content: center;
+                         |  background: ${cream};
+                         |  color: ${black};
+                         |  border-radius: 50%;
+                         |  font-size: 1.1rem;
+                         |  transition: background 0.2s, color 0.2s;
+                         |}
+                         |.site-backToTop:hover span {
+                         |  background: ${black};
+                         |  color: ${cream};
                          |}""".stripMargin
 
   // There isn't a good way to do things like @import or * with scalatags, so
@@ -268,7 +302,7 @@ object Style extends CascadingStyleSheet:
                |  }
                |
                |  @import url('https://rsms.me/inter/inter.css');
-               |  html { font-family: 'Inter', sans-serif; }
+               |  html { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
                |  @supports (font-variation-settings: normal) {
                |    html { font-family: 'Inter var', sans-serif; }
                |  }
