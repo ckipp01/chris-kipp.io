@@ -54,3 +54,31 @@ Used in situations where the [[cases#Genitive - Родовий відмінок|
 | ого        | m . +  n.        | нового<br>синього  |
 | ої         | f.               | розумної<br>старої |
 | их         | plr.             | зелених<br>вулицях |
+
+## Accusative Endings
+
+#### Masculine
+
+##### Inanimate
+Just like other usages of [[cases#Accusative|accusative]] with inanimate objects, they only change for feminine singular.
+
+##### Animate
+
+Endings change to -ого (hard) or -ього (soft)
+
+#### Feminine
+
+Just like other usages of [[cases#Accusative|accusative]] with inanimate objects, for adjectives regardless of the animacy the endings change the same way:
+
+-  а ending -> у
+- я ending -> ю
+
+#### Plural
+
+##### Inanimate
+
+Change the ending to -і
+
+##### Animate
+
+Depending on hard or soft it changes to -их (hard) or -іх (soft)

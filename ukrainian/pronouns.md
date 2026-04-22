@@ -13,19 +13,21 @@ date: 2025-04-20
 - reflexive possessive pronoun - Повернений присвійний займенник
 - demonstrative pronoun - вказівні займенник
 
-# Pronouns / займенники
+# Personal Pronouns / займенники
 
-| Nominative | Genitive    | Dative | English                 |
-| ---------- | ----------- | ------ | ----------------------- |
-| я          | мене        | мені   | I                       |
-| ти         | тебе        | тобі   | you informal            |
-| він        | нього/його* | йому   | he                      |
-| вона       | неї/її*     | їй     | she                     |
-| воно       | нього/його* | йому   | it                      |
-| ми         | нас         | нам    | we                      |
-| ви         | вас         | вам    | you formal / you plural |
-| вони       | них/їх*     | їм     | they                    |
+| Nominative | Genitive    | Dative | Accusative  | Instrumental | Locative | English                 |
+| ---------- | ----------- | ------ | ----------- | ------------ | -------- | ----------------------- |
+| я          | мене        | мені   | мене        | мною         | мені     | I                       |
+| ти         | тебе        | тобі   | тебе        | тобою        | тобі     | you informal            |
+| він        | нього/його* | йому   | нього/його* | ним          | ньому    | he                      |
+| вона       | неї/її*     | їй     | неї/її*     | нею          | ній      | she                     |
+| воно       | нього/його* | йому   | нього/його* | ним          | ньому    | it                      |
+| ми         | нас         | нам    | нас         | нами         | нас      | we                      |
+| ви         | вас         | вам    | вас         | вами         | вас      | you formal / you plural |
+| вони       | них/їх*     | їм     | них/їх*     | ними         | них      | they                    |
 
+_*_ Used in the situation where there is no preposition. For example:
+- я люблю його vs нього є сестра
 ## Usages
 
 ### Nominative
@@ -45,6 +47,7 @@ _NOTE_: It's important with genitive to differentiate between the two different 
 - To give something
 - To like something
 - Used for indirect objects
+- For emotions - нам сумно
 
 ## Possessive pronouns / присвійні займенники
 
@@ -83,6 +86,7 @@ Similar to nouns, possessive pronouns in [[cases#Accusative||accusative case]] c
 - вашу
 - нашу
 - їхию
+
 ### Locative Cases
 Used in normal situations where [[cases#Locative - місцевий відмінок||Locative case]] is called for.
 
@@ -112,7 +116,15 @@ Used in normal situations where [[cases#Genitive - Родовий відміно
 
 Used to indicate this/that.
 
+### Nominative
+
 - цей - this masc.
 - ця - this fem.
 - це - this neut.
 - ці - these plural
+
+### Locative
+
+- цьому - this masc./neut.
+- цій - this fem.
+- цих - these plural
