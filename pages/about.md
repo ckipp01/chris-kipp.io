@@ -14,13 +14,18 @@ tooling, primarily with Neovim and Scala, talking about music, or sharing stuff
 I find interesting. I have a varied background, including growing up on a farm
 in the United States and having a M.A. in International Relations. I first got
 started in tech as I was finishing grad school, and I haven't really looked back since.
-I'm currently located in the Netherlands working at [reflek.io.](https://www.reflek.io/)
+I'm currently located in the Netherlands and looking for what comes next. You
+can find me on [LinkedIn
+here](https://www.linkedin.com/in/chris-kipp-bba3a55a/).
 
-You can take a look at the projects I work on [here on GitHub](https://github.com/ckipp01) or find me on [Mastodon](https://hachyderm.io/@ckipp). 
+You can take a look at the projects I work on [here on
+GitHub](https://github.com/ckipp01) or find me on
+[Mastodon](https://hachyderm.io/@ckipp). 
 
 Over the years this site has taken many shapes ranging from a custom JS
 framework powered site, one that fully tracked all my free time, to ultimately
-the minimal shape you see it in now. It will continue to change and grow as I do.
+the minimal shape you see it in now. It will continue to change and grow as I
+do.
 
 Thanks for stopping by.
 
