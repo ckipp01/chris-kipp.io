@@ -11,4 +11,4 @@ object Constants:
   final val UKRAINIAN = os.Path("./ukrainian/", os.pwd)
   final val PAGES_DIR = os.Path("./pages/", os.pwd)
 
-  final val PAGES_TO_IGNORE = List(".obsidian.vimrc", ".obsidian", "west-highland-way")
+  final val PAGES_TO_IGNORE = List(".obsidian.vimrc", ".obsidian")
