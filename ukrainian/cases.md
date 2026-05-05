@@ -45,6 +45,7 @@ There are a few main places that we use the genitive case:
 | а      | а -> и           | вода -> води           |
 | я      | я -> і           | Аня -> Ані             |
 | ія     | ія -> ії         | Швейцарія -> Швейцарії |
+
 **NOTE**: ш and other noise letters (ж, з, ч, ш, щ) make other letters after itself soft: груша -> груші
 
 #### Masculine rules
@@ -90,6 +91,7 @@ There is also a handful of just irregular ones that you need to remember.
 - гості -> гостей
 - речі -> речей
 - двері -> дверей
+
 ## Locative - 	місцевий відмінок
 
 Used when we are talking about location.  It answers questions such as “where?”
@@ -127,6 +129,7 @@ These shifts happen in the last closed syllable of the word.
 | Харків     | у Харкові   |
 | Київ       | у Києві     |
 | Миколаїв   | у Миколаєві |
+
 ## Instrumental
 
 - Often used after certain verbs
@@ -183,6 +186,7 @@ forms of instrumental.
 	- про
 	- через
 	- на
+	
 #### Rules
 - M + N -> these don't change at all
 - F. 

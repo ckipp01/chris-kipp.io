@@ -2,6 +2,7 @@
 title: Scala and Vim Part 1
 date: 2020-07-02
 description: A look at the current state of Vim and Scala
+category: tooling
 ---
 
 # Scala and Vim Part 1

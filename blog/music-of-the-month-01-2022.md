@@ -2,6 +2,8 @@
 title: Music of the Month - Jan 2022
 date: 2022-02-01
 description: Music I enjoyed this past month
+category: music
+series: Music of the Month
 ---
 
 # Music of the Month - Jan 2022

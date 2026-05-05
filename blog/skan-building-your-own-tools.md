@@ -2,6 +2,7 @@
 title: skan and building your own tools
 date: 2023-04-27
 description: A short article on a recent tool I built for myself, and how I enjoyed the process.
+category: tooling
 ---
 
 # skan and building your own tools

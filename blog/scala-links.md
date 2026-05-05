@@ -3,6 +3,7 @@ title: Scala Links
 date: 2022-10-21
 description: A collection of links that lead you to the various Scala pages, documentations, repos, etc.
 updated: 2023-06-13
+category: scala
 ---
 
 # Scala Links

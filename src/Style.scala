@@ -37,13 +37,13 @@ object Style extends CascadingStyleSheet:
     a(
       borderBottomWidth := "2px",
       borderBottomStyle.dashed,
-      borderColor := black,
-      padding := 2
+      borderColor := black
     )
   )
 
   val linkHoverBase = cls(
     a(
+      padding := "6px",
       &.hover(
         background := black,
         color := cream,
@@ -52,21 +52,24 @@ object Style extends CascadingStyleSheet:
     )
   )
 
+  val wordmark = cls(
+    fontFamily := "monospace",
+    fontSize := "0.72rem",
+    letterSpacing := "-0.01em",
+    color := black
+  )
+
   val headerBase = cls(
     display.flex,
-    flexDirection.column,
-    justifyContent.center,
-    alignItems.center,
-    marginTop := "5px",
+    justifyContent.spaceBetween,
+    alignItems := "baseline",
+    maxWidth := 750,
+    margin := "10px auto 36px",
+    padding := "0 10px",
     Selector("nav")(
       display.flex,
-      justifyContent.center,
-      flexWrap.wrap,
-      a(
-        fontSize := "1.75rem",
-        margin := 5,
-        padding := 5
-      )
+      fontSize := "0.75rem",
+      color := gray
     ),
     linkHoverBase.splice
   )
@@ -74,20 +77,20 @@ object Style extends CascadingStyleSheet:
   val headings = cls(
     h1(
       fontWeight.bold,
-      fontSize := "1.5rem",
-      lineHeight := "2rem",
+      fontSize := "2rem",
+      lineHeight := "2.5rem",
       margin := "1rem 0"
     ),
     h2(
       fontWeight.bold,
-      fontSize := "1.3rem",
+      fontSize := "1.5rem",
       lineHeight := "2rem",
       margin := "1rem 0"
     ),
     h3(
       fontWeight.bold,
-      fontSize := "1.2rem",
-      lineHeight := "1.5rem",
+      fontSize := "1.25rem",
+      lineHeight := "1.75rem",
       margin := "1rem 0"
     )
   )
@@ -127,26 +130,8 @@ object Style extends CascadingStyleSheet:
     borderRadius := 2
   )
 
-  val iconContainer = cls(
-    display.flex,
-    justifyContent.center,
-    a(
-      width := 40
-    ),
-    img(
-      padding := 10,
-      maxHeight := 20,
-      margin := "5px 0"
-    )
-  )
-
   val scaleOnHover = cls.hover(
     styles2.transform := "scale(1.1)"
-  )
-
-  val maxAndCenter = cls(
-    maxWidth := 750,
-    margin := "5px auto"
   )
 
   val largeFontOverview = cls(
@@ -238,6 +223,145 @@ object Style extends CascadingStyleSheet:
     span(fontStyle.italic, opacity := 0.5, fontSize := "0.8em")
   )
 
+  // ── Blog overview ──────────────────────────────────────────────────────────
+
+  val blogLayout = cls(
+    display := "grid",
+    linkHoverBase.splice
+  )
+
+  val blogSidebarLabel = cls(
+    fontSize := "0.55rem",
+    fontWeight := "500",
+    fontFamily := "monospace",
+    color := gray,
+    letterSpacing := "0.1em",
+    textTransform.uppercase,
+    marginBottom := 10
+  )
+
+  val blogFilterList = cls(
+    listStyle := "none",
+    padding := 0,
+    margin := 0
+  )
+
+  val filterLink = cls(
+    display.flex,
+    justifyContent.spaceBetween,
+    alignItems.center,
+    width := "100%",
+    color := gray,
+    fontSize := "0.72rem",
+    fontFamily := "monospace"
+  )
+
+  val filterActive = cls(
+    color := black,
+    fontWeight := "600"
+  )
+
+  val filterLinkLabel = cls(
+    display := "inline-flex",
+    alignItems.center
+  )
+
+  val filterLinkCount = cls(
+    fontSize := "0.6rem",
+    fontFamily := "monospace",
+    color := gray
+  )
+
+  val catDotBase = cls(
+    display := "inline-block",
+    width := "7px",
+    height := "7px",
+    borderRadius := "50%"
+  )
+
+  val postRow = cls(
+    display := "grid",
+    alignItems := "baseline",
+    borderBottom := "1px solid rgba(0,0,0,0.08)"
+  )
+
+  val postDate = cls(
+    fontSize := "0.6rem",
+    fontFamily := "monospace",
+    color := gray
+  )
+
+  val postTitleLink = cls(
+    color := black,
+    fontSize := "0.83rem",
+    fontWeight := "500",
+    lineHeight := "1.3"
+  )
+
+  val postCatTag = cls(
+    display := "inline-flex",
+    alignItems.center,
+    fontSize := "0.6rem",
+    fontFamily := "monospace",
+    color := gray
+  )
+
+  val seriesMarker = cls(
+    fontSize := "0.6rem",
+    fontFamily := "monospace",
+    color := gray
+  )
+
+  val seriesMetaText = cls(
+    marginLeft := 10,
+    fontSize := "0.65rem",
+    fontFamily := "monospace",
+    color := gray
+  )
+
+  val seriesDetails = cls(
+    borderBottom := "1px solid rgba(0,0,0,0.08)"
+  )
+
+  val seriesSummary = cls(
+    display := "grid",
+    alignItems := "baseline",
+    padding := "6px",
+    cursor.pointer
+  )
+
+  val seriesChildren = cls(
+    paddingTop := 4,
+    paddingBottom := 10
+  )
+
+  val seriesChildRow = cls(
+    display.flex,
+    alignItems := "baseline"
+  )
+
+  val seriesChildDate = cls(
+    fontSize := "0.6rem",
+    fontFamily := "monospace",
+    color := gray,
+    minWidth := "76px"
+  )
+
+  val seriesChildTitle = cls(
+    color := gray,
+    fontSize := "0.78rem",
+    lineHeight := "1.3"
+  )
+
+  val blogEmptyState = cls(
+    color := gray,
+    fontSize := "0.78rem",
+    lineHeight := "1.4",
+    padding := "20px 0"
+  )
+
+  // ── /Blog overview ─────────────────────────────────────────────────────────
+
   val backToTop = cls(
     position.fixed,
     bottom := "30px",
@@ -278,6 +402,35 @@ object Style extends CascadingStyleSheet:
                          |.site-backToTop:hover span {
                          |  background: ${black};
                          |  color: ${cream};
+                         |}
+                         |.site-headerBase nav { gap: 16px; }
+                         |.site-blogLayout { grid-template-columns: 140px 1fr; gap: 36px; }
+                         |.site-filterLinkLabel { gap: 8px; }
+                         |.site-postRow { grid-template-columns: 84px 1fr auto; gap: 14px; }
+                         |.site-postDate { font-variant-numeric: tabular-nums; }
+                         |.site-postCatTag { gap: 5px; }
+                         |.site-seriesSummary { grid-template-columns: 84px 1fr auto; gap: 14px; list-style: none; }
+                         |.site-seriesSummary::-webkit-details-marker { display: none; }
+                         |.site-seriesSummary::marker { display: none; }
+                         |.site-seriesMarker::before { content: '▸ '; }
+                         |details[open] .site-seriesMarker::before { content: '▾ '; }
+                         |.site-seriesMarker { font-variant-numeric: tabular-nums; }
+                         |.site-seriesChildren { padding-left: 84px; }
+                         |.site-seriesChildRow { gap: 14px; }
+                         |.site-seriesChildDate { font-variant-numeric: tabular-nums; }
+                         |.site-postRow:hover * { color: inherit; }
+                         |.site-seriesChildRow:hover * { color: inherit; }
+                         |.site-seriesSummary:is(:hover, :focus) { background: ${black}; color: ${cream}; }
+                         |.site-seriesSummary:is(:hover, :focus) * { color: inherit; }
+                         |@media (max-width: 640px) {
+                         |  .site-blogLayout { grid-template-columns: 1fr; gap: 20px; }
+                         |  .site-blogFilterList { display: flex; flex-wrap: wrap; gap: 6px; }
+                         |  .site-filterLink { padding: 4px 10px; border: 1px solid rgba(0,0,0,0.15); border-radius: 999px; }
+                         |  .site-filterActive { border-color: ${black}; }
+                         |  .site-postRow { grid-template-columns: 84px 1fr; }
+                         |  .site-postCatTag { display: none; }
+                         |  .site-seriesSummary { grid-template-columns: 84px 1fr; }
+                         |  .site-seriesChildren { padding-left: 14px; }
                          |}""".stripMargin
 
   // There isn't a good way to do things like @import or * with scalatags, so
@@ -288,6 +441,7 @@ object Style extends CascadingStyleSheet:
                |  border:0;
                |  outline:0;
                |  border-spacing:0;
+               |  box-sizing:border-box;
                |  text-decoration:none;
                |  font-weight:inherit;
                |  font-style:inherit;
@@ -308,6 +462,10 @@ object Style extends CascadingStyleSheet:
                |  }
                |
                |*:focus {
-               |  background: ${gray};
+               |  background: ${black};
+               |  color: ${cream};
+               |}
+               |a:focus {
+               |  border-radius: 2px;
                |}""".stripMargin
 end Style

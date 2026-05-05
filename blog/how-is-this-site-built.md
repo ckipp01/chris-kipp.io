@@ -3,6 +3,7 @@ title: How is this site built
 date: 2020-02-23
 description: A short overview of how this site is built.
 updated: 2021-04-04
+category: meta
 ---
 
 # How is this site built?

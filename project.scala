@@ -1,4 +1,5 @@
 //> using scala "3.8.3"
+//> using jvm 21
 //> using options "-deprecation" "-feature" "-explain" "-Wunused:all"
 //> using dep "com.lihaoyi::os-lib:0.11.8"
 //> using dep "com.lihaoyi::scalatags:0.13.1"

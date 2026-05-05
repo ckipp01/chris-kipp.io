@@ -24,7 +24,6 @@ object Main:
         .sortBy(_.date)
         .reverse
       val blogRss = Rss.generate(blogPages)
-      val blogOverview = Html.blogOverview(blogPages)
       /////////////////////////
       // PROCESSING Ukrainian//
       /////////////////////////
@@ -120,14 +119,26 @@ object Main:
       scribe.info("writing index.html")
       os.write(
         os.Path(Constants.SITE_DIR / "index.html", os.pwd),
-        blogOverview.render
+        Html.blogOverview(blogPages).render
       )
 
       scribe.info("writing blog.html")
       os.write(
         os.Path(Constants.SITE_DIR / "blog.html", os.pwd),
-        blogOverview.render
+        Html.blogOverview(blogPages).render
       )
+
+      scribe.info("writing category filter pages")
+      Category.values.foreach: cat =>
+        scribe.info(s"writing blog/${cat.key}.html")
+        os.write(
+          os.Path(
+            Constants.SITE_DIR / "blog" / s"${cat.key}.html",
+            os.pwd
+          ),
+          Html.blogOverview(blogPages, Some(cat)).render,
+          createFolders = true
+        )
 
       scribe.info("writing talks.html")
       os.write(

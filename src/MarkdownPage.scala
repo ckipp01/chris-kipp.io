@@ -28,6 +28,10 @@ import com.vladsch.flexmark.util.misc.Extension
   *   The content of the page (basically the markup)
   * @param thumbnail
   *   Possible thumbnail to use for the post
+  * @param category
+  *   Optional category for blog posts
+  * @param series
+  *   Optional series this post belongs to
   */
 case class MarkdownPage(
     title: String,
@@ -35,7 +39,9 @@ case class MarkdownPage(
     updated: Option[String],
     description: String,
     content: String,
-    thumbnail: Option[String]
+    thumbnail: Option[String],
+    category: Option[Category],
+    series: Option[Series]
 ):
   val urlify: String =
     title
@@ -87,7 +93,9 @@ object MarkdownPage:
       metadata.get("updated"),
       description,
       pageHtml,
-      metadata.get("thumbnail")
+      metadata.get("thumbnail"),
+      metadata.get("category").flatMap(Category.fromString),
+      metadata.get("series").flatMap(Series.fromString)
     )
   end fromPath
 

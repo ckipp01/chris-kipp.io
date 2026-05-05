@@ -3,6 +3,7 @@ title: Hiking the West Highland Way
 date: 2026-04-22
 description: An overview of my preparation and experience hiking the West
 Highland Way in Scotland
+category: personal
 ---
 
 # The West Highland Way

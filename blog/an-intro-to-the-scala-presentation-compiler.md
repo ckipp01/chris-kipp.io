@@ -3,6 +3,7 @@ title: An intro to the Scala presentation compiler
 date: 2021-07-15
 description: An introduction to what the Scala presentation compiler is and an example of how to use it.
 updated: 2021-07-17
+category: scala
 ---
 
 # An intro to the Scala Presentation Compiler

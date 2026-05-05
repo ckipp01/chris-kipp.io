@@ -3,6 +3,7 @@ title: A Bloop Tour for Metals users
 date: 2020-05-24
 description: An overview of Bloop, especially relevant for Metals users.
 updated: 2020-05-27
+category: scala
 ---
 
 # A Bloop Tour for Metals users

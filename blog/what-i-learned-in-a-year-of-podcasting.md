@@ -2,6 +2,7 @@
 title: What I Learned in a Year of Podcasting
 date: 2022-07-18
 description: What I learned in the first year of starting a podcast, and commonly asked questions.
+category: personal
 ---
 
 # What I learned in the first year of starting a podcast, and commonly asked questions.

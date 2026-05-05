@@ -2,6 +2,7 @@
 title: An intro to Flow Fields in Scala
 date: 2023-06-25
 description: A look at flow fileds using Scala and following the examples in https://tylerxhobbs.com/essays/2020/flow-fields
+category: scala
 ---
 
 # An intro to Flow Fields in Scala

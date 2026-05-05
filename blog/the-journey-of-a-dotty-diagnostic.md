@@ -2,6 +2,7 @@
 title: The Journey of a Dotty Diagnostic
 date: 2022-11-20
 description: A dive into the world of Diagnostics in Scala 3
+category: scala
 ---
 
 # The Journey of a Dotty Diagnostic

@@ -3,6 +3,7 @@ title: Claude Code, Metals, and NVIM
 date: 2025-08-13
 description: A look at a terminal based AI powered workflow with claude code and
 Metals in Neovim
+category: tooling
 ---
 
 # An overview of using Claude Code, Metals, and NVIM

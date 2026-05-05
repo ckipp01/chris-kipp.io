@@ -53,6 +53,8 @@ _NOTE_: It's important with genitive to differentiate between the two different 
 
 - Used to show possession
 
+### Nominative Cases
+
 | Masculine | Feminine | Neuter | Plural | English               |
 | --------- | -------- | ------ | ------ | --------------------- |
 | мій       | моя      | моє    | мої    | my                    |
@@ -85,7 +87,7 @@ Similar to nouns, possessive pronouns in [[cases#Accusative||accusative case]] c
 - його
 - вашу
 - нашу
-- їхию
+- їхню
 
 ### Locative Cases
 Used in normal situations where [[cases#Locative - місцевий відмінок||Locative case]] is called for.
@@ -111,20 +113,43 @@ Used in normal situations where [[cases#Genitive - Родовий відміно
 | вашого    | вашої    | вашого  | ваших  |
 | нашого    | нашої    | нашого  | наших  |
 | їхнього   | їхньої   | їхнього | їхніх  |
+### Dative Cases
+Used in normal situations where the Dative case is called for.
 
+| Masculine | Feminine | Neuter | Plural |
+| --------- | -------- | ------ | ------ |
+| моєму     | моїй     |        | моїм   |
+| твоєму    | твоїй    |        | твоїм  |
+| його      | йогo     | йогo   | йогo   |
+| її        | її       | її     | її     |
+| вашого    | вашої    | вашого | вашим  |
+| нашому    | нашій    | нашого | наших  |
+| їхнього   | їхній    |        | їхнім  |
+### Accusative Cases
+The conjugations are the same as they are in the genitive cases up above.
 ## Demonstrative pronouns / вказівні займенники
 
 Used to indicate this/that.
 
-### Nominative
+_NOTE:_ That for accusative inanimate nouns are the exact same as the nominative form. This is different for animate masculine nouns where accusative = genitive instead. It's also different for feminine nouns, which have their own distinct ending.
+### This
 
-- цей - this masc.
-- ця - this fem.
-- це - this neut.
-- ці - these plural
+| Nominative       | Masculine | Feminine | Plural |
+| ---------------- | --------- | -------- | ------ |
+| **Nominative**   | цей/це    | ця       | ці     |
+| **Genitive**     | цього     | цієї     | цих    |
+| **Dative**       | цьому     | цій      | цим    |
+| **Accusative**   | цього     | цієї     | цих    |
+| **Instrumental** | цим       | цією     | цими   |
+| **Locative**     | на цьому  | на цій   | на цих |
 
-### Locative
+### That
 
-- цьому - this masc./neut.
-- цій - this fem.
-- цих - these plural
+| Nominative       | Masculine | Feminine | Plural |
+| ---------------- | --------- | -------- | ------ |
+| **Nominative**   | той/те    | та       | ті     |
+| **Genitive**     | того      | тої=тієї | тих    |
+| **Dative**       | тому      | тій      | тим    |
+| **Accusative**   | того      | тої=тієї | тих    |
+| **Instrumental** | тим       | тою=тією | тими   |
+| **Locative**     | на тому   | на тій   | на тих |

@@ -25,28 +25,130 @@ object Html:
       )
     )
 
-  def blogOverview(blogPosts: Seq[MarkdownPage]) =
+  def blogOverview(
+      blogPosts: Seq[MarkdownPage],
+      activeCategory: Option[Category] = None
+  ) =
+    val filteredPosts = activeCategory.fold(blogPosts): cat =>
+      blogPosts.filter(_.category.contains(cat))
+    val rows = groupSeries(filteredPosts)
+
     htmlWrapper(
       headFrag(
         pageTitle = "chris-kipp.io - blog",
-        description =
-          "A collection of blogs posts by Chris Kipp over the years."
+        description = "A collection of blogs posts by Chris Kipp over the years."
       ),
       body(
         Style.bodyBase,
         headerFrag("blog"),
         tags2.main(
-          Style.tableBase,
-          Style.largeFontOverview,
-          blogPosts.map: blogPost =>
+          div(
+            Style.blogLayout,
+            tags2.aside(
+              div(Style.blogSidebarLabel, "FILTER"),
+              ul(
+                Style.blogFilterList,
+                li(
+                  a(
+                    Style.filterLink,
+                    if activeCategory.isEmpty then Style.filterActive else "",
+                    href := "/blog",
+                    span(Style.filterLinkLabel, "all"),
+                    span(Style.filterLinkCount, blogPosts.length.toString)
+                  )
+                ),
+                Category.values.map: cat =>
+                  val count = blogPosts.count(_.category.contains(cat))
+                  li(
+                    a(
+                      Style.filterLink,
+                      if activeCategory.contains(cat) then Style.filterActive
+                      else "",
+                      href := s"/blog/${cat.key}",
+                      span(Style.filterLinkLabel, catDot(cat), cat.label),
+                      span(Style.filterLinkCount, count.toString)
+                    )
+                  )
+              )
+            ),
             div(
-              Style.blogListing,
-              a(href := s"./blog/${blogPost.urlify}")(blogPost.title),
-              span(blogPost.date)
+              if rows.isEmpty then
+                div(Style.blogEmptyState, "No posts in this category.")
+              else
+                frag(
+                  rows.map:
+                    case PostRow(page) =>
+                      val cat = page.category.getOrElse(Category.Meta)
+                      a(
+                        Style.postRow,
+                        href := s"/blog/${page.urlify}",
+                        span(Style.postDate, page.date),
+                        span(Style.postTitleLink, page.title),
+                        span(Style.postCatTag, catDot(cat), cat.label)
+                      )
+
+                    case SeriesRow(series, items) =>
+                      val cat    = items.head.category.getOrElse(Category.Meta)
+                      val oldest = items.last.date
+                      val newest = items.head.date
+                      val meta =
+                        s"${items.length} posts · ${oldest.take(7)} → ${newest.take(7)}"
+                      tags2.details(
+                        Style.seriesDetails,
+                        tags2.summary(
+                          Style.seriesSummary,
+                          span(Style.seriesMarker, "series"),
+                          div(
+                            span(Style.postTitleLink, series.name),
+                            span(Style.seriesMetaText, meta)
+                          ),
+                          span(Style.postCatTag, catDot(cat), cat.label)
+                        ),
+                        div(
+                          Style.seriesChildren,
+                          items.map: child =>
+                            a(
+                              Style.seriesChildRow,
+                              href := s"/blog/${child.urlify}",
+                              span(Style.seriesChildDate, child.date),
+                              span(Style.seriesChildTitle, child.title)
+                            )
+                        )
+                      )
+                )
             )
+          )
         ),
         footerFrag()
       )
+    )
+
+  private sealed trait BlogRow
+  private case class PostRow(page: MarkdownPage) extends BlogRow
+  private case class SeriesRow(series: Series, items: Seq[MarkdownPage])
+      extends BlogRow
+
+  private def groupSeries(posts: Seq[MarkdownPage]): Seq[BlogRow] =
+    val out        = scala.collection.mutable.ArrayBuffer.empty[BlogRow]
+    val seenSeries = scala.collection.mutable.Map.empty[Series, Int]
+    for post <- posts do
+      post.series match
+        case None => out += PostRow(post)
+        case Some(series) =>
+          seenSeries.get(series) match
+            case None =>
+              seenSeries(series) = out.length
+              out += SeriesRow(series, Vector(post))
+            case Some(idx) =>
+              out(idx) match
+                case s: SeriesRow => out(idx) = s.copy(items = s.items :+ post)
+                case _            =>
+    out.toSeq
+
+  private def catDot(cat: Category) =
+    span(
+      Style.catDotBase,
+      attr("style") := s"background:oklch(0.62 0.14 ${cat.hue})"
     )
 
   def talksOverview(talks: Talks) =
@@ -194,6 +296,7 @@ object Html:
   private def headerFrag(active: String) =
     header(
       Style.headerBase,
+      a(Style.wordmark, href := "/", "chris-kipp.io"),
       tags2.nav(
         NavItem("/about", "about", active).html(),
         NavItem("/blog", "blog", active).html(),

@@ -2,6 +2,8 @@
 title: Music of the Month - October 2022
 date: 2022-11-06
 description: Music I enjoyed this past month
+category: music
+series: Music of the Month
 ---
 
 # Music of the Month - October 2022

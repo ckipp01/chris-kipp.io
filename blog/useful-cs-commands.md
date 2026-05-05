@@ -5,6 +5,7 @@ description: "
   An overview of some useful Coursier commands that every Scala developer can
   use in their day to day workflow."
 updated: 2020-04-13
+category: tooling
 ---
 
 # Useful Coursier commands for every dev
