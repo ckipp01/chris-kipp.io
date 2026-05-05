@@ -11,7 +11,7 @@ When we are talking about the current date we use the following structure:
 
 -  nominative neuter + genitive month
 
-Ex. _Сьогодні двадцять друге Квітняа. 
+Ex. _Сьогодні двадцять друге Квітня._
 
 - We use the nominative neuter form of друге because we are implicitly referring to число here.
 
@@ -50,7 +50,7 @@ When we are talking about things happening "on this day" like "on Friday" we use
 
 | Nominative | English   | Accusative  |
 | ---------- | --------- | ----------- |
-| понеділок  | Monday    | y понеділок |
+| понеділок  | Monday    | у понеділок |
 | вівторок   | Tuesday   | у вівторок  |
 | середа     | Wednesday | у середу    |
 | четвер     | Thursday  | у четвер    |

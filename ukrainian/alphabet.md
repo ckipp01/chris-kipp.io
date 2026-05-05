@@ -55,7 +55,7 @@ date: 2025-29-04
 
 ## Some general notes
 
-Ukrainian is an _open syllable language_ many that it follows grammar that often
+Ukrainian is an _open syllable language_ meaning that it follows grammar that often
 has a consonant, vowel, consonant, vowel pattern. This impacts the rhythm,
 spelling conventions, and general flow of speaking.
 
@@ -67,5 +67,5 @@ Because of the _open syllable language_ patterns often when you see a word that
 has 2 consonants together they are often foreign words that have made it into
 the language. This is good to know because in a lot of cases, foreign words
 aren't conjugated. For example, _кафе_ is borrowed from French, and therefore
-irregardless of the function it has in the sentence, it will always just be
+regardless of the function it has in the sentence, it will always just be
 _кафе_.

@@ -11,7 +11,7 @@ date: 2025-04-20
 - dative pronoun - давальний займенник
 - possessive pronoun - присвійний займенник
 - reflexive possessive pronoun - Повернений присвійний займенник
-- demonstrative pronoun - вказівні займенник
+- demonstrative pronoun - вказівний займенник
 
 # Personal Pronouns / займенники
 
@@ -27,7 +27,7 @@ date: 2025-04-20
 | вони       | них/їх*     | їм     | них/їх*     | ними         | них      | they                    |
 
 _*_ Used in the situation where there is no preposition. For example:
-- я люблю його vs нього є сестра
+- я люблю його vs у нього є сестра
 ## Usages
 
 ### Nominative
@@ -63,7 +63,7 @@ _NOTE_: It's important with genitive to differentiate between the two different 
 | її        | її       | її     | її     | hers                  |
 | ваш       | ваша     | ваше   | ваші   | yours (plural/formal) |
 | наш       | наша     | наше   | наші   | ours                  |
-| їхнй      | їхня     | їхнє   | їхні   | theirs                |
+| їхній     | їхня     | їхнє   | їхні   | theirs                |
 
 ### Reflexive possessive pronoun - Повернений присвійний займенник
 
@@ -98,9 +98,9 @@ Used in normal situations where [[cases#Locative - місцевий відмін
 | твоєму    | твоїй    | твоєму  | твоїх  |
 | його      | йогo     | йогo    | йогo   |
 | її        | її       | її      | її     |
-| вашому    | вашїй    | вашому  | ваших  |
-| нашому    | нашїй    | нашому  | наших  |
-| їхньому   | їхнїй    | їхньому | їхніх  |
+| вашому    | вашій    | вашому  | ваших  |
+| нашому    | нашій    | нашому  | наших  |
+| їхньому   | їхній    | їхньому | їхніх  |
 ### Genitive Cases
 Used in normal situations where [[cases#Genitive - Родовий відмінок|genitive case]] is called for.
 
@@ -122,8 +122,8 @@ Used in normal situations where the Dative case is called for.
 | твоєму    | твоїй    |        | твоїм  |
 | його      | йогo     | йогo   | йогo   |
 | її        | її       | її     | її     |
-| вашого    | вашої    | вашого | вашим  |
-| нашому    | нашій    | нашого | наших  |
+| вашому    | вашій    | вашому | вашим  |
+| нашому    | нашій    | нашому | нашим  |
 | їхнього   | їхній    |        | їхнім  |
 ### Accusative Cases
 The conjugations are the same as they are in the genitive cases up above.

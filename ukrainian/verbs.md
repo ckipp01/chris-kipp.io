@@ -5,7 +5,7 @@ date: 2025-04-30
 
 ## Terms
 
-- verb - дієсловa
+- verb - дієслово
 - infinitive - інфінітив
 
 ## Infinitives / інфінітиви
@@ -69,7 +69,7 @@ NOTE: That this switch takes place in all forms of the conjugation
 - к - ч - пекти
 - т - ч - хотіти
 - с - ш - писати
-- х - ш - колихаим
+- х - ш - колихати
 
 ### -misc/mixed group
 
@@ -114,7 +114,7 @@ While we translate this to "I like ..." in English the literal translation is mo
 
 бути deserves a mention here since it's either used so often or implied so often and actually omitted.
 
-For example when we are using present tense to say that someone or something _is_ something, we always emit є, which is the conjugation for all present tense usages.
+For example when we are using present tense to say that someone or something _is_ something, we always omit є, which is the conjugation for all present tense usages.
 
 We say:
 
@@ -131,7 +131,7 @@ We do however use it when we are signifying position, which is another common us
 > У мене є сестра.
 > У них є друзі.
 
-In general it may see odd to use бути here but when you're saying
+In general it may seem odd to use бути here but when you're saying
 
 > У мене є ...
 
@@ -150,7 +150,7 @@ There are two different groups that defy this rule.
 
 1. Verbs with historical changes that have different roots but ordinary endings.
 	1. йти - йшов - йшла - йшло - йшли
-	2. прпйти - прпйшов - прпйшла - прпйшло - прпйшли
+	2. прийти - прийшов - прийшла - прийшло - прийшли
 	3. знайти - знайшов - знайшла - знайшло - знайшли
 	4. їсти - їв - їла - їло - їли
 	5. красти - крав - крала - крало - крали

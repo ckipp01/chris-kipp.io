@@ -8,7 +8,7 @@ which usually expresses a modification or predication._
 
 ## Terms
 
-- proposition/s - прийменник/и
+- preposition/s - прийменник/и
 
 ## з / зі
 
@@ -18,7 +18,7 @@ Has the meaning _from_ or _with_ depending on the context.
 	- Note the usage of [[cases#Genitive - Родовий відмінок|genitive case]]  here when we are saying you are from a place.
 2. The second usage is when it means _with_ indicated by the usage of the noun following being in the [[cases#Instrumental|instrumental case]]. Ex.
 	- з другом
-	- з собаою
+	- з собакою
 
 The determining factor of when to use з vs зі has to do the start of the word that comes after.
 - When the word following starts with з, с, ш, щ, or a consonant cluster beginning with these sounds we use зі.
@@ -68,9 +68,9 @@ Means **over** or **on** and requires [[cases#Instrumental|the instrumental case
 
 Means **under** or **below** and is followed by a noun in the [[cases#Instrumental|instrumental form]].
 
-## дла
+## для
 
-Means for and requires the [[cases#Genitive - Родовий відмінок|genitive case]] following it.
+Means **for** and requires the [[cases#Genitive - Родовий відмінок|genitive case]] following it.
 
 ## до
 

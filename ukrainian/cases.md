@@ -15,14 +15,14 @@ This is considered to be the most difficult case as there are multiple different
 
 There are a few main places that we use the genitive case:
 
-1. Possessive case - яблуко Ані, книги Марїї
+1. Possessive case - яблуко Ані, книги Марії
 2. Instead of the English "of": чашка кави, колір фуболки
 3. After "з" meaning "from": я з України
 4. After немає and other negations
 5. After "до" meaning "to" for direction
 6. after "без" meaning "without"
 7. After certain prepositions and prepositional phrases of place
-	1. віля
+	1. біля
 	2. праворуч від
 	3. ліворуч від
 	4. далеко від
@@ -50,7 +50,7 @@ There are a few main places that we use the genitive case:
 
 #### Masculine rules
 
-For masculine genitive there are two different endings depending on whether or nothing they fit into one of the following two groups
+For masculine genitive there are two different endings depending on whether or not they fit into one of the following two groups
 
 1. Specific things:  (-а for hard, -я for soft)
 	1. people's names
@@ -85,7 +85,7 @@ For masculine genitive there are two different endings depending on whether or n
 
 There is also a handful of just irregular ones that you need to remember.
 
-- люоди -> людей
+- люди -> людей
 - діти -> дітей
 - гроші -> грошей
 - гості -> гостей

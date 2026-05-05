@@ -29,7 +29,7 @@ These will impact the endings of the words. A chart of the most common endings a
 
 | Ending                                   | Rule                                   | Example           |
 | ---------------------------------------- | -------------------------------------- | ----------------- |
-| ь ending (when the ending also has an е) | Drop the е and replace the ь with an і | хлорець -> хлорці |
+| ь ending (when the ending also has an е) | Drop the е and replace the ь with an і | хлопець -> хлопці |
 | ь ending (when there is no е)            | Just replace the ь with і              | зять -> зяті      |
 | For pretty much everything else          | Just add и                             | парк -> парки     |
 ### Feminine
@@ -38,7 +38,7 @@ These will impact the endings of the words. A chart of the most common endings a
 | --------- | -------------------- | ------------------ |
 | а ending  | Replace the а with и | книга -> книги     |
 | cons + я  | Replace the я with і | киця -> киці       |
-| vowel + я | Repace я with ї      | галерея -> галереї |
+| vowel + я | Replace я with ї      | галерея -> галереї |
 
 ### Neuter
 
@@ -65,7 +65,7 @@ Below is a list of common irregulars.
 
 ### Plural with один і два
 
-When using оден or два with nouns you conjugate them to match the gender of the noun that you're using it with.
+When using один or два with nouns you conjugate them to match the gender of the noun that you're using it with.
 
 | word | male | female | neuter |
 | ---- | ---- | ------ | ------ |
