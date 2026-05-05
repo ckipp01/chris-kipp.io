@@ -36,7 +36,8 @@ object Html:
     htmlWrapper(
       headFrag(
         pageTitle = "chris-kipp.io - blog",
-        description = "A collection of blogs posts by Chris Kipp over the years."
+        description =
+          "A collection of blogs posts by Chris Kipp over the years."
       ),
       body(
         Style.bodyBase,
@@ -88,7 +89,7 @@ object Html:
                       )
 
                     case SeriesRow(series, items) =>
-                      val cat    = items.head.category.getOrElse(Category.Meta)
+                      val cat = items.head.category.getOrElse(Category.Meta)
                       val oldest = items.last.date
                       val newest = items.head.date
                       val meta =
@@ -122,6 +123,7 @@ object Html:
         footerFrag()
       )
     )
+  end blogOverview
 
   private sealed trait BlogRow
   private case class PostRow(page: MarkdownPage) extends BlogRow
@@ -129,11 +131,11 @@ object Html:
       extends BlogRow
 
   private def groupSeries(posts: Seq[MarkdownPage]): Seq[BlogRow] =
-    val out        = scala.collection.mutable.ArrayBuffer.empty[BlogRow]
+    val out = scala.collection.mutable.ArrayBuffer.empty[BlogRow]
     val seenSeries = scala.collection.mutable.Map.empty[Series, Int]
     for post <- posts do
       post.series match
-        case None => out += PostRow(post)
+        case None         => out += PostRow(post)
         case Some(series) =>
           seenSeries.get(series) match
             case None =>
@@ -380,6 +382,6 @@ object Html:
           )
         )
       ),
-    backToTopFrag()
+      backToTopFrag()
     )
 end Html

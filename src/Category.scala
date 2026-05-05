@@ -13,7 +13,7 @@ object Category:
     case _          => None
 
   extension (c: Category)
-    def key: String   = c.toString.toLowerCase
+    def key: String = c.toString.toLowerCase
     def label: String = c.toString.toLowerCase
     def hue: Int = c match
       case Tooling  => 28
