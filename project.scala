@@ -1,4 +1,4 @@
-//> using scala "3.8.3"
+//> using scala "3.8.4"
 //> using jvm 21
 //> using options "-deprecation" "-feature" "-explain" "-Wunused:all"
 //> using dep "com.lihaoyi::os-lib:0.11.8"
