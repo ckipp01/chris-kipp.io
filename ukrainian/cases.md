@@ -192,3 +192,51 @@ forms of instrumental.
 - F. 
 	- а ending -> у
 	- я ending -> ю
+## Dative
+### When it's used
+- to describe feelings and states (мені холодно, йому весело)
+- with modal words (мені треба, тобі можна, їй варто)
+- to indicate age (мені 20 років, йому 5 років)
+- indirect object - the recipient of an action
+	- it answers the question, "to whom?", or "to what"
+	- we use it when someone gives, tells, shows, or sends something to someone
+	- ex. - я подарувала книжку другові
+	- ex. - він розповів історію свої дочці
+- with certain verbs that just require Dative
+	- some verbs always take the dative case because their meaning is directed to someone
+		- допомагати (to help)
+		- радити (to advise)
+		- дзвонити / телефонувати (to call)
+### Rules
+#### Masculine rules
+
+Unfortunately for this one we have 2 parallel forms, one is carried over from older type of speech and is still preserved, and there is also a newer form, both can be used. The `-ові` form is the older one.
+
+| Ending | Conjugation Rule | Alternative | Example                        |
+| ------ | ---------------- | ----------- | ------------------------------ |
+| hard   | add у            | add ові     | чоловік -> чоловіку/чоловікові |
+| soft   | add ю            | add еві     | хлопець -> хлопцю/хлопцеві     |
+- keep in mind that you still have stem changes in the normal way. So you can't always just add ю for example.
+#### Feminine rules
+
+| Ending | Conjugation Rule       | Example            |
+| ------ | ---------------------- | ------------------ |
+| -ка    | The ка changes to ці   | жінка -> жінці     |
+| -а     | The а switches to і    | машина -> машині   |
+| -ія    | The я switches to a ї  | Іспанія -> Іспанії |
+| -я     | The я switches to an і | вишня -> вишні     |
+#### Neuter rules
+
+| Ending               | Conjugation Rule      | Example        |
+| -------------------- | --------------------- | -------------- |
+| -е                   | the е switches to a ю | сонце -> сонцю |
+| -о                   | the о switches to a у | вікно -> вікну |
+| Double consonant + я | The я switches to a ю | життя -> життю |
+#### Plural rules
+- For plural, the gender doesn't matter, we form it in the same way. The only thing that matters in the hard/soft stem that comes before the ending
+
+| Ending | Conjugation Rule                                               | Example                                                         |
+| ------ | -------------------------------------------------------------- | --------------------------------------------------------------- |
+| soft   | The soft ending (и or а) changes to ам                         | - чоловіки -> чоловікам<br>- села -> селам                      |
+| hard   | The hard ending (і, я, or double consonant + я) switches to ям | - полуниці -> полуницям<br>- моря -> морям<br>- життя -> життям |
+

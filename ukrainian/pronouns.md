@@ -145,11 +145,11 @@ _NOTE:_ That for accusative inanimate nouns are the exact same as the nominative
 
 ### That
 
-| Nominative       | Masculine | Feminine | Plural |
-| ---------------- | --------- | -------- | ------ |
-| **Nominative**   | той/те    | та       | ті     |
-| **Genitive**     | того      | тої=тієї | тих    |
-| **Dative**       | тому      | тій      | тим    |
-| **Accusative**   | того      | тої=тієї | тих    |
-| **Instrumental** | тим       | тою=тією | тими   |
-| **Locative**     | на тому   | на тій   | на тих |
+| Nominative       | Masculine                     | Feminine                            | Plural   |
+| ---------------- | ----------------------------- | ----------------------------------- | -------- |
+| **Nominative**   | той/те                        | та                                  | ті       |
+| **Genitive**     | того                          | тої=тієї                            | тих      |
+| **Dative**       | тому                          | тій                                 | тим      |
+| **Accusative**   | того (animate)/те (inanimate) | тої=тієї (animate) / та (inanimate) | тих / ті |
+| **Instrumental** | тим                           | тою=тією                            | тими     |
+| **Locative**     | на тому                       | на тій                              | на тих   |

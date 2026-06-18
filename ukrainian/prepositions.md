@@ -39,6 +39,8 @@ Most commonly used as **for**. This requires the [[cases#Accusative||accusative 
 
 It can also mean **behind** and if it's used this way it will require [[cases#Instrumental|instrumental case]].
 
+When it's used in comparison, it requires 
+
 Ex. Дякую **за** допомогу
 ## про
 
@@ -68,7 +70,7 @@ Means **over** or **on** and requires [[cases#Instrumental|the instrumental case
 
 Means **under** or **below** and is followed by a noun in the [[cases#Instrumental|instrumental form]].
 
-## для
+	## для
 
 Means **for** and requires the [[cases#Genitive - Родовий відмінок|genitive case]] following it.
 
