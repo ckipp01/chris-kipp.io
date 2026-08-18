@@ -108,7 +108,7 @@ Probably the most common phrase you'll see this with is:
 
 While we translate this to "I like ..." in English the literal translation is more like "to me is pleasing ...", which is why it has the reflexive form.
 
-## Special Verbs
+## Other Special Verbs
 
 ### бути - to be
 
@@ -136,6 +136,19 @@ In general it may seem odd to use бути here but when you're saying
 > У мене є ...
 
 You're not actually literally translating "I have..." but rather "In my possession is" with is being є.
+
+### стояти / лежати / висіти - positional verbs
+
+These verbs describe where something is based on its physical orientation.
+
+- стояти = to stand — used when something is upright or vertical
+- лежати = to lie — used when something is horizontal or flat
+- висіти = to hang — used when something is suspended (wall, ceiling, hook, etc.)
+
+Examples:
+- У кімнаті стоїть стіл. (The table stands in the room.)
+- На столі лежать книжки. (Books are lying on the table.)
+- На стіні висить картина. (A picture hangs on the wall.)
 
 ## Past Imperfect Tense
 

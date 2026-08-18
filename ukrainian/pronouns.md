@@ -125,6 +125,19 @@ Used in normal situations where the Dative case is called for.
 | вашому    | вашій    | вашому | вашим  |
 | нашому    | нашій    | нашому | нашим  |
 | їхнього   | їхній    |        | їхнім  |
+### Instrumental Cases
+Used in normal situations where the [[cases#Instrumental - орудний відмінок||Instrumental case]] is called for.
+
+| Masculine | Feminine | Neuter  | Plural   |
+| --------- | -------- | ------- | -------- |
+| моїм      | моєю     | моїм    | моїми    |
+| твоїм     | твоєю    | твоїм   | твоїми   |
+| його      | йогo     | йогo    | йогo     |
+| її        | її       | її      | її       |
+| вашим     | вашою    | вашим   | вашими   |
+| нашим     | нашою    | нашим   | нашими   |
+| їхнім     | їхньою   | їхнім   | їхніми   |
+
 ### Accusative Cases
 The conjugations are the same as they are in the genitive cases up above.
 ## Demonstrative pronouns / вказівні займенники

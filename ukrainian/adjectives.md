@@ -64,7 +64,7 @@ Just like other usages of [[cases#Accusative|accusative]] with inanimate objects
 
 ##### Animate
 
-Endings change to -ого (hard) or -ього (soft)
+For animate we end up having the same endings as [[#Genitive Endings]],  -ого (hard) or -ього (soft)
 
 #### Feminine
 
@@ -81,4 +81,7 @@ Change the ending to -і
 
 ##### Animate
 
-Depending on hard or soft it changes to -их (hard) or -іх (soft)
+Depending on hard or soft it changes to -их (hard) or -іх (soft), which again is the same as the [[#Genitive Endings]].
+
+## Dative Endings
+Adjective endings for the dative singular are the same as the [[#Locative Endings]], but only in the singular usages. This doesn't work in the plural.

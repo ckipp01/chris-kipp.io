@@ -192,6 +192,22 @@ forms of instrumental.
 - F. 
 	- а ending -> у
 	- я ending -> ю
+
+### Accusative case for animate objects
+
+For animate nouns (people, animals), the accusative case follows the [[cases#Genitive - Родовий відмінок|genitive]] form rather than the nominative.
+
+- Masculine singular animate: accusative = genitive
+	- брат -> брата (nom. брат, gen. брата)
+	- хлопець -> хлопця
+	- чоловік -> чоловіка
+- Feminine singular animate: same ending as inanimate (а -> у, я -> ю) — no special rule needed
+	- Марія -> Марію
+	- жінка -> жінку
+- Plural animate (all genders): accusative = genitive plural
+	- студенти -> студентів
+	- жінки -> жінок
+
 ## Dative
 ### When it's used
 - to describe feelings and states (мені холодно, йому весело)
