@@ -9,7 +9,6 @@ object Main:
   @main def buildSite() =
     val result: Either[String, Unit] = for
       blogPosts <- getMarkdownPages(Constants.BLOG_DIR)
-      ukrainianNotes <- getMarkdownPages(Constants.UKRAINIAN)
       topLevelPages <- getMarkdownPages(Constants.PAGES_DIR)
       lists <- getLists(Constants.LIST_DIR)
     yield
@@ -24,16 +23,6 @@ object Main:
         .sortBy(_.date)
         .reverse
       val blogRss = Rss.generate(blogPages)
-      /////////////////////////
-      // PROCESSING Ukrainian//
-      /////////////////////////
-      scribe.info("processing ukrainian notes...")
-      val ukrainianPages = ukrainianNotes
-        .map: page =>
-          scribe.info(s"putting together ${page.urlify}")
-          page.copy(content = Html.blogPage(page).render)
-        .sortBy(_.date)
-        .reverse
 
       //////////////////////
       // PROCESSING TALKS //
@@ -91,17 +80,6 @@ object Main:
             os.pwd
           ),
           post.content,
-          createFolders = true
-        )
-
-      ukrainianPages.foreach: page =>
-        scribe.info(s"writing ukrainian/${page.urlify}.html")
-        os.write(
-          os.Path(
-            Constants.SITE_DIR / "ukrainian" / (page.urlify + ".html"),
-            os.pwd
-          ),
-          page.content,
           createFolders = true
         )
 

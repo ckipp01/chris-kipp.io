@@ -6,7 +6,6 @@ import scala.jdk.CollectionConverters.*
 
 import com.vladsch.flexmark.ext.anchorlink.AnchorLinkExtension
 import com.vladsch.flexmark.ext.tables.TablesExtension
-import com.vladsch.flexmark.ext.wikilink.WikiLinkExtension
 import com.vladsch.flexmark.ext.yaml.front.matter.AbstractYamlFrontMatterVisitor
 import com.vladsch.flexmark.ext.yaml.front.matter.YamlFrontMatterExtension
 import com.vladsch.flexmark.html.HtmlRenderer
@@ -115,17 +114,11 @@ object MarkdownPage:
     List(
       YamlFrontMatterExtension.create(),
       AnchorLinkExtension.create(),
-      TablesExtension.create(),
-      WikiLinkExtension.create()
+      TablesExtension.create()
     ).asJavaCollection
 
   private val options = new MutableDataSet()
     .set(Parser.EXTENSIONS, extensions)
-    .set(WikiLinkExtension.LINK_FILE_EXTENSION, ".html")
-    .set(WikiLinkExtension.ALLOW_ANCHORS, true)
-    .set(WikiLinkExtension.LINK_FIRST_SYNTAX, true)
-    .set(WikiLinkExtension.LINK_ESCAPE_CHARS, " +/<>")
-    .set(WikiLinkExtension.LINK_REPLACE_CHARS, "-----")
 
   private val parser = Parser.builder(options).build()
   private val renderer = HtmlRenderer.builder(options).build()
