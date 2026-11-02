@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
-      - uses: coursier/cache-action@v8
+      - uses: coursier/cache-action@v9
       - uses: VirtusLab/scala-cli-setup@main
 
       - name: Check formatting
